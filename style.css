@@ -54,7 +54,7 @@ footer {
 
 .project {
   border: 0px solid orange;
-  height: 20rem;
+  height: 35rem;
   text-align: center;
   background-size: 80% auto;
   background-position: 50% 0;
@@ -65,8 +65,8 @@ footer {
   background-size: 85%;
 }
 
-#projOne {
-  background-image: url("https://blog.codepen.io/wp-content/uploads/2012/06/Button-Fill-Black-Large.png");
+#clock {
+  background-image:url("images/clock.png");
 }
 
 #travelQuotes {
