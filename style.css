@@ -1,0 +1,93 @@
+body {
+  color: #111;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  background-image: url("images/background-pattern.png");
+  background-size: 100%;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 2px solid #111;
+  display: inline-block;
+  padding: 0 1rem 0.2rem;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+header {
+  border: 0px solid green;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 20px;
+  width: 100%;
+  padding: 4px 0 0 0;
+  font-size: 12px;
+  text-align: center;
+  background-color: #111;
+  color: #fff;
+}
+
+.content {
+  border: 0px solid red;
+  padding: 0 6rem;
+}
+
+.section {
+  border: 0px solid blue;
+  float: none;
+  background: #fff;
+  padding: 2rem;
+}
+
+.project {
+  border: 0px solid orange;
+  height: 20rem;
+  text-align: center;
+  background-size: 80% auto;
+  background-position: 50% 0;
+  transition: 0.3s;
+}
+
+.project:hover {
+  background-size: 85%;
+}
+
+#projOne {
+  background-image: url("https://blog.codepen.io/wp-content/uploads/2012/06/Button-Fill-Black-Large.png");
+}
+
+#travelQuotes {
+  background-image: url("images/travelQuotes.png");
+}
+
+.link {
+  border-radius: 50%;
+  display: inline-block;
+  height: 4rem;
+  width: 4rem;
+  background-position: 52% 54%;
+  margin: 0 1rem;
+}
+
+#github {
+  background-image: url("images/github-logo.png");
+  background-size: 130% auto;
+}
+
+#email {
+  background-image: url("images/email-logo.png");
+  background-size: 100% auto;
+}
