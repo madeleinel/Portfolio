@@ -11,7 +11,7 @@ function currentDiv(n) {
 
 function showDivs(n) {
   var i;
-  var x = document.getElementsByClassName("mySlides");
+  var x = document.getElementsByClassName("pSlides");
   var dots = document.getElementsByClassName("chooseImage");
   if (n > x.length) {slideIndex = 1};
   if (n < 1) {slideIndex = x.length};
