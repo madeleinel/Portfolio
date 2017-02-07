@@ -79,7 +79,7 @@ button:hover {
   left: 0;
   background-color: cadetblue;
 
-  text-align: left;
+  /*text-align: left;*/
 }
 
 #aboutBtn {
@@ -90,7 +90,7 @@ button:hover {
   left: 50vw;
   background-color: teal;
 
-  text-align: right;
+  /*text-align: right;*/
 }
 
 #experBtn {
@@ -101,7 +101,7 @@ button:hover {
   left: 0;
   background-color: white;
 
-  text-align: left;
+  /*text-align: left;*/
 }
 
 #portBtn {
@@ -112,7 +112,7 @@ button:hover {
   left: 50vw;
   background-color: lightBlue;
 
-  text-align: right;
+  /*text-align: right;*/
 }
 
 .closeBtn {
