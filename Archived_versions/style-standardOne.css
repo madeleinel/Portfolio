@@ -1,7 +1,7 @@
 body {
   font-family: "Raleway", sans-serif;
   margin: 0;
-  background-image: url("images/background-pattern.png");
+  background-image: url("../images/background-pattern.png");
   background-size: 100%;
   background-attachment: fixed;
   text-align: center;

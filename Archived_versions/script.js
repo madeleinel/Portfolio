@@ -27,11 +27,8 @@ function showDivs(n) {
   for (i = 0; i < dots.length; i++) {
      dots[i].className = dots[i].className.replace(" currentImage", "");
   }
-
-// NEED TO UNCOMMENT THE 2 BELOW LINES TO MAKE THE SLIDESHOW WORK:
-
-  // x[slideIndex-1].style.display = "block";
-  // dots[slideIndex-1].className += " currentImage";
+  x[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " currentImage";
 }
 
 // Setting up modal pop-ups
