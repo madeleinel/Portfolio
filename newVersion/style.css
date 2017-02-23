@@ -1,0 +1,82 @@
+/*header:
+big when on landing page
+then slim down to thin nav bar at the top of the page when scroll down*/
+
+* {
+  border: 1px solid purple;
+}
+
+body {
+  font-family: Raleway, sans-serif;
+  margin: 0;
+}
+
+/*Styling based on the types of content*/
+
+a {
+  text-decoration: none;
+  background: pink;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+  display: inline-block;
+}
+
+/*Styling the page sections*/
+
+header {
+  background: lightBlue;
+}
+
+main {
+  background: lightGreen;
+}
+
+footer {
+  background: lightBlue;
+}
+
+/*Styling the main content sections*/
+
+.section {
+  min-height: 40vh;
+}
+
+
+/*Styling .content #contact content*/
+#contact a {
+  border: 2px solid red;
+}
+
+.icon {
+  height: 3em;
+  width: 3em;
+  background-size: cover;
+  background-position: center;
+  display: inline-block;
+  position: relative;
+
+  /*border: 0;*/
+}
+
+#github {
+  background-image: url("icons/github.png");
+}
+
+#twitter {
+  background-image: url("icons/twitter.png");
+}
+
+#linkedin {
+  background-image: url("icons/linkedin.png");
+}
+
+#instagram {
+  background-image: url("icons/instagram.png");
+}

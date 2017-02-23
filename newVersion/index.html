@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <title>Portfolio Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  </head>
+
+  <body>
+    <header id="header">
+      <h1><a href="#header">Portfolio Page</a></h1>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="section" id="about">
+        <h2>About</h2>
+        <p>texttext</p>
+      </div>
+
+      <div class="section" id="portfolio">
+        <h2>Portfolio</h2>
+        <p>texttext</p>
+      </div>
+
+      <div class="section" id="contact">
+        <h2>Contact</h2>
+        <div class="contactIcons">
+          <div class="row">
+            <a href="https://github.com/madeleinel" target="_blank"><div class="icon" id="github"></div></a>
+            <a href="https://twitter.com/Muddiqe" target="_blank"><div class="icon" id="twitter"></div></a>
+            <a href="https://uk.linkedin.com/in/madeleinelinder" target="_blank"><div class="icon" id="linkedin"></div></a>
+            <a href="https://www.instagram.com/muddique/" target="_blank"><div class="icon" id="instagram"></div></a>
+          </div>
+        </div>
+        <form id="contactForm">
+          <div class="row">
+            <label for="name">Your name:</label>
+            <input id="name" type="text" placeholder="Your name here" />
+          </div>
+          <div class="row">
+            <label for="email">Your email:</label>
+            <input id="email" type="text" placeholder="Your email here" />
+          </div>
+          <div class="row">
+            <label for="message">Your message:</label>
+            <textarea id="message" rows="20" cols="60" placeholder="Your message here"></textarea>
+            <button id="sendEmail">Send email</button>
+          </div>
+        </form>
+      </div>
+
+    </main>
+
+    <footer>
+      <p>Created by Madeleine Linder (2017)</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+
+</html>
