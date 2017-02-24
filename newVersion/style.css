@@ -13,9 +13,22 @@ body {
 
 /*Styling based on the types of content*/
 
+h1, h2, h3 {
+  text-align: center;
+}
+
+h2 {
+  background-color: yellow;
+  padding: 1em;
+}
+
+p {
+  background: orange;
+}
+
 a {
   text-decoration: none;
-  background: pink;
+  color: white;
 }
 
 ul {
@@ -28,18 +41,112 @@ ul li {
   display: inline-block;
 }
 
+/*Styling the nav bar(s)*/
+
+nav {
+  text-align: center;
+
+  background-color: #232323;
+}
+
+.headerNav {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 1.5em;
+}
+
+.headerNav li {
+  width: 8em;
+}
+
+#slideshowNav {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#slideshowNav button {
+  width: 8em;
+}
+
+/*Set visibility of the headers and top nav bars*/
+
+#landingHeader {
+  position: relative;
+  z-index: 100;
+}
+
+#hiddenHeader {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 50;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+}
+
 /*Styling the page sections*/
 
 header {
   background: lightBlue;
+  /*text-align: center;*/
+
+  /*will-change: transform;
+  transition: transform 200ms linear;*/
 }
+
+#headerUnpinned {
+  display: block;
+  /*transform: translateY(-100%);*/
+}
+
+#headerPinned {
+  display: block;
+  /*position: fixed;*/*/
+  /*top: 0;
+  left: 0;*/
+  max-height: 2em;
+  /*transform: translateY(0%);*/
+}
+
+/*when scrolling, enable these classes*/
+/*#headerUnpinned {
+  display: none;
+  transform: translateY(-100%);
+}
+
+#headerPinned {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  max-height: 2em;
+  transform: translateY(0%);
+}*/
 
 main {
   background: lightGreen;
 }
 
 footer {
-  background: lightBlue;
+  text-align: center;
+  background-color: #232323;
+  /*height: 2em;
+  position: fixed;
+  bottom: 0;
+  left: 0;*/
 }
 
 /*Styling the main content sections*/
@@ -48,10 +155,103 @@ footer {
   min-height: 40vh;
 }
 
+/*Styling .content #portfolio content*/
+/*consider inserting the images as background-image in css instead of as images in html*/
+
+/*transition: 0.3s;*/
+
+.slides {
+  width: 80vw;
+  margin: 0 auto;
+  position: relative;
+  /*display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;*/
+}
+
+.slides img {
+  width: 60%;
+}
+
+.slideInfo {
+  position: absolute;
+  right: 0;
+  display: inline-block;
+  width: 40%;
+}
+
+.chooseImage {
+  /*background-color: black;*/
+  background-color: #111;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  cursor: pointer;
+}
+
+/* only display the first slide when open the page, ie before have chosen which slide to display */
+.slides img:not(:first-child) {
+    display: none;
+}
+
+.currentImage {
+  background-color: #55cf80;
+  color: #111;
+  outline: none;
+}
+
+
 
 /*Styling .content #contact content*/
+
+.row {
+  text-align: center;
+  padding: 1em 0;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+#contactIcons {
+  padding: 1em 0;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#contact input {
+  width: 40vw;
+  margin: 1em auto;
+}
+
+#contact textarea {
+  width: 60vw;
+  margin: 1em auto;
+}
+
+#contact button {
+  width: 8em;
+  margin: 1em auto;
+  color: #fff;
+  background-color: #111;
+  outline: none;
+  cursor: pointer;
+}
+
 #contact a {
-  border: 2px solid red;
+  border: 0;
+  cursor: pointer;
 }
 
 .icon {
@@ -61,8 +261,9 @@ footer {
   background-position: center;
   display: inline-block;
   position: relative;
+  margin: 0 2em;
 
-  /*border: 0;*/
+  border: 0;
 }
 
 #github {
@@ -80,3 +281,12 @@ footer {
 #instagram {
   background-image: url("icons/instagram.png");
 }
+
+
+
+
+/*Media queries
+> for phones
+> for tablets*/
+
+/*Accessibility notes / measures*/

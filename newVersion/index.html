@@ -13,9 +13,33 @@
   </head>
 
   <body>
-    <header id="header">
-      <h1><a href="#header">Portfolio Page</a></h1>
-      <nav>
+    <!-- <header>
+      <div id="headerUnpinned">
+        <h1>Portfolio Page</h1>
+      </div>
+      <div id="headerPinned">
+        <nav id="headerNav">
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header> -->
+
+    <header id="landingHeader">
+      <h1>Portfolio Page</h1>
+      <nav class="headerNav">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <header id="hiddenHeader">
+      <nav class="headerNav">
         <ul>
           <li><a href="#about">About</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
@@ -32,25 +56,81 @@
 
       <div class="section" id="portfolio">
         <h2>Portfolio</h2>
-        <p>texttext</p>
+        <nav id="slideshowNav">
+          <button class="chooseImage" onclick="currentDiv(1)">Ex1</button>
+  				<button class="chooseImage" onclick="currentDiv(2)">Ex2</button>
+  				<button class="chooseImage" onclick="currentDiv(3)">Ex3</button>
+  				<button class="chooseImage" onclick="currentDiv(4)">Ex4</button>
+  				<button class="chooseImage" onclick="currentDiv(5)">Ex5</button>
+  				<button class="chooseImage" onclick="currentDiv(6)">Ex6</button>
+  				<button class="chooseImage" onclick="currentDiv(7)">Ex7</button>
+        </nav>
+
+        <content id="slideshow">
+          <div class="slides" id="ex1">
+            <img src="images\img1.jpg" alt="Ex1" />
+            <div class="slideInfo">
+              <h3>Info for slide 1</h3>
+              <p>Text here</p>
+            </div>
+          </div>
+          <div class="slides" id="ex2">
+            <img src="images\img2.jpg" alt="Ex2" />
+            <div class="slideInfo">
+              <h3>Info for slide 2</h3>
+              <p>Text here</p>
+            </div>
+          </div>
+          <div class="slides" id="ex3">
+            <img src="images\img1.jpg" alt="Ex3" />
+            <div class="slideInfo">
+              <h3>Info for slide 3</h3>
+              <p>Text here</p>
+            </div>
+          </div>
+          <div class="slides" id="ex4">
+            <img src="images\img2.jpg" alt="Ex4" />
+            <div class="slideInfo">
+              <h3>Info for slide 4</h3>
+              <p>Text here</p>
+            </div>
+          </div>
+          <div class="slides" id="ex5">
+            <img src="images\img1.jpg" alt="Ex5" />
+            <div class="slideInfo">
+              <h3>Info for slide 5</h3>
+              <p>Text here</p>
+            </div>
+          </div>
+          <div class="slides" id="ex6">
+            <img src="images\img2.jpg" alt="Ex6" />
+            <div class="slideInfo">
+              <h3>Info for slide 6</h3>
+              <p>Text here</p>
+            </div>
+          </div>
+          <div class="slides" id="ex7">
+            <img src="images\img1.jpg" alt="Ex7" />
+            <div class="slideInfo">
+              <h3>Info for slide 7</h3>
+              <p>Text here</p>
+            </div>
+          </div>
+        </content>
       </div>
 
       <div class="section" id="contact">
         <h2>Contact</h2>
-        <div class="contactIcons">
-          <div class="row">
-            <a href="https://github.com/madeleinel" target="_blank"><div class="icon" id="github"></div></a>
-            <a href="https://twitter.com/Muddiqe" target="_blank"><div class="icon" id="twitter"></div></a>
-            <a href="https://uk.linkedin.com/in/madeleinelinder" target="_blank"><div class="icon" id="linkedin"></div></a>
-            <a href="https://www.instagram.com/muddique/" target="_blank"><div class="icon" id="instagram"></div></a>
-          </div>
+        <div id="contactIcons">
+          <a href="https://github.com/madeleinel" target="_blank"><div class="icon" id="github"></div></a>
+          <a href="https://twitter.com/Muddiqe" target="_blank"><div class="icon" id="twitter"></div></a>
+          <a href="https://uk.linkedin.com/in/madeleinelinder" target="_blank"><div class="icon" id="linkedin"></div></a>
+          <a href="https://www.instagram.com/muddique/" target="_blank"><div class="icon" id="instagram"></div></a>
         </div>
         <form id="contactForm">
           <div class="row">
             <label for="name">Your name:</label>
             <input id="name" type="text" placeholder="Your name here" />
-          </div>
-          <div class="row">
             <label for="email">Your email:</label>
             <input id="email" type="text" placeholder="Your email here" />
           </div>
