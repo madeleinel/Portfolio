@@ -3,11 +3,33 @@
 const emailBtn = document.getElementById('sendEmail');
 
 emailBtn.addEventListener('click', (e) => {
-
   // take content from form fields and transform it into an email
+});
 
-})
+// Make the navbar change on scroll
+( function() {
+  const navBar = document.getElementById('nav');
+  let navLinks = document.getElementsByClassName('nav__link');
+  navLinks = Array.from(navLinks);
+  document.getElementById('navBox').style.display = 'none';
+  let windowHeight = window.innerHeight - navBar.clientHeight;
 
+  window.addEventListener('scroll', (e) => {
+    let scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+
+    if (scroll > windowHeight) {
+      navBar.className = 'nav--onScroll';
+      navLinks.forEach( (e) => {
+        e.className = 'nav__link nav_link--white';
+      });
+      return;
+    }
+    navBar.className = '';
+    navLinks.forEach( (e) => {
+      e.className = 'nav__link';
+    });
+  });
+})();
 
 
 // Hide the header (apart from the nav bar) when scroll down the page, from the landing page onto the main part of the site
