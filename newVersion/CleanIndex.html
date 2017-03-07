@@ -44,6 +44,90 @@
         <!-- PORTFOLIO section -->
         <div class="section" id="portfolio">
           <h2>Portfolio</h2>
+          <!-- add a nav bar for the slideshow, which will enable you to choose which slide to view -->
+          <nav id="slideshowNav">
+            <button class="chooseImage" onclick="currentDiv(1)">OurStory</button>
+    				<button class="chooseImage" onclick="currentDiv(2)">Python Project</button>
+    				<button class="chooseImage" onclick="currentDiv(3)">Poetry Blog</button>
+    				<button class="chooseImage" onclick="currentDiv(4)">Clock</button>
+    				<button class="chooseImage" onclick="currentDiv(5)">Paint Site</button>
+    				<button class="chooseImage" onclick="currentDiv(6)">Travel Quote Generator</button>
+    				<button class="chooseImage" onclick="currentDiv(7)">Webcam Site</button>
+          </nav>
+
+          <!-- add each slideshow slide > including image and name of site (which are also links to the site), description, and link to source code on Github -->
+          <content id="slideshow">
+            <div class="slides" id="ex1">
+              <div class="slideImg">
+                <a href="https://github.com/madeleinel" target="_blank"><img src="images\img1.jpg" alt="Ex1" /><a>
+                </div>
+              <div class="slideInfo">
+                <h3><a href="https://github.com/madeleinel" target="_blank">OurStory</a></h3>
+                <p>Created as part of the Code First: Girls Beginners' Course competition.<br>Created with Liz.j, it was built using HTML, CSS, JavaScript and the Twitter API bootstrap.</p>
+                <p><a href="https://github.com/madeleinel" target="_blank">Source code</a></p>
+              </div>
+            </div>
+            <div class="slides" id="ex2">
+              <div class="slideImg">
+                <a href="https://github.com/madeleinel" target="_blank"><img src="images\img2.jpg" alt="Ex2" /></a>
+              </div>
+              <div class="slideInfo">
+                <h3><a href="https://github.com/madeleinel" target="_blank">Python Project</a></h3>
+                <p>Created as part of the Code First: Girls Advanced Course competition.<br>Created with E Keane, it was built using Python.</p>
+                <p><a href="https://github.com/madeleinel" target="_blank">Source code</a></p>
+              </div>
+            </div>
+            <div class="slides" id="ex3">
+              <div class="slideImg">
+                <a href="https://github.com/madeleinel" target="_blank"><img src="images\img1.jpg" alt="Ex3" /></a>
+              </div>
+              <div class="slideInfo">
+                <h3><a href="https://github.com/madeleinel" target="_blank">Poetry Blog</a></h3>
+                <p>Built for a friend to host her poetry.<br>Created using HTML5, CSS3, ES6 and [server].</p>
+                <p><a href="https://github.com/madeleinel" target="_blank">Source code</a></p>
+              </div>
+            </div>
+            <div class="slides" id="ex4">
+              <div class="slideImg">
+                <a href="https://github.com/madeleinel" target="_blank"><img src="images\img2.jpg" alt="Ex4" /></a>
+              </div>
+              <div class="slideInfo">
+                <h3><a href="https://github.com/madeleinel" target="_blank">Clock</a></h3>
+                <p>Based on [two] JavaScript30 tutorials (Wes Bos).<br>Built using HTML, CSS and JavaScript.</p>
+                <p><a href="https://github.com/madeleinel" target="_blank">Source code</a></p>
+              </div>
+            </div>
+            <div class="slides" id="ex5">
+              <div class="slideImg">
+                <a href="https://github.com/madeleinel" target="_blank"><img src="images\img1.jpg" alt="Ex5" /></a>
+              </div>
+              <div class="slideInfo">
+                <h3><a href="https://github.com/madeleinel" target="_blank">Paint Site</a></h3>
+                <p>Based on [two] JavaScript30 tutorials (Wes Bos).<br>Built using HTML, CSS and JavaScript.</p>
+                <p><a href="https://github.com/madeleinel" target="_blank">Source code</a></p>
+              </div>
+            </div>
+            <div class="slides" id="ex6">
+              <div class="slideImg">
+                <a href="https://github.com/madeleinel" target="_blank"><img src="images\img2.jpg" alt="Ex6" /></a>
+              </div>
+              <div class="slideInfo">
+                <h3><a href="https://github.com/madeleinel" target="_blank">Travel Quote Generator</a></h3>
+                <p>Based on a FreeCodeCamp project.</br>Built using HTML, CSS and JavaScript.</p>
+                <p><a href="https://github.com/madeleinel" target="_blank">Source code</a></p>
+              </div>
+            </div>
+            <div class="slides" id="ex7">
+              <div class="slideImg">
+                <a href="https://github.com/madeleinel" target="_blank"><img src="images\img1.jpg" alt="Ex7" /></a>
+              </div>
+              <div class="slideInfo">
+                <h3><a href="https://github.com/madeleinel" target="_blank">Webcam Site</a></h3>
+                <p>Based on [a] JavaScript30 tutorial (Wes Bos).<br>Built using HTML, CSS and JavaScript.</p>
+                <p><a href="https://github.com/madeleinel" target="_blank">Source code</a></p>
+              </div>
+            </div>
+          </content>
         </div>
 
         <!-- CONTACT section -->
@@ -63,7 +147,7 @@
     </footer>
 
     <!-- link to the JavaScript file -->
-    <script src="script.js"></script>
+    <script src="CleanScript.js"></script>
   </body>
 
 </html>

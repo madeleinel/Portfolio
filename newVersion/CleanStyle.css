@@ -1,5 +1,6 @@
 body {
   font-family: Raleway, sans-serif; /* set the default font to Raleway */
+  color: #111;
 }
 
 /*Style the landing page*/
@@ -97,8 +98,69 @@ main {
             ///////////////////////////////*/
 
 /*set up the slideshow within the Portfolio section*/
+#portfolio {
 
+}
 
+/*//// THE SLIDESHOW NAV BAR////*/
+/*style the slideshow nav bar*/
+#slideshowNav {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #111;
+}
+
+/*style the buttons within the slideshow nav bar*/
+#slideshowNav button {
+  width: 12em;
+  outline: none; /*remove border and highlights around clicked buttons*/
+  cursor: pointer;
+  background-color: #111;
+}
+
+/*change font color to show which slide is currently being displayed*/
+.chooseImage {
+  color: #fff;
+}
+
+.currentImage {
+  color: #55cf80;
+}
+
+/*//// THE SLIDESHOW////*/
+.slides {
+  /*lay out the slide content (image & project description) to display next to each other (flexbox row) > on smaller screens these will be displayed one after the other (flexbox column)*/
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.slides .slideImg {
+  order: 1;
+  flex: 3; /*the project images should take up 60% of the slide*/
+}
+
+.slides img {
+  width: 100%; /*make the images fill their containing div*/
+}
+
+.slides .slideInfo {
+  order: 2;
+  flex: 2; /*the project info should take up 40% of the slide*/
+}
+
+/*set to only display the first slide by default (then once have made a different choice in the nav bar, only the chosen slide will be displayed)*/
+#slideshow .slides:not(:first-child) {
+    display: none;
+}
 
 /*to remove when done: */
 main * {
