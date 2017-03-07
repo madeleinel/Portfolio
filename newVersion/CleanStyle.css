@@ -3,6 +3,17 @@ body {
   color: #111;
 }
 
+/*overwrite the default stylings of hyperlinks and list items*/
+a {
+  text-decoration: none;
+  color: #111;
+  /*cursor: pointer; >> doesn't seem to be necessary*/
+}
+
+li {
+  list-style: none;
+}
+
 /*Style the landing page*/
 header {
   height: 100vh; /* set the landing page to cover the entire window */
@@ -10,19 +21,51 @@ header {
   background-image: url('images/placeholder.jpg');
   background-size: cover;
   background-position: center;
+  text-align: center;
 }
 
-#pageTitle {
-
+#pageTitle, #pageStart a {
+  font-family: 'Roboto Condensed';
+  color: #fff;
+  font-size: 8em;
+  padding: 0.5em 0;
+  text-shadow: 1px 1px 4px #111;
+  transition: 0.5s;
 }
 
 #pageStart {
-
+  /*center the icon horizontally*/
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  /*use translateX(-50%) to ensure that the middle of the icon is at the midddle of the page*/
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
-#topNav {
-
+#pageStart a:hover {
+  color: #55cf80;
+  transition: 0.5s;
 }
+
+/*style the website nav bar*/
+/*#topNav {
+  border: 1px solid yellow;
+  background-color: #111;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#topNav a {
+  border: 1px solid purple;
+  color: #fff;
+}*/
 
             /*///////////////////////////////
             ////////FLEXBOX STRUCTURE////////
@@ -91,10 +134,37 @@ main {
     flex-direction: column;
   }
   /*remove slideshow feature > instead display all items one after the other (image-description-image-description--etc)*/
+  #slideshow .slides:not(:first-child) {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
 }
 
             /*///////////////////////////////
             ///DONE WITH FLEXBOX STRUCTURE///
+            ///////////////////////////////*/
+
+
+
+            /*///////////////////////////////
+            /////MAIN STRUCTURE STYLINGS/////
+            ///////////////////////////////*/
+
+h2 {
+  color: #55cf80;
+  font-size: 36px;
+  text-align: center;
+  padding: 1em;
+}
+
+
+
+            /*///////////////////////////////
+            ////////PORTFOLIO SECTION////////
             ///////////////////////////////*/
 
 /*set up the slideshow within the Portfolio section*/
@@ -113,11 +183,13 @@ main {
   flex-direction: row;
   justify-content: space-around;
   background-color: #111;
+  height: 4em;
 }
 
 /*style the buttons within the slideshow nav bar*/
 #slideshowNav button {
   width: 12em;
+  border: none;
   outline: none; /*remove border and highlights around clicked buttons*/
   cursor: pointer;
   background-color: #111;
@@ -159,10 +231,63 @@ main {
 
 /*set to only display the first slide by default (then once have made a different choice in the nav bar, only the chosen slide will be displayed)*/
 #slideshow .slides:not(:first-child) {
-    display: none;
+  display: none;
+}
+
+            /*///////////////////////////////
+            /////////CONTACT SECTION/////////
+            ///////////////////////////////*/
+
+/*set up the contact section*/
+
+/*set up row of hyperlinked icons*/
+#contactIcons {
+  padding: 1em 0;
+  background-color: #111;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.icon {
+  height: 2em;
+  width: 2em;
+  background-size: cover;
+  background-position: center;
+  display: inline-block;
+  position: relative;
+  margin: 0 2em;
+  /*set up drop-shadow to enable icon hover highlighting effect*/
+	-webkit-filter: drop-shadow(0px 0px 0px rgba(255, 255, 255, 0.8));
+	-webkit-transition: all 0.1s linear;
+	-o-transition: all 0.1s linear;
+	transition: all 0.1s linear;
+}
+
+/*set up icon hover highlighting effect*/
+.icon:hover {
+	-webkit-filter: drop-shadow(0px 0px 4px rgba(255, 255, 255, 0.8));
+}
+
+/*linking to the relevant icon images*/
+#github {
+  background-image: url("icons/github.png");
+}
+#twitter {
+  background-image: url("icons/twitter.png");
+}
+#linkedin {
+  background-image: url("icons/linkedin.png");
+}
+#instagram {
+  background-image: url("icons/instagram.png");
 }
 
 /*to remove when done: */
-main * {
-    border: 1px solid purple;
-}
+/*main * {
+  border: 1px solid purple;
+}*/
