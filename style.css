@@ -319,19 +319,19 @@ h2 {
 
 /*linking to the relevant icon images*/
 #github {
-  background-image: url("./icons/github.png");
+  background-image: url('assets/github.png');
 }
 #twitter {
-  background-image: url("./icons/twitter.png");
+  background-image: url('assets/twitter.png');
 }
 #linkedin {
-  background-image: url("./icons/linkedin.png");
+  background-image: url('assets/linkedin.png');
 }
 #instagram {
-  background-image: url("./icons/instagram.png");
+  background-image: url('assets/instagram.png');
 }
 #message {
-  background-image: url("./icons/coffeeCup.png"); /* replace this icon || credit the other icons? did I get them from Michelle's website? */
+  background-image: url('assets/coffeeCup.png'); /* replace this icon || credit the other icons? did I get them from Michelle's website? */
   /*<div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>*/
 }
 
