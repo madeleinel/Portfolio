@@ -1,104 +1,168 @@
-<!Doctype html>
+<!DOCTYPE html>
 
-<html>
-	<head>
-		<title>Portfolio</title>
-		<link rel="stylesheet" type="text/css" href="style.css"> <!-- Link to CSS file -->
-		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"> <!-- Link to custom font stylesheet -->
-	</head>
+<html lang="en">
+
+  <head>
+    <title>Portfolio Page</title>
+    <!-- Set up basic properties of the page -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Link to the stylesheet & custom font -->
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  </head>
 
   <body>
+    <!-- The landing page -->
+    <header>
+      <h1 id="pageTitle">MADELEINE LINDER</h1>
+      <!-- Landing page button > will take you to the page content -->
+      <span id="pageStart"><a href="#about">&#8615;</a></span>
+    </header>
 
-	  <div class="content">
+    <!-- Site navbar > will be visible at all times apart from the landing page (though minimised on smaller screens) -->
+    <nav id="topNav">
+      <li><a class="navLink" href="#about">About</a></li>
+      <li><a class="navLink" href="#portfolio">Portfolio</a></li>
+      <li><a class="navLink" href="#contact">Contact</a></li>
+    </nav>
 
-	    <div class="button" id="about"><button id="aboutBtn"><h2>About</h2></button></div>
-      <div class="modal" id="aboutModal">
-        <div class="section">
-					<div class="sectionHeader">
-	          <span class="closeBtn" id="closeAbtBtn">&times;</span>
-						<h2>About</h2>
-					</div>
-					<div class="sectionContent" id="about">
-						<p>With a previous degree in Psychology and experience working within administration and project management, I am currently working on changing career becoming a web developer.</p>
-						<p>My aim is to become a full-stack web developer, and my main languages are HTML, CSS and JavaScript, and I will start learning Python in the coming weeks.</p>
-						<p>Mainly self-taught, using online tutorials and resources such as <a href="https://www.freecodecamp.com" target="_blank">FreeCodeCamp</a>, <a href="https://www.codecademy.com" target="_blank">Codecademy</a> and <a href="https://www.udemy.com" target="_blank">Udemy</a>.</p>
-						<p>Currently completing the <a href="https://www.codefirstgirls.com" target="_blank">Code First: Girls</a> Beginners Course (HTML, CSS and JavaScript), and about to start the Code First: Girls Advanced Course (Python).</p>
-						<p>Attendee of <a href="https://www.codebar.io" target="_blank">Codebar</a>, <a href="https://www.nodegirls.com" target="_blank">Node Girls London</a> and <a href="https://www.foundersandcoders.com">Founders & Coders</a> meetups and workshops.</p>
-					</div>
+    <!-- The main content of the page > 2 side columns & 1 main column, set up using flexbox (turning into rows on smaller screens) -->
+    <main>
+      <!-- left sidebar > will be above main content on smaller screens -->
+      <div class="column" id="leftSidebar"></div>
+
+      <!-- the main content column -->
+      <div class="column" id="mainColumn">
+        <!-- the main content sections > About, Portfolio, Contact -->
+        <!-- ABOUT section -->
+        <div class="section" id="about">
+          <h2>About</h2>
+          <content id="aboutMe">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </content>
         </div>
+
+        <!-- PORTFOLIO section -->
+        <div class="section" id="portfolio">
+          <h2>Portfolio</h2>
+          <!-- add a nav bar for the slideshow, which will enable you to choose which slide to view -->
+          <nav id="slideshowNav">
+            <button class="chooseImage" onclick="currentDiv(1)">OurStory</button>
+    				<button class="chooseImage" onclick="currentDiv(2)">Python Project</button>
+    				<button class="chooseImage" onclick="currentDiv(3)">Poetry Blog</button>
+    				<button class="chooseImage" onclick="currentDiv(4)">Clock</button>
+    				<button class="chooseImage" onclick="currentDiv(5)">Paint Site</button>
+    				<button class="chooseImage" onclick="currentDiv(6)">Quote Generator</button>
+    				<button class="chooseImage" onclick="currentDiv(7)">Webcam Site</button>
+          </nav>
+
+          <!-- add each slideshow slide > including image and name of site (which are also links to the site), description, and link to source code on Github -->
+          <content id="slideshow">
+            <div class="slides" id="ex1">
+              <div class="slideImg">
+                <a href="https://github.com/madeleinel" target="_blank"><img src="images\OurStory_Mockup.jpg" alt="Ex1" /><a>
+                </div>
+              <div class="slideInfo">
+                <h3><a href="https://github.com/madeleinel" target="_blank">OurStory</a></h3>
+                <p>Created as part of the Code First: Girls Beginners' Course competition.<br>Created with Liz.j, it was built using HTML, CSS, JavaScript and the Twitter API bootstrap.</p>
+                <p><a href="https://github.com/madeleinel" target="_blank">Source code</a></p>
+              </div>
+            </div>
+            <div class="slides" id="ex2">
+              <div class="slideImg">
+                <a href="https://github.com/madeleinel" target="_blank"><img src="images\backgroundPattern.jpg" alt="Ex2" /></a>
+              </div>
+              <div class="slideInfo">
+                <h3><a href="https://github.com/madeleinel" target="_blank">Python Project</a></h3>
+                <p>Created as part of the Code First: Girls Advanced Course competition.<br>Created with E Keane, it was built using Python.</p>
+                <p><a href="https://github.com/madeleinel" target="_blank">Source code</a></p>
+              </div>
+            </div>
+            <div class="slides" id="ex3">
+              <div class="slideImg">
+                <a href="https://github.com/madeleinel" target="_blank"><img src="images\BlogSite_Mockup.jpg" alt="Ex3" /></a>
+              </div>
+              <div class="slideInfo">
+                <h3><a href="https://github.com/madeleinel" target="_blank">Poetry Blog</a></h3>
+                <p>Built for a friend to host her poetry.<br>Created using HTML5, CSS3, ES6 and [server].</p>
+                <p><a href="https://github.com/madeleinel" target="_blank">Source code</a></p>
+              </div>
+            </div>
+            <div class="slides" id="ex4">
+              <div class="slideImg">
+                <a href="https://github.com/madeleinel" target="_blank"><img src="images\clock.jpg" alt="Ex4" /></a>
+              </div>
+              <div class="slideInfo">
+                <h3><a href="https://github.com/madeleinel" target="_blank">Clock</a></h3>
+                <p>Based on [two] JavaScript30 tutorials (Wes Bos).<br>Built using HTML, CSS and JavaScript.</p>
+                <p><a href="https://github.com/madeleinel" target="_blank">Source code</a></p>
+              </div>
+            </div>
+            <div class="slides" id="ex5">
+              <div class="slideImg">
+                <a href="https://github.com/madeleinel" target="_blank"><img src="images\HTMLCanvas.jpg" alt="Ex5" /></a>
+              </div>
+              <div class="slideInfo">
+                <h3><a href="https://github.com/madeleinel" target="_blank">Paint Site</a></h3>
+                <p>Based on [two] JavaScript30 tutorials (Wes Bos).<br>Built using HTML, CSS and JavaScript.</p>
+                <p><a href="https://github.com/madeleinel" target="_blank">Source code</a></p>
+              </div>
+            </div>
+            <div class="slides" id="ex6">
+              <div class="slideImg">
+                <a href="https://github.com/madeleinel" target="_blank"><img src="images\travelQuotes.jpg" alt="Ex6" /></a>
+              </div>
+              <div class="slideInfo">
+                <h3><a href="https://github.com/madeleinel" target="_blank">Travel Quote Generator</a></h3>
+                <p>Based on a FreeCodeCamp project.</br>Built using HTML, CSS and JavaScript.</p>
+                <p><a href="https://github.com/madeleinel" target="_blank">Source code</a></p>
+              </div>
+            </div>
+            <div class="slides" id="ex7">
+              <div class="slideImg">
+                <a href="https://github.com/madeleinel" target="_blank"><img src="images\backgroundPattern.jpg" alt="Ex7" /></a>
+              </div>
+              <div class="slideInfo">
+                <h3><a href="https://github.com/madeleinel" target="_blank">Webcam Site</a></h3>
+                <p>Based on [a] JavaScript30 tutorial (Wes Bos).<br>Built using HTML, CSS and JavaScript.</p>
+                <p><a href="https://github.com/madeleinel" target="_blank">Source code</a></p>
+              </div>
+            </div>
+          </content>
+        </div>
+
+        <!-- CONTACT section -->
+        <div class="section" id="contact">
+          <h2>Contact</h2>
+          <content id="contactMe">
+            <!-- set up row of icons which will link to relevant accounts -->
+            <div id="contactIcons">
+              <a href="https://github.com/madeleinel" target="_blank"><div class="icon" id="github"></div></a>
+              <a href="https://twitter.com/Muddiqe" target="_blank"><div class="icon" id="twitter"></div></a>
+              <a href="https://uk.linkedin.com/in/madeleinelinder" target="_blank"><div class="icon" id="linkedin"></div></a>
+              <a href="https://www.instagram.com/muddique/" target="_blank"><div class="icon" id="instagram"></div></a>
+              <a href="mailto:madeleinelinder@hotmail.com"><div class="icon" id="message"></div></a>
+            </div>
+            <!-- set up contact form? -->
+          </contact>
+        </div>
+
       </div>
 
-      <div class="button" id="skills"><button id="skillsBtn"><h2>Skills</h2></button></div>
-      <div class="modal" id="skillsModal">
-				<div class="section">
-					<div class="sectionHeader">
-	          <span class="closeBtn" id="closeSksBtn">&times;</span>
-						<h2>Skills</h2>
-					</div>
-					<div class="sectionContent" id="skills">
+      <!-- right sidebar > will be below main content on smaller screens -->
+      <div class="column" id="rightSidebar"></div>
+    </main>
 
-						<div class="skillCategory" id="codingLang">
-							<h3>Coding languages</h3>
-							<span>HTML</span>
-							<span>CSS</span>
-							<span>JavaScript</span>
-							<span>Python</span>
-						</div>
-						<div class="skillCategory" id="langSkills">
-							<h3>Language skills</h3>
-							<span>Swedish</span>
-							<span>English</span>
-						</div>
-						<div class="skillCategory" id="hardSkills">
-							<h3>Hard skills</h3>
-							<span>Project Management</span>
-							<span>Translation</span>
-							<span>Customer Service</span>
-							<span>Administration</span>
-						</div>
-						<div class="skillCategory" id="softSkills">
-							<h3>Soft skills</h3>
-							<span>Creative Problem Solving</span>
-							<span>Organisational Skills</span>
-							<span>Team Work</span>
-							<span>Liaising</span>
-						</div>
+    <!-- page footer -->
+    <footer>
+      <p>Created by Madeleine Linder (2017)</p>
+    </footer>
 
-					</div>
-        </div>
-      </div>
-
-      <div class="button" id="experience"><button id="experBtn"><h2>Experience</h2></button></div>
-			<div class="modal" id="experModal">
-				<div class="section">
-					<div class="sectionHeader">
-						<span class="closeBtn" id="closeExpBtn">&times;</span>
-						<h2>Experience</h2>
-					</div>
-					<div class="sectionContent" id="experience">
-						<p>Experience section...</p>
-					</div>
-				</div>
-			</div>
-
-      <div class="button" id="portfolio"><button id="portBtn"><h2>Portfolio</h2></button></div>
-			<div class="modal" id="portModal">
-				<div class="section">
-					<div class="sectionHeader">
-						<span class="closeBtn" id="closePrtBtn">&times;</span>
-						<h2>Portfolio</h2>
-					</div>
-					<div class="sectionContent" id="portfolio">
-						<p>Portfolio section...</p>
-					</div>
-				</div>
-			</div>
-
-    </div>
-
-	  <!-- <footer>Created by Madeleine Linder (2017)</footer> -->
-
-		<script src="script.js"></script>
-
+    <!-- link to the JavaScript file -->
+    <script src="script.js"></script>
   </body>
+
 </html>

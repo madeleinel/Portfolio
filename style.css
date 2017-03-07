@@ -1,64 +1,242 @@
 body {
-  margin: 0;
-  font-family: Raleway, sans-serif;
-  overflow: hidden;
+  font-family: Raleway, sans-serif; /* set the default font to Raleway */
+  color: #111;
 }
 
-* {
-  border: 0px solid orange;
+/*overwrite the default stylings of hyperlinks and list items*/
+a {
+  text-decoration: none;
+  color: #111;
+  /*cursor: pointer; >> doesn't seem to be necessary*/
 }
 
-.section h2 {
-  border: 0px solid green;
-  font-size: 3em;
+li {
+  list-style: none;
+}
 
-  /*display: inline-block;
-  margin: auto;
-  padding-right: 3em;*/
+/*Style the landing page*/
+header {
+  height: 100vh; /* set the landing page to cover the entire window */
+  /*set the image for the landing page: */
+  background-image: url('images/placeholder.jpg');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
 
-/*Two options for centering the section titles, one above and one below*/
+  position: relative;
+  z-index: 99;
+}
 
-  width: 94%;
+#pageTitle, #pageStart a {
+  font-family: 'Roboto Condensed';
+  color: #fff;
+  font-size: 8em;
+  padding: 0.5em 0;
+  text-shadow: 1px 1px 4px #111;
+  transition: 0.5s;
+}
+
+#pageStart {
+  /*center the icon horizontally*/
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  /*use translateX(-50%) to ensure that the middle of the icon is at the midddle of the page*/
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+/*style the website nav bar*/
+#topNav {
+  background-color: #111;
+  height: 4em;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  justify-content: space-around;
+  -ms-align-items: center;
+  align-items: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100vw;
+}
+
+#topNav a {
+  color: #fff;
+}
+
+/*make the page navigation links turn green when hovered over*/
+#pageStart a:hover, #topNav a:hover {
+  color: #55cf80;
+  transition: 0.5s;
+}
+
+            /*///////////////////////////////
+            ////////FLEXBOX STRUCTURE////////
+            ///////////////////////////////*/
+
+
+  /* The following will be used for the three columns below: */
+  /*order: controls the order in which the items appear within the container > may be different order for smaller screens
+  /*flex: flex-grow flex-shrink flex-basis
+      flex-grow > (defines ability to grow) dictates the proportion of the available space that the element should occupy > eg if all have '1', they will take up equal space
+      flex-shrink > (defines ability to shrink)
+      flex-basis > defines the default size of the element, before the remaining space is distributed
+          >> flex-shrink & flex-basis are optional*/
+
+
+/*set up flexbox structure of main page content*/
+main {
+  /*flexbox container > lay out the three columns next to each other (flexbox row) */
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.column {
+
+}
+
+#leftSidebar {
+  order: 1;
+  flex: 1;
+}
+
+/*main content column*/
+#mainColumn {
+  order: 2; /* set this column to be between the two side columns */
+  flex: 5; /*set this column to take up 5/7 of the horisontal space*/
+
+  /*lay out the content sections within this column to display one after the other (flexbox column)*/
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+#rightSidebar {
+  order: 3;
+  flex: 1;
+}
+
+/*////set up media queries for how the layout will change for smaller screens////*/
+
+/*media queries for screens with a width of 320px - 700px*/
+@media (min-width: 320px) and (max-width: 700px) {
+  /*change flexbox structure to display the 3 main columns one after the other (flexbox column)*/
+  main {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  /*change flexbox structure to display the slide contents (image & project description) one after the other (flexbox column)*/
+  #slideshowNav {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  /*remove slideshow feature > instead display all items one after the other (image-description-image-description--etc)*/
+  #slideshow .slides:not(:first-child) {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+            /*///////////////////////////////
+            ///DONE WITH FLEXBOX STRUCTURE///
+            ///////////////////////////////*/
+
+
+
+            /*///////////////////////////////
+            /////MAIN STRUCTURE STYLINGS/////
+            ///////////////////////////////*/
+
+h2 {
+  color: #55cf80;
+  font-size: 36px;
+  text-align: center;
+  padding: 2.5em 0 1em 0;
+}
+
+
+
+            /*///////////////////////////////
+            //////////ABOUT SECTION//////////
+            ///////////////////////////////*/
+
+
+
+#about p {
+  margin: 0 4em;
   text-align: center;
 }
 
-.section h3 {
-  border: 0px solid purple;
+
+
+            /*///////////////////////////////
+            ////////PORTFOLIO SECTION////////
+            ///////////////////////////////*/
+
+/*set up the slideshow within the Portfolio section*/
+#portfolio {
+
 }
 
-a {
-  text-decoration: none;
-  color: teal;
-  font-weight: bold;
+/*//// THE SLIDESHOW NAV BAR////*/
+/*style the slideshow nav bar*/
+#slideshowNav {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #111;
+  height: 4em;
 }
 
-a:hover {
-  color: purple;
+/*style the buttons within the slideshow nav bar*/
+#slideshowNav button {
+  width: 12em;
+  border: none;
+  outline: none; /*remove border and highlights around clicked buttons*/
+  cursor: pointer;
+  background-color: #111;
 }
 
-button {
-  border: 0;
-  font-family: Raleway;
-  font-size: 3.5em;
+/*change font color to show which slide is currently being displayed*/
+.chooseImage {
+  color: #fff;
 }
 
-button:hover {
-  color: white;
+.currentImage {
+  color: #55cf80;
 }
 
-button:focus {
-  outline: none;
-}
-
-.section {
-  border: 0px solid purple;
-  width: 100%;
-  height: 100%;
-  background-color: white;
-  color: black;
-}
-
-.sectionHeader {
+/*//// THE SLIDESHOW////*/
+.slides {
+  /*lay out the slide content (image & project description) to display next to each other (flexbox row) > on smaller screens these will be displayed one after the other (flexbox column)*/
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
@@ -67,83 +245,104 @@ button:focus {
   flex-direction: row;
 }
 
-.sectionContent {
-  border: 0px solid red;
-  margin: 2em;
-  padding: 0 6em;
+.slides .slideImg {
+  order: 1;
+  flex: 3; /*the project images should take up 60% of the slide*/
 }
 
-#aboutModal, #skillsModal, #experModal, #portModal {
+.slides img {
+  width: 100%; /*make the images fill their containing div*/
+  max-height: 360px; /*ev remove later; aim to make all source img files the same size to avoid having to set this but still have all images be the same height*/
+}
+
+.slides .slideInfo {
+  order: 2;
+  flex: 2; /*the project info should take up 40% of the slide*/
+}
+
+/*set to only display the first slide by default (then once have made a different choice in the nav bar, only the chosen slide will be displayed)*/
+#slideshow .slides:not(:first-child) {
   display: none;
-  position: fixed;
-  z-index: 99; /* Sit on top */
-  left: 15vw;
-  top: 15vh;
-  width: 70vw;
-  height: 70vh;
-  /*overflow: hidden; /* Enable scroll if needed */*/
-  /*background: rgba(0, 0, 0, 0.5)*/
 }
 
-#skillsBtn {
-  width: 50vw;
-  height: 50vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: #5f9ea0; /*cadetBlue*/
-
-  /*text-align: left;*/
-}
-
-#aboutBtn {
-  width: 50vw;
-  height: 50vh;
-  position: fixed;
-  top: 0;
-  left: 50vw;
-  background-color: #4C7E7F; /*darker version of cadetBlue*/
-
-  /*text-align: right;*/
-}
-
-#experBtn {
-  width: 50vw;
-  height: 50vh;
-  position: fixed;
-  top: 50vh;
-  left: 0;
-  background-color: #4C7E7F; /*darker version of cadetBlue*/
-
-  /*text-align: left;*/
-}
-
-#portBtn {
-  width: 50vw;
-  height: 50vh;
-  position: fixed;
-  top: 50vh;
-  left: 50vw;
-  background-color: #5f9ea0; /*cadetBlue*/
-
-  /*text-align: right;*/
-}
-
-.closeBtn {
-  border: 0px solid blue;
-  font-size: 2em;
-  display: inline-block;
-  padding: 1rem;
-  cursor: pointer;
-}
-
-#skills {
+/*style the project descriptions*/
+.slideInfo h3 {
   text-align: center;
+  font-size: 24px;
+  margin: 2em;
 }
 
-#skills span {
-  padding: 0.5rem;
-  background: cadetBlue;
-  border-radius: 0.4rem;
-  color: #fff;
+.slideInfo p {
+  margin: 2em;
+}
+
+            /*///////////////////////////////
+            /////////CONTACT SECTION/////////
+            ///////////////////////////////*/
+
+/*set up the contact section*/
+
+/*set up row of hyperlinked icons*/
+#contactIcons {
+  padding: 1em 0;
+  background-color: #111;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.icon {
+  height: 2em;
+  width: 2em;
+  background-size: cover;
+  background-position: center;
+  display: inline-block;
+  position: relative;
+  margin: 0 2em;
+  /*set up drop-shadow to enable icon hover highlighting effect*/
+	-webkit-filter: drop-shadow(0px 0px 0px rgba(255, 255, 255, 0.8));
+	-webkit-transition: all 0.1s linear;
+	-o-transition: all 0.1s linear;
+	transition: all 0.1s linear;
+}
+
+/*set up icon hover highlighting effect*/
+.icon:hover {
+	-webkit-filter: drop-shadow(0px 0px 4px rgba(255, 255, 255, 0.8));
+}
+
+/*linking to the relevant icon images*/
+#github {
+  background-image: url("icons/github.png");
+}
+#twitter {
+  background-image: url("icons/twitter.png");
+}
+#linkedin {
+  background-image: url("icons/linkedin.png");
+}
+#instagram {
+  background-image: url("icons/instagram.png");
+}
+#message {
+  background-image: url("icons/coffeeCup.png"); /* replace this icon || credit the other icons? did I get them from Michelle's website? */
+  /*<div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>*/
+}
+
+/*style the footer*/
+footer {
+  text-align: center;
+  height: 1em;
+}
+
+/*to remove when done: */
+/*main * {
+  border: 1px solid purple;
+}*/
+#leftSidebar, #rightSidebar {
+  background-color: rgba(85, 207, 128, 0.1);
 }
