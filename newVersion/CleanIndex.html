@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <title>Portfolio Page</title>
+    <!-- Set up basic properties of the page -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Link to the stylesheet & custom font -->
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" type="text/css" href="CleanStyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  </head>
+
+  <body>
+    <!-- The landing page -->
+    <header>
+      <h1 id="pageTitle">MADELEINE LINDER</h1>
+      <!-- Landing page button > will take you to the page content -->
+      <span id="pageStart"><a href="#about">&#187;</a></span>
+      <!-- Site navbar > will be visible at all times (though minimised on smaller screens) -->
+      <nav id="topNav">
+        <li><a class="navLink" href="#about">About</a></li>
+        <li><a class="navLink" href="#portfolio">Portfolio</a></li>
+        <li><a class="navLink" href="#contact">Contact</a></li>
+      </nav>
+    </header>
+
+    <!-- The main content of the page > 2 side columns & 1 main column, set up using flexbox (turning into rows on smaller screens) -->
+    <main>
+      <!-- left sidebar > will be above main content on smaller screens -->
+      <div class="column" id="leftSidebar">left sidebar</div>
+
+      <!-- the main content column -->
+      <div class="column" id="mainColumn">
+        <!-- the main content sections > About, Portfolio, Contact -->
+        <!-- ABOUT section -->
+        <div class="section" id="about">
+          <h2>About</h2>
+        </div>
+
+        <!-- PORTFOLIO section -->
+        <div class="section" id="portfolio">
+          <h2>Portfolio</h2>
+        </div>
+
+        <!-- CONTACT section -->
+        <div class="section" id="contact">
+          <h2>Contact</h2>
+        </div>
+
+      </div>
+
+      <!-- right sidebar > will be below main content on smaller screens -->
+      <div class="column" id="rightSidebar">right sidebar</div>
+    </main>
+
+    <!-- page footer -->
+    <footer>
+      <p>Created by Madeleine Linder (2017)</p>
+    </footer>
+
+    <!-- link to the JavaScript file -->
+    <script src="script.js"></script>
+  </body>
+
+</html>

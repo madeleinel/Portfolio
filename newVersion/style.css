@@ -9,6 +9,7 @@ then slim down to thin nav bar at the top of the page when scroll down*/
 body {
   font-family: Raleway, sans-serif;
   margin: 0;
+  /* overflow: hidden; */ /* disables scrolling on the page */
 }
 
 /*Styling based on the types of content*/
@@ -20,6 +21,7 @@ h1, h2, h3 {
 h1 {
   font-family: 'Roboto Condensed';
   color: #fff;
+  font-size: 6em;
 }
 
 h2 {
@@ -156,10 +158,38 @@ main {
 
 header {
   background: #111;
+  background-image: url('images/placeholder.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  /*margin: 0;
+  padding: 0;*/
+  border: 1px solid red;
+  position: relative;
   /*text-align: center;*/
 
   /*will-change: transform;
   transition: transform 200ms linear;*/
+}
+
+header #title {
+  position: absolute;
+  left: 14%;
+  bottom: 10%;
+}
+
+#start {
+  /*border: 1px solid yellow;*/
+  font-family: 'Roboto Condensed';
+  color: #fff;
+  font-size: 8em;
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+  transform: rotate(90deg);
+  position: absolute;
+  left: 45%;
+  bottom: 0%;
+  transition-duration: 5s;
 }
 
 #headerUnpinned {
@@ -207,7 +237,31 @@ footer {
 /*Styling the main content sections*/
 
 .section {
-  min-height: 40vh;
+  min-height: 100vh;
+}
+
+#about img {
+  border: 2px solid #fff;
+  height: 20em;
+  width: 20em;
+  box-shadow: 2px 2px 5px #111;
+}
+
+#about .skills {
+  border: 2px solid #fff;
+  height: 20em;
+  width: 20em;
+  box-shadow: 2px 2px 5px #111;
+  background-color: #111;
+  color: #fff;
+}
+
+#about #right {
+  border-radius: 12.5em 2.5em 12.5em 2.5em;
+}
+
+#about #left {
+  border-radius: 2.5em 12.5em 2.5em 12.5em;
 }
 
 /*Styling .content #portfolio content*/
@@ -354,3 +408,60 @@ footer {
 > for tablets*/
 
 /*Accessibility notes / measures*/
+
+main {  /* "Main" includes "Sections" & sidebars */
+  min-height: 400px;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+}
+
+#sidebarLeft {
+  border: 1px solid blue;
+  margin: 10px;
+  padding: 10px;
+  order: 1;
+}
+
+#mainColumn {  /* "Sections" includes each content page */
+  min-height: 200px;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-flow: column;
+  order: 2;
+}
+
+#sidebarRight {
+  border: 1px solid blue;
+  margin: 10px;
+  padding: 10px;
+  order: 3;
+}
+
+main > #sidebarLeft {
+  margin: 4px;
+  padding: 5px;
+  background: #ccccff;
+  flex: 1 6 20%;
+  order: 1;
+}
+
+main > #mainColumn {
+  border: 1px solid purple;
+  margin: 4px;
+  padding: 5px;
+  background: #dddd88;
+  flex: 3 1 60%;
+  order: 2;
+}
+
+main > #sidebarRight {
+  margin: 4px;
+  padding: 5px;
+  background: #ccccff;
+  flex: 1 6 20%;
+  order: 3;
+}

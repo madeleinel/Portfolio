@@ -1,0 +1,106 @@
+body {
+  font-family: Raleway, sans-serif; /* set the default font to Raleway */
+}
+
+/*Style the landing page*/
+header {
+  height: 100vh; /* set the landing page to cover the entire window */
+  /*set the image for the landing page: */
+  background-image: url('images/placeholder.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+#pageTitle {
+
+}
+
+#pageStart {
+
+}
+
+#topNav {
+
+}
+
+            /*///////////////////////////////
+            ////////FLEXBOX STRUCTURE////////
+            ///////////////////////////////*/
+
+
+  /* The following will be used for the three columns below: */
+  /*order: controls the order in which the items appear within the container > may be different order for smaller screens
+  /*flex: flex-grow flex-shrink flex-basis
+      flex-grow > (defines ability to grow) dictates the proportion of the available space that the element should occupy > eg if all have '1', they will take up equal space
+      flex-shrink > (defines ability to shrink)
+      flex-basis > defines the default size of the element, before the remaining space is distributed
+          >> flex-shrink & flex-basis are optional*/
+
+
+/*set up flexbox structure of main page content*/
+main {
+  /*flexbox container > lay out the three columns next to each other (flexbox row) */
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.column {
+
+}
+
+#leftSidebar {
+  order: 1;
+  flex: 1;
+}
+
+/*main content column*/
+#mainColumn {
+  order: 2; /* set this column to be between the two side columns */
+  flex: 5; /*set this column to take up 5/7 of the horisontal space*/
+
+  /*lay out the content sections within this column to display one after the other (flexbox column)*/
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+#rightSidebar {
+  order: 3;
+  flex: 1;
+}
+
+/*////set up media queries for how the layout will change for smaller screens////*/
+
+/*media queries for screens with a width of 320px - 700px*/
+@media (min-width: 320px) and (max-width: 700px) {
+  /*change flexbox structure to display the 3 main columns one after the other (flexbox column)*/
+  main {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  /*remove slideshow feature > instead display all items one after the other (image-description-image-description--etc)*/
+}
+
+            /*///////////////////////////////
+            ///DONE WITH FLEXBOX STRUCTURE///
+            ///////////////////////////////*/
+
+/*set up the slideshow within the Portfolio section*/
+
+
+
+/*to remove when done: */
+main * {
+    border: 1px solid purple;
+}
