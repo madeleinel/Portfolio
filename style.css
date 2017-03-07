@@ -18,9 +18,11 @@ li {
 header {
   height: 100vh; /* set the landing page to cover the entire window */
   /*set the image for the landing page: */
-  background-image: url('images/placeholder.jpg');
+  background-color: #b27686; /* dark pink (from image): #8C4F5F or lighter version of the dark pink: #b27686 or green: #55cf80 or cadetblue: #5f9ea0 or light cadetblue: #b6d2d3 */
+  background-image: url('images/landingPage.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: right;
+  background-blend-mode: difference; /* difference | multiply darken color-burn hard-light */ /*possibly remove this option (&& change landing page image)*/
   text-align: center;
 
   position: relative;
@@ -28,23 +30,32 @@ header {
 }
 
 #pageTitle, #pageStart a {
-  font-family: 'Roboto Condensed';
   color: #fff;
+  text-shadow: 2px 2px 4px #111;
+}
+
+#pageTitle {
+  font-family: 'Lobster', cursive;
   font-size: 8em;
-  padding: 0.5em 0;
-  text-shadow: 1px 1px 4px #111;
-  transition: 0.5s;
+  /*font-weight: bold;*/
+  padding: 1em 0;
+  line-height: 1.2em;
 }
 
 #pageStart {
   /*center the icon horizontally*/
   position: absolute;
-  bottom: 10%;
+  bottom: 5%;
   left: 50%;
   /*use translateX(-50%) to ensure that the middle of the icon is at the midddle of the page*/
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
+}
+
+#pageStart a {
+  font-size: 10em;
+  transition: 0.5s;
 }
 
 /*style the website nav bar*/
@@ -188,7 +199,7 @@ h2 {
 
 
 #about p {
-  margin: 0 4em;
+  margin: 3em 6em;
   text-align: center;
 }
 
