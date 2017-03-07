@@ -22,6 +22,9 @@ header {
   background-size: cover;
   background-position: center;
   text-align: center;
+
+  position: relative;
+  z-index: 99;
 }
 
 #pageTitle, #pageStart a {
@@ -44,15 +47,10 @@ header {
   transform: translateX(-50%);
 }
 
-#pageStart a:hover {
-  color: #55cf80;
-  transition: 0.5s;
-}
-
 /*style the website nav bar*/
-/*#topNav {
-  border: 1px solid yellow;
+#topNav {
   background-color: #111;
+  height: 4em;
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
@@ -60,12 +58,25 @@ header {
   -ms-flex-direction: row;
   flex-direction: row;
   justify-content: space-around;
+  -ms-align-items: center;
+  align-items: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100vw;
 }
 
 #topNav a {
-  border: 1px solid purple;
   color: #fff;
-}*/
+}
+
+/*make the page navigation links turn green when hovered over*/
+#pageStart a:hover, #topNav a:hover {
+  color: #55cf80;
+  transition: 0.5s;
+}
 
             /*///////////////////////////////
             ////////FLEXBOX STRUCTURE////////
@@ -133,6 +144,12 @@ main {
     -ms-flex-direction: column;
     flex-direction: column;
   }
+  /*change flexbox structure to display the slide contents (image & project description) one after the other (flexbox column)*/
+  #slideshowNav {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
   /*remove slideshow feature > instead display all items one after the other (image-description-image-description--etc)*/
   #slideshow .slides:not(:first-child) {
     display: -webkit-flex;
@@ -158,7 +175,20 @@ h2 {
   color: #55cf80;
   font-size: 36px;
   text-align: center;
-  padding: 1em;
+  padding: 2.5em 0 1em 0;
+}
+
+
+
+            /*///////////////////////////////
+            //////////ABOUT SECTION//////////
+            ///////////////////////////////*/
+
+
+
+#about p {
+  margin: 0 4em;
+  text-align: center;
 }
 
 
@@ -222,6 +252,7 @@ h2 {
 
 .slides img {
   width: 100%; /*make the images fill their containing div*/
+  max-height: 360px; /*ev remove later; aim to make all source img files the same size to avoid having to set this but still have all images be the same height*/
 }
 
 .slides .slideInfo {
@@ -232,6 +263,17 @@ h2 {
 /*set to only display the first slide by default (then once have made a different choice in the nav bar, only the chosen slide will be displayed)*/
 #slideshow .slides:not(:first-child) {
   display: none;
+}
+
+/*style the project descriptions*/
+.slideInfo h3 {
+  text-align: center;
+  font-size: 24px;
+  margin: 2em;
+}
+
+.slideInfo p {
+  margin: 2em;
 }
 
             /*///////////////////////////////
@@ -286,8 +328,15 @@ h2 {
 #instagram {
   background-image: url("icons/instagram.png");
 }
+#message {
+  background-image: url("icons/coffeeCup.png"); /* replace this icon || credit the other icons? did I get them from Michelle's website? */
+  /*<div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>*/
+}
 
 /*to remove when done: */
 /*main * {
   border: 1px solid purple;
 }*/
+#leftSidebar, #rightSidebar {
+  background-color: rgba(85, 207, 128, 0.1);
+}
