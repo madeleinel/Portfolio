@@ -53,9 +53,23 @@ header {
   transform: translateX(-50%);
 }
 
-#pageStart a {
-  font-size: 10em;
+/* #pageStart a {
   transition: 0.5s;
+} */
+
+#pageStart img {
+  height: 5em;
+  width: 6em;
+  /*set up drop-shadow to enable icon hover highlighting effect*/
+  -webkit-filter: drop-shadow(0px 0px 0px rgba(255, 255, 255, 0.8));
+  -webkit-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+
+/*set up icon hover highlighting effect*/
+#pageStart img:hover {
+  -webkit-filter: drop-shadow(0px 0px 4px rgba(255, 255, 255, 0.8));
 }
 
 /*style the website nav bar*/
@@ -342,7 +356,7 @@ h2 {
   background-image: url('assets/instagram.png');
 }
 #message {
-  background-image: url('assets/coffeeCup.png'); /* replace this icon || credit the other icons? did I get them from Michelle's website? */
+  background-image: url('assets/email.png'); /* replace this icon || credit the other icons? did I get them from Michelle's website? */
   /*<div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>*/
 }
 
