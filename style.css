@@ -390,7 +390,12 @@ h2 {
 /*style the footer*/
 footer {
   text-align: center;
-  height: 1em;
+  background-color: #111;
+  color: #fff;
+}
+
+footer p {
+  padding: 0.4em;
 }
 
 /*to remove when done: */
