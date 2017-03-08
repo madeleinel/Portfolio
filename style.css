@@ -212,9 +212,24 @@ h2 {
 
 
 
+#about {
+  text-align: center;
+}
+
 #about p {
   margin: 3em 6em;
-  text-align: center;
+}
+
+#about h4 {
+  font-size: 24px;
+  margin: 1.5em 0;
+}
+
+#about .skill {
+  background: #111;
+  color: #fff;
+  padding: 0.5em;
+  margin: 0 0.5em;
 }
 
 
@@ -263,6 +278,7 @@ h2 {
 
 /*//// THE SLIDESHOW////*/
 .slides {
+   margin: 4em 0 0 0; /* ev remove */
   /*lay out the slide content (image & project description) to display next to each other (flexbox row) > on smaller screens these will be displayed one after the other (flexbox column)*/
   display: -webkit-flex;
   display: -ms-flex;
@@ -296,7 +312,12 @@ h2 {
 .slideInfo h3 {
   text-align: center;
   font-size: 24px;
-  margin: 2em;
+  padding: 1.5em 2em;
+  background-color: #eadee0; /* origin colour, from landing page: #7B4D58 */
+}
+
+.slideInfo h3 a {
+  color: #111;
 }
 
 .slideInfo p {
@@ -355,9 +376,15 @@ h2 {
 #instagram {
   background-image: url('assets/instagram.png');
 }
-#message {
-  background-image: url('assets/email.png'); /* replace this icon || credit the other icons? did I get them from Michelle's website? */
-  /*<div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>*/
+/* credit the above icons? did I get them from Michelle's website? */
+#email {
+  background-image: url('assets/email.png');
+}
+
+/*add empty space between the contact icon bar and the footer*/
+#filler {
+  height: 4em;
+  background-color: rgba(85, 207, 128, 0.1);
 }
 
 /*style the footer*/
