@@ -155,7 +155,7 @@ main {
   flex-direction: column;
 
   /* create illusion of the center column hovering over the sidebars */
-  box-shadow: 0px 20px 32px #111; /* update these values to make the shadow more subtle (don't remove) */
+  box-shadow: 0px 20px 32px #111; /* update these values to make the shadow more subtle, & make sure it goes all the way from top to bottom on both sides (don't remove) */
 }
 
 #rightSidebar {
