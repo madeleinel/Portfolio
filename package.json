@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/madeleinel/portfolio/issues"
   },
-  "homepage": "https://github.com/madeleinel/portfolio#readme"
+  "homepage": "https://github.com/madeleinel/portfolio#readme",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
 }

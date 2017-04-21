@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <title>Portfolio Page</title>
+    <!-- Set up basic properties of the page -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Link to the stylesheet & custom font -->
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+  </head>
+
+  <body>
+    <!-- Site navbar > will be visible at all times apart from the landing page (though minimised on smaller screens) -->
+    <nav id="topNav">
+      <li><a class="navLink" href="#portfolio">Portfolio</a></li>
+      <li><a class="navLink" href="#about">About</a></li>
+      <li><a class="navLink" href="#contact">Contact</a></li>
+    </nav>
+
+    <!-- The main content of the page > 2 side columns & 1 main column, set up using flexbox (turning into rows on smaller screens) -->
+    <main>
+      <!-- left sidebar > will be above main content on smaller screens -->
+      <div class="column" id="leftSidebar"></div>
+
+      <!-- the main content column -->
+      <div class="column" id="mainColumn">
+
+        <!-- ABOUT section -->
+        <div class="section" id="about">
+          <h2>About</h2>
+          <content id="aboutMe">
+            <p>I am an ambitious problem-solver who thrives on new challenges. With plenty of experience working within an international environment, I am currently switching careers and am looking for a new and exciting position with opportunities to develop within web development.</p>
+            <p>I love programming and the fact that it gives me the ability to create things, and be creative and use logic to solve challenging problems — not to mention that there’s always more to learn! It’s something that I get a lot of energy from and love doing.</p>
+            <p>Do get in touch using the contact details below if you want to discuss this further!</p>
+            <h4>Skills:</h4>
+              <span class="skill">JavaScript</span>
+              <span class="skill">HTML</span>
+              <span class="skill">CSS</span>
+              <span class="skill">Python</span>
+              <span class="skill">APIs</span>
+          </content>
+        </div>
+
+        <div class="section" id="filler">
+          <!-- put something here? -->
+        </div>
+
+      </div>
+
+      <!-- right sidebar > will be below main content on smaller screens -->
+      <div class="column" id="rightSidebar"></div>
+    </main>
+
+    <!-- page footer -->
+    <footer>
+      <p>Created by Madeleine Linder (2017)</p>
+    </footer>
+
+    <!-- link to the JavaScript file -->
+    <script src="script.js"></script>
+  </body>
+
+</html>
