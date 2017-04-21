@@ -163,7 +163,7 @@ main {
   flex-direction: column;
 
   /* create illusion of the center column hovering over the sidebars */
-  box-shadow: 0px 20px 32px #111; /* update these values to make the shadow more subtle, & make sure it goes all the way from top to bottom on both sides (don't remove) */
+  box-shadow: 0 2em 3em #333; /* update these values to make the shadow more subtle, & make sure it goes all the way from top to bottom on both sides (don't remove) */
 }
 
 #rightSidebar {
@@ -209,10 +209,11 @@ main {
             ///////////////////////////////*/
 
 h2 {
+  font-family: 'Lobster', cursive;
   color: #55cf80;
-  font-size: 36px;
+  font-size: 4em;
   text-align: center;
-  padding: 2.5em 0 1em 0;
+  padding: 1.5em 0 0.5em 0;
 }
 
 
