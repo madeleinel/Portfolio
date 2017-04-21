@@ -74,7 +74,15 @@ header {
 
 /*style the website nav bar*/
 #topNav {
-  background-color: #111;
+  /*background-color: #111;*/
+
+  background-color: #b27686;
+  background-image: url('images/landingPage.jpg');
+  background-size: cover;
+  background-position: right;
+  background-blend-mode: difference;
+  text-align: center;
+
   height: 4em;
   display: -webkit-flex;
   display: -ms-flex;
