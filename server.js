@@ -4,11 +4,13 @@ var express = require('express');
 var app = express();
 app.use(express.static('public'));
 
+var port = process.env.PORT || 5500;
+
 // var formidable = require('express-formidable');
 // app.use(formidable());
-// What was this used for in the node girls express workshop?
+// What was this used for in the Node Girls express workshop?
 
-var view = require(__dirname + '/views/view.js');
+// var view = require(__dirname + '/views/view.js');
 
 app.get('/', function (request, response) {
   // response.sendFile(__dirname + '/public/index.html'); // Redundant code
@@ -34,6 +36,6 @@ app.get('/contact', function (request, response) {
   response.sendFile(__dirname + '/public/contact.html');
 });
 
-app.listen(5500, function() {
+app.listen(port, function() {
   console.log('Server is listening on port 5500. Ready to accept requests!')
 });
