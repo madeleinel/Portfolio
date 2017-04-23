@@ -36,6 +36,6 @@ app.get('/contact', function (request, response) {
   response.sendFile(__dirname + '/public/contact.html');
 });
 
-app.listen(5500, function() {
+app.listen(port, function() {
   console.log('Server is listening on port 5500. Ready to accept requests!')
 });
