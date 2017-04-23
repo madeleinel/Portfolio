@@ -1,0 +1,95 @@
+* {
+  border: solid 1px pink;
+}
+
+body {
+  font-family: Raleway, sans-serif;
+}
+
+/* Basic structure of the page */
+main {
+  margin-top: 4em;    /* Make sure it starts displaying under the navbar */
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+#leftSidebar {
+  order: 1;
+  flex: 1;
+
+  background-color: yellow;
+}
+
+#rightSidebar {
+  order: 3;
+  flex: 1;
+
+  background-color: orange;
+}
+
+#mainColumn {
+  order: 2;
+  flex: 5;
+
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+
+  background-color: pink;
+}
+
+/* Site navbar */
+#topNav {
+  height: 4em;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  background-color: #b27686;
+  background-image: url('images/landingPage.jpg');
+  background-size: cover;
+  background-position: top;
+  background-blend-mode: difference;
+
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  justify-content: space-around;
+  -ms-align-items: center;
+  align-items: center;
+}
+
+#topNav a {
+  color: #fff;
+  font-size: 1.5em;
+}
+
+#topNav a:hover {
+  color: #B8CCC1;
+  transition: 0.5s;
+}
+
+#topNav span {
+  font-family: 'Lobster', cursive;
+  font-size: 1.5em;
+}
+
+/* The footer */
+footer {
+  height: 1em;
+  width: 100vw;
+  padding: 1em;
+  text-align: center;
+  background-color: #B8CCC1;
+}

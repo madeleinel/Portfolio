@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <title>Portfolio Page</title>
+    <!-- Set up basic properties of the page -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Link to the stylesheet & custom font -->
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="mediaQuery.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+  </head>
+
+  <body>
+    <header>
+      <!-- Site navbar > will be visible at all times apart from the landing page (though minimised on smaller screens) -->
+      <nav id="topNav">
+        <li><a class="navLink" href="/about">About</a></li>
+        <li><a class="navLink" href="/skills">Skills</a></li>
+        <li><a class="navLink" href="/"><span>Madeleine Linder</span></a></li>
+        <li><a class="navLink" href="/portfolio">Portfolio</a></li>
+        <li><a class="navLink" href="/contact">Contact</a></li>
+      </nav>
+    </header>
+
+    <!-- The main content of the page > 2 side columns & 1 main column, set up using flexbox (turning into rows on smaller screens) -->
+    <main>
+      <!-- left sidebar > will be above main content on smaller screens -->
+      <div id="leftSidebar">left</div>
+
+      <!-- the main content column -->
+      <div id="mainColumn">
+
+        <!-- CONTACT section -->
+        <div class="section" id="content">
+          <h2>Testing</h2>
+        </div>
+
+        <div class="section" id="filler">
+          <!-- put something here? -->
+        </div>
+
+      </div>
+
+      <!-- right sidebar > will be below main content on smaller screens -->
+      <div id="rightSidebar">right</div>
+    </main>
+
+    <!-- page footer -->
+    <footer>
+      <p>Created by Madeleine Linder (2017)</p>
+    </footer>
+
+    <!-- link to the JavaScript file -->
+    <script src="script.js"></script>
+  </body>
+
+</html>

@@ -6,13 +6,24 @@ app.use(express.static('public'));
 
 // var formidable = require('express-formidable');
 // app.use(formidable());
+// What was this used for in the node girls express workshop?
+
+var view = require(__dirname + '/views/view.js');
 
 app.get('/', function (request, response) {
-  response.send('Landing page');
+  // response.sendFile(__dirname + '/public/index.html'); // Redundant code
+});
+
+app.get('/testing', function (request, response) {
+  response.sendFile(__dirname + '/public/wrapper.html');
 });
 
 app.get('/about', function (request, response) {
   response.sendFile(__dirname + '/public/about.html');
+});
+
+app.get('/skills', function (request, response) {
+  response.sendFile(__dirname + '/public/skills.html');
 });
 
 app.get('/portfolio', function (request, response) {
