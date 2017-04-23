@@ -1,0 +1,241 @@
+div {
+  /*border: solid 1px purple;*/
+}
+
+body {
+  font-family: Raleway, sans-serif;
+}
+
+h2 {
+  font-family: 'Lobster', cursive;
+  font-size: 4em;
+  color: #b27686;
+  text-align: center;
+  padding: 1em 0;
+}
+
+h3 {
+  font-family: 'Lobster', cursive;
+  font-size: 2em;
+  text-align: center;
+  padding: 1em 0;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.4em;
+  margin-bottom: 1em;
+}
+
+/* Landing page */
+#landingPage {
+  height: 100vh;
+  width: 100vw;
+
+  background-color: #b27686;
+  background-image: url('images/landingPage.jpg');
+  background-size: cover;
+  background-position: right;
+  background-blend-mode: difference;
+
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  justify-content: center;    /* center horizontally */
+  -ms-align-items: center;    /* center vertically */
+  align-items: center;
+  text-align: center;
+}
+
+#landingPage a {
+  font-family: 'Lobster', cursive;
+  font-size: 8em;
+  color: #fff;
+  text-shadow: 0.2rem 0.2rem 0.4rem #111;
+}
+
+#landingPage a:hover {
+  -webkit-filter: drop-shadow(0 0 0.2rem rgba(255, 255, 255, 0.8));
+  transition: 0.2s;
+}
+
+/* Basic structure of the page */
+main {
+  margin-top: 4em;    /* Make sure it starts displaying under the navbar */
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+
+  min-height: 87vh;
+}
+#leftSidebar {
+  order: 1;
+  flex: 1;
+}
+
+#rightSidebar {
+  order: 3;
+  flex: 1;
+}
+
+#mainColumn {
+  order: 2;
+  flex: 5;
+
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.row {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  justify-content: center;
+
+  /*-webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;*/
+}
+
+.column {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-align-items: center;
+  align-items: center;
+}
+
+/* Site navbar */
+#topNav {
+  height: 4em;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  background-color: #b27686;
+  background-image: url('images/landingPage.jpg');
+  background-size: cover;
+  background-position: top;
+  background-blend-mode: difference;
+
+  box-shadow: 0.2em 0.2em 1em #333;
+
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  justify-content: space-around;
+  -ms-align-items: center;
+  align-items: center;
+}
+
+#topNav a {
+  color: #fff;
+  font-size: 1.5em;
+}
+
+#topNav a:hover {
+  color: #B8CCC1;
+  transition: 0.2s;
+}
+
+#topNav span {
+  font-family: 'Lobster', cursive;
+  font-size: 1.5em;
+}
+
+
+
+
+/* Main section content */
+.section {
+  /*background-color: #F7F1F3;*/
+  border-radius: 2em;
+  padding: 3em 0;
+  margin-bottom: 6em;
+}
+
+/* Portfolio content */
+img {
+  height: 32vh;
+  box-shadow: 0.2em 0.2em 1em #333;
+  margin: 1em;
+}
+
+.topImg img {
+  height: 46vh;
+}
+
+.text {
+  width: 62vw;
+  text-align: center;
+}
+
+.text span {
+  background-color: #92626F;
+  border-radius: 1em;
+  padding: 0.5em;
+  margin: 1em;
+  /*margin-top: 4em;*/
+}
+
+/* Contact content */
+#contactIcons {
+  justify-content: center;
+  background-color: #92626F;
+  width: 28vw;
+  border-radius: 2em;
+  padding: 0.5em;
+  margin-top: 4em;
+}
+
+.icon {
+  height: 2em;
+  width: 2em;
+  background-size: cover;
+  background-position: center;
+  margin: 0 2em;
+}
+
+#github {
+  background-image: url('assets/github.png');
+}
+#twitter {
+  background-image: url('assets/twitter.png');
+}
+#linkedin {
+  background-image: url('assets/linkedin.png');
+}
+#email {
+  background-image: url('assets/email.png');
+}
+
+/* The footer */
+footer {
+  height: 1em;
+  width: 100vw;
+  padding: 1em;
+  /*margin-top: 8em;*/
+  text-align: center;
+  background-color: #B8CCC1;
+}

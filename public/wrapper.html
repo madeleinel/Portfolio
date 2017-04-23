@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <title>Portfolio Page</title>
+    <!-- Set up basic properties of the page -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Link to the stylesheet & custom font -->
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="mediaQuery.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+  </head>
+
+  <body>
+    <header>
+      <!-- Site navbar > will be visible at all times apart from the landing page (though minimised on smaller screens) -->
+      <nav id="topNav">
+        <li><a class="navLink" href="/about">About</a></li>
+        <li><a class="navLink" href="/portfolio">Portfolio</a></li>
+        <li><a class="navLink" href="/"><span>Madeleine Linder</span></a></li>
+        <li><a class="navLink" href="https://github.com/madeleinel" target="_blank">GitHub</a></li>
+        <li><a class="navLink" href="/contact">Contact</a></li>
+
+        <!-- <li><a class="navLink contactIcon" href="https://uk.linkedin.com/in/madeleinelinder" target="_blank"><div class="icon" id="linkedin"></div></a></li> -->
+        <!-- <li><a class="navLink contactIcon" href="https://twitter.com/Muddiqe" target="_blank"><div class="icon" id="twitter"></div></a></li> -->
+        <!-- <li><a class="navLink contactIcon" href="https://github.com/madeleinel" target="_blank"><div class="icon" id="github"></div></a></li> -->
+        <!-- <li><a class="navLink contactIcon" href="mailto:madeleinelinder@hotmail.com" target="_blank"><div class="icon" id="email"></div></a></li> -->
+      </nav>
+    </header>
+
+    <!-- The main content of the page > 2 side columns & 1 main column, set up using flexbox (turning into rows on smaller screens) -->
+    <main>
+      <!-- left sidebar > will be above main content on smaller screens -->
+      <div id="leftSidebar"></div>
+
+      <!-- the main content column -->
+      <div id="mainColumn">
+
+        <!-- CONTACT section -->
+        <div class="section" id="content">
+          <h2>Testing</h2>
+
+          <div class="container">
+            <div class="row left">
+              <div class="column">
+                <img src="images/backgroundPattern.jpg" />
+              </div>
+              <div class="column">
+                <p>texttexttext</p>
+              </div>
+            </div>
+            <div class="row right">
+              <div class="column">
+                <p>texttexttext</p>
+              </div>
+              <div class="column">
+                <img src="images/backgroundPattern.jpg" />
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- right sidebar > will be below main content on smaller screens -->
+      <div id="rightSidebar"></div>
+    </main>
+
+    <!-- page footer -->
+    <footer>
+      <p>Created by Madeleine Linder (2017)</p>
+    </footer>
+
+    <!-- link to the JavaScript file -->
+    <script src="script.js"></script>
+  </body>
+
+</html>
