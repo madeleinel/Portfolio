@@ -8,7 +8,7 @@ var port = process.env.PORT || 5500;
 
 // var formidable = require('express-formidable');
 // app.use(formidable());
-// What was this used for in the node girls express workshop?
+// What was this used for in the Node Girls express workshop?
 
 // var view = require(__dirname + '/views/view.js');
 
