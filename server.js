@@ -4,6 +4,8 @@ var express = require('express');
 var app = express();
 app.use(express.static('public'));
 
+var port = process.env.PORT || 5500;
+
 // var formidable = require('express-formidable');
 // app.use(formidable());
 // What was this used for in the node girls express workshop?
