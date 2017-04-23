@@ -8,7 +8,7 @@ app.use(express.static('public'));
 // app.use(formidable());
 // What was this used for in the node girls express workshop?
 
-var view = require(__dirname + '/views/view.js');
+// var view = require(__dirname + '/views/view.js');
 
 app.get('/', function (request, response) {
   // response.sendFile(__dirname + '/public/index.html'); // Redundant code
