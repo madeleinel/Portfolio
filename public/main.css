@@ -6,6 +6,41 @@ body {
   font-family: Raleway, sans-serif;
 }
 
+/* Landing page */
+#landingPage {
+  height: 100vh;
+  width: 100vw;
+
+  background-color: #b27686;
+  background-image: url('images/landingPage.jpg');
+  background-size: cover;
+  background-position: right;
+  background-blend-mode: difference;
+
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  justify-content: center;    /* center horizontally */
+  -ms-align-items: center;    /* center vertically */
+  align-items: center;
+  text-align: center;
+}
+
+#landingPage a {
+  font-family: 'Lobster', cursive;
+  font-size: 8em;
+  color: #fff;
+  text-shadow: 2px 2px 4px #111;
+}
+
+#landingPage a:hover {
+  -webkit-filter: drop-shadow(0px 0px 4px rgba(255, 255, 255, 0.8));
+  transition: 0.2s;
+}
+
 /* Basic structure of the page */
 main {
   margin-top: 4em;    /* Make sure it starts displaying under the navbar */
@@ -77,7 +112,7 @@ main {
 
 #topNav a:hover {
   color: #B8CCC1;
-  transition: 0.5s;
+  transition: 0.2s;
 }
 
 #topNav span {
