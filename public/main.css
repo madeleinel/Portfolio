@@ -1,9 +1,20 @@
-* {
-  border: solid 1px pink;
+div {
+  /*border: solid 1px purple;*/
 }
 
 body {
   font-family: Raleway, sans-serif;
+}
+
+h2 {
+  font-family: 'Lobster', cursive;
+  font-size: 4em;
+  color: #b27686;
+  text-align: center;
+  padding: 1em 0;
+
+  /*text-decoration: overline;*/
+  border: 1px solid purple;
 }
 
 /* Landing page */
@@ -33,11 +44,11 @@ body {
   font-family: 'Lobster', cursive;
   font-size: 8em;
   color: #fff;
-  text-shadow: 2px 2px 4px #111;
+  text-shadow: 0.2rem 0.2rem 0.4rem #111;
 }
 
 #landingPage a:hover {
-  -webkit-filter: drop-shadow(0px 0px 4px rgba(255, 255, 255, 0.8));
+  -webkit-filter: drop-shadow(0 0 0.2rem rgba(255, 255, 255, 0.8));
   transition: 0.2s;
 }
 
@@ -54,15 +65,11 @@ main {
 #leftSidebar {
   order: 1;
   flex: 1;
-
-  background-color: yellow;
 }
 
 #rightSidebar {
   order: 3;
   flex: 1;
-
-  background-color: orange;
 }
 
 #mainColumn {
@@ -76,7 +83,33 @@ main {
   -ms-flex-direction: column;
   flex-direction: column;
 
-  background-color: pink;
+  /*background-color: pink;*/
+}
+
+.row {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  justify-content: center;
+
+  /*-webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;*/
+}
+
+.column {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+
+  /*-ms-align-items: center;
+  align-items: center;*/
 }
 
 /* Site navbar */
@@ -93,6 +126,8 @@ main {
   background-size: cover;
   background-position: top;
   background-blend-mode: difference;
+
+  box-shadow: 0.2em 0.2em 1em #333;
 
   display: -webkit-flex;
   display: -ms-flex;
@@ -120,11 +155,79 @@ main {
   font-size: 1.5em;
 }
 
+
+
+
+/* Main section content */
+.left img {
+  /*border-radius: 55% 12% 55% 12%;*/
+  /*border: 0.4em solid #fff;*/
+}
+
+.right img {
+  /*border-radius: 12% 55% 12% 55%;*/
+}
+
+.column img {
+  width: 20vw;
+  flex: 2;
+  /*order: 1;*/
+
+  box-shadow: 0.2em 0.2em 1em #333;
+  margin: 1em;
+}
+
+.column p {
+  width: 46vw;
+  flex: 5;
+  /*order: 2;*/
+
+  margin-top: 2em;
+  margin-left: 1em;
+}
+
+
+
+
+
 /* The footer */
 footer {
   height: 1em;
   width: 100vw;
   padding: 1em;
+  margin-top: 8em;
   text-align: center;
   background-color: #B8CCC1;
+}
+
+
+
+
+
+
+/* Contact icons */
+.contactIcon {
+  /*background-color: #fff;*/
+}
+
+.icon {
+  height: 2em;
+  width: 2em;
+  /*background-color: #fff;*/
+
+  background-size: cover;
+  background-position: center;
+}
+
+#github {
+  background-image: url('assets/github.png');
+}
+#twitter {
+  background-image: url('assets/twitter.png');
+}
+#linkedin {
+  background-image: url('assets/linkedin.png');
+}
+#email {
+  background-image: url('assets/email.png');
 }
