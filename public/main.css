@@ -12,9 +12,19 @@ h2 {
   color: #b27686;
   text-align: center;
   padding: 1em 0;
+}
 
-  /*text-decoration: overline;*/
-  border: 1px solid purple;
+h3 {
+  font-family: 'Lobster', cursive;
+  font-size: 2em;
+  text-align: center;
+  padding: 1em 0;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.4em;
+  margin-bottom: 1em;
 }
 
 /* Landing page */
@@ -61,6 +71,8 @@ main {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+
+  min-height: 87vh;
 }
 #leftSidebar {
   order: 1;
@@ -82,8 +94,6 @@ main {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-
-  /*background-color: pink;*/
 }
 
 .row {
@@ -107,9 +117,8 @@ main {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-
-  /*-ms-align-items: center;
-  align-items: center;*/
+  -ms-align-items: center;
+  align-items: center;
 }
 
 /* Site navbar */
@@ -159,64 +168,53 @@ main {
 
 
 /* Main section content */
-.left img {
-  /*border-radius: 55% 12% 55% 12%;*/
-  /*border: 0.4em solid #fff;*/
+.section {
+  /*background-color: #F7F1F3;*/
+  border-radius: 2em;
+  padding: 3em 0;
+  margin-bottom: 6em;
 }
 
-.right img {
-  /*border-radius: 12% 55% 12% 55%;*/
-}
-
-.column img {
-  width: 20vw;
-  flex: 2;
-  /*order: 1;*/
-
+/* Portfolio content */
+img {
+  height: 32vh;
   box-shadow: 0.2em 0.2em 1em #333;
   margin: 1em;
 }
 
-.column p {
-  width: 46vw;
-  flex: 5;
-  /*order: 2;*/
-
-  margin-top: 2em;
-  margin-left: 1em;
+.topImg img {
+  height: 46vh;
 }
 
-
-
-
-
-/* The footer */
-footer {
-  height: 1em;
-  width: 100vw;
-  padding: 1em;
-  margin-top: 8em;
+.text {
+  width: 62vw;
   text-align: center;
-  background-color: #B8CCC1;
 }
 
+.text span {
+  background-color: #92626F;
+  border-radius: 1em;
+  padding: 0.5em;
+  margin: 1em;
+  /*margin-top: 4em;*/
+}
 
-
-
-
-
-/* Contact icons */
-.contactIcon {
-  /*background-color: #fff;*/
+/* Contact content */
+#contactIcons {
+  justify-content: center;
+  background-color: #92626F;
+  width: 28vw;
+  border-radius: 2em;
+  padding: 0.5em;
+  margin-top: 4em;
 }
 
 .icon {
   height: 2em;
   width: 2em;
-  /*background-color: #fff;*/
-
   background-size: cover;
   background-position: center;
+  margin: 0 2em;
 }
 
 #github {
@@ -230,4 +228,14 @@ footer {
 }
 #email {
   background-image: url('assets/email.png');
+}
+
+/* The footer */
+footer {
+  height: 1em;
+  width: 100vw;
+  padding: 1em;
+  /*margin-top: 8em;*/
+  text-align: center;
+  background-color: #B8CCC1;
 }

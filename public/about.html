@@ -10,51 +10,59 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Link to the stylesheet & custom font -->
     <link rel="stylesheet" type="text/css" href="reset.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="mediaQuery.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
   </head>
 
   <body>
-    <!-- Site navbar > will be visible at all times apart from the landing page (though minimised on smaller screens) -->
-    <nav id="topNav">
-      <li><a class="navLink" href="/portfolio">Portfolio</a></li>
-      <li><a class="navLink" href="/about">About</a></li>
-      <li><a class="navLink" href="/contact">Contact</a></li>
-    </nav>
+    <header>
+      <!-- Site navbar > will be visible at all times apart from the landing page (though minimised on smaller screens) -->
+      <nav id="topNav">
+        <li><a class="navLink" href="/about">About</a></li>
+        <li><a class="navLink" href="/skills">Skills</a></li>
+        <li><a class="navLink" href="/"><span>Madeleine Linder</span></a></li>
+        <li><a class="navLink" href="/portfolio">Portfolio</a></li>
+        <li><a class="navLink" href="/contact">Contact</a></li>
+
+        <!-- <li><a class="navLink contactIcon" href="https://uk.linkedin.com/in/madeleinelinder" target="_blank"><div class="icon" id="linkedin"></div></a></li> -->
+        <!-- <li><a class="navLink contactIcon" href="https://twitter.com/Muddiqe" target="_blank"><div class="icon" id="twitter"></div></a></li> -->
+        <!-- <li><a class="navLink contactIcon" href="https://github.com/madeleinel" target="_blank"><div class="icon" id="github"></div></a></li> -->
+        <!-- <li><a class="navLink contactIcon" href="mailto:madeleinelinder@hotmail.com" target="_blank"><div class="icon" id="email"></div></a></li> -->
+      </nav>
+    </header>
 
     <!-- The main content of the page > 2 side columns & 1 main column, set up using flexbox (turning into rows on smaller screens) -->
     <main>
       <!-- left sidebar > will be above main content on smaller screens -->
-      <div class="column" id="leftSidebar"></div>
+      <div id="leftSidebar"></div>
 
       <!-- the main content column -->
-      <div class="column" id="mainColumn">
+      <div id="mainColumn">
 
-        <!-- ABOUT section -->
-        <div class="section" id="about">
           <h2>About</h2>
-          <content id="aboutMe">
-            <p>I am an ambitious problem-solver who thrives on new challenges. With plenty of experience working within an international environment, I am currently switching careers and am looking for a new and exciting position with opportunities to develop within web development.</p>
-            <p>I love programming and the fact that it gives me the ability to create things, and be creative and use logic to solve challenging problems — not to mention that there’s always more to learn! It’s something that I get a lot of energy from and love doing.</p>
-            <p>Do get in touch using the contact details <a href="/contact">here</a> if you want to discuss this further!</p>
-            <h4>Skills:</h4>
-              <span class="skill">JavaScript</span>
-              <span class="skill">HTML</span>
-              <span class="skill">CSS</span>
-              <span class="skill">Python</span>
-              <span class="skill">APIs</span>
-          </content>
-        </div>
 
-        <div class="section" id="filler">
-          <!-- put something here? -->
-        </div>
+          <div class="container">
 
-      </div>
+            <div class="column section">
+              <div class="row">
+                <div class="text">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquet sollicitudin fermentum. Pellentesque vehicula orci in dolor molestie, non tincidunt ligula aliquam. Aenean eleifend purus vel molestie vehicula. Pellentesque non interdum nisi. Sed viverra lorem eget purus vestibulum, hendrerit elementum nibh mollis.</p>
+                  <p>Aliquam non urna varius, pharetra urna sed, interdum justo. Aenean libero risus, imperdiet sit amet rhoncus et, eleifend eu sem. Pellentesque vitae nulla dapibus, ornare est non, hendrerit velit. Vivamus venenatis maximus est, eget vehicula lorem maximus volutpat. Vivamus at libero a ligula faucibus commodo.</p>
+                  <p>Nam pharetra interdum ex eget posuere. Suspendisse commodo nisl in pretium semper. Pellentesque faucibus nibh nunc, auctor auctor purus sodales at.</p>
+                  <p>Praesent lacus metus, eleifend vel tellus ut, convallis gravida diam. Vivamus rhoncus nunc quis orci sollicitudin porta. Ut nunc justo, tincidunt cursus orci sit amet, tempor congue massa.</p>
+                  <p>Nam non quam luctus, finibus felis nec, gravida dui. Curabitur condimentum, purus pretium viverra interdum, nibh massa viverra odio, sit amet malesuada magna urna et neque. Phasellus ultricies auctor nibh, id feugiat quam varius quis. Cras pretium odio vel mauris tempor, at pharetra sapien vehicula. Aliquam erat volutpat. Morbi sodales ac leo eu ultricies. Aenean aliquam eleifend convallis. Ut vulputate id libero eget posuere.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>    <!-- Closing .container -->
+
+      </div>    <!-- Closing #mainColumn -->
 
       <!-- right sidebar > will be below main content on smaller screens -->
-      <div class="column" id="rightSidebar"></div>
+      <div id="rightSidebar"></div>
     </main>
 
     <!-- page footer -->
