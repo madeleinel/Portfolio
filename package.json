@@ -18,6 +18,9 @@
   },
   "homepage": "https://github.com/madeleinel/portfolio#readme",
   "dependencies": {
-    "express": "^4.15.2"
+    "ejs": "^2.5.6",
+    "express": "^4.15.2",
+    "pug": "^2.0.0-beta.12",
+    "underscore": "^1.8.3"
   }
 }

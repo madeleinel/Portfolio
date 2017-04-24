@@ -199,6 +199,10 @@ img {
   /*margin-top: 4em;*/
 }
 
+.text span a {
+  color: #fff;
+}
+
 /* Contact content */
 #contactIcons {
   justify-content: center;
