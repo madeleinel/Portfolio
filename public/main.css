@@ -28,6 +28,10 @@ p {
   margin-bottom: 1em;
 }
 
+a {
+  color: #fff;
+}
+
 /* Landing page */
 #landingPage {
   height: 100vh;
@@ -51,15 +55,23 @@ p {
   text-align: center;
 }
 
-#landingPage a {
+h1 {
+  font-family: 'Poiret One', sans-serif;
+  font-size: 8em;
+  border: 0.4rem solid #fff;
+  padding: 2rem;
+  -webkit-filter: drop-shadow(0.2rem 0.2rem 0.2rem rgba(17, 17, 17, 1));
+}
+
+/*#landingPage a {
   font-family: 'Lobster', cursive;
   font-size: 8em;
   color: #fff;
   text-shadow: 0.2rem 0.2rem 0.4rem #111;
-}
+}*/
 
-#landingPage a:hover {
-  -webkit-filter: drop-shadow(0 0 0.2rem rgba(255, 255, 255, 0.8));
+h1:hover {
+  -webkit-filter: drop-shadow(0 0 0.2rem rgba(255, 255, 255, 0.6));
   transition: 0.2s;
 }
 
@@ -152,7 +164,7 @@ main {
 }
 
 #topNav a {
-  color: #fff;
+  /*color: #fff;*/
   font-size: 1.5em;
 }
 
@@ -162,8 +174,10 @@ main {
 }
 
 #topNav span {
-  font-family: 'Lobster', cursive;
-  font-size: 1.5em;
+  font-family: 'Poiret One', sans-serif;
+  font-size: 2em;
+  /*font-family: 'Lobster', cursive;
+  font-size: 1.5em;*/
 }
 
 /* Main section content */
@@ -200,9 +214,9 @@ img {
   display: inline-block;
 }
 
-.text span a {
+/*.text span a {
   color: #fff;
-}
+}*/
 
 /* Contact content */
 #contactIcons {
