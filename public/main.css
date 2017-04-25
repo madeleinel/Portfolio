@@ -16,7 +16,8 @@ h2 {
 }
 
 h3 {
-  font-family: 'Lobster', cursive;
+  /*font-family: 'Poiret One', sans-serif;*/
+  /*font-family: 'Lobster', cursive;*/
   font-size: 2em;
   text-align: center;
   padding: 1em 0;
@@ -164,8 +165,8 @@ main {
 }
 
 #topNav a {
-  /*color: #fff;*/
-  font-size: 1.5em;
+  font-family: 'Poiret One', sans-serif;
+  font-size: 1.8em;
 }
 
 #topNav a:hover {
@@ -174,10 +175,7 @@ main {
 }
 
 #topNav span {
-  font-family: 'Poiret One', sans-serif;
-  font-size: 2em;
-  /*font-family: 'Lobster', cursive;
-  font-size: 1.5em;*/
+  font-size: 1.6em;
 }
 
 /* Main section content */
