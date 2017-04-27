@@ -17,7 +17,7 @@ app.get('/', function (request, response) {
 });
 
 app.get('/testing', function (request, response) {
-  response.sendFile(__dirname + '/public/about_contact.html');
+  response.sendFile(__dirname + '/public/about.html');
 });
 
 app.get('/about', function (request, response) {
