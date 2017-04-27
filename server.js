@@ -17,23 +17,15 @@ app.get('/', function (request, response) {
 });
 
 app.get('/testing', function (request, response) {
-  response.sendFile(__dirname + '/public/wrapper.html');
+  response.sendFile(__dirname + '/public/about_contact.html');
 });
 
 app.get('/about', function (request, response) {
-  response.sendFile(__dirname + '/public/about.html');
-});
-
-app.get('/skills', function (request, response) {
-  response.sendFile(__dirname + '/public/skills.html');
+  response.sendFile(__dirname + '/public/about_contact.html');
 });
 
 app.get('/portfolio', function (request, response) {
   response.sendFile(__dirname + '/public/portfolio.html');
-});
-
-app.get('/contact', function (request, response) {
-  response.sendFile(__dirname + '/public/contact.html');
 });
 
 app.listen(port, function() {

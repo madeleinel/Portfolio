@@ -64,7 +64,7 @@ h1 {
   -webkit-filter: drop-shadow(0.2rem 0.2rem 0.2rem rgba(17, 17, 17, 1));
 }
 
-/*#landingPage a {
+/*#landingPage a {        Old version of the landing page title
   font-family: 'Lobster', cursive;
   font-size: 8em;
   color: #fff;
@@ -78,7 +78,7 @@ h1:hover {
 
 /* Basic structure of the page */
 main {
-  margin-top: 4em;    /* Make sure it starts displaying under the navbar */
+  margin-top: 4em;    /* To ensure it starts displaying under the navbar */
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
@@ -164,9 +164,16 @@ main {
   align-items: center;
 }
 
+#topNav li {
+  min-width: 6rem;
+  text-align: right;
+  /*border: 1px solid yellow;*/
+}
+
 #topNav a {
   font-family: 'Poiret One', sans-serif;
   font-size: 1.8em;
+  /*border: 1px solid white;*/
 }
 
 #topNav a:hover {
@@ -180,10 +187,7 @@ main {
 
 /* Main section content */
 .section {
-  /*background-color: #F7F1F3;*/
-  border-radius: 2em;
   padding: 3em 0;
-  margin-bottom: 6em;
 }
 
 /* Portfolio content */
@@ -209,9 +213,6 @@ img {
   padding: 0.5em;
   margin: 1em;
   display: inline-block;
-
-  /*background-color: #92626F;
-  color: #fff;*/
 }
 
 .text span a {
@@ -225,7 +226,7 @@ img {
   width: 28vw;
   border-radius: 2em;
   padding: 0.5em;
-  margin-top: 4em;
+  margin-bottom: 8em;
 }
 
 .icon {
@@ -254,7 +255,10 @@ footer {
   height: 1em;
   width: 100vw;
   padding: 1em;
-  /*margin-top: 8em;*/
   text-align: center;
   background-color: #B8CCC1;
+}
+
+footer p {
+  margin-bottom: 0;
 }
