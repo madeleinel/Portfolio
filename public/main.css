@@ -204,17 +204,19 @@ img {
 }
 
 .text span {
-  background-color: #92626F;
+  border: 0.2em solid #92626F;
   border-radius: 1em;
   padding: 0.5em;
   margin: 1em;
-  color: #fff;
   display: inline-block;
+
+  /*background-color: #92626F;
+  color: #fff;*/
 }
 
-/*.text span a {
-  color: #fff;
-}*/
+.text span a {
+  color: black;
+}
 
 /* Contact content */
 #contactIcons {
