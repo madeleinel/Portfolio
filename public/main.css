@@ -331,7 +331,14 @@ footer {
   width: 100vw;
   padding: 1em;
   text-align: center;
-  background-color: #B8CCC1;
+  /*background-color: #B8CCC1;*/
+
+  color: #fff;
+  background-color: #b27686;
+  background-image: url('images/landingPage.jpg');
+  background-size: cover;
+  background-position: bottom;
+  background-blend-mode: difference;
 }
 
 footer p {
