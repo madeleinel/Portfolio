@@ -222,6 +222,11 @@ img {
   margin: 1em;
 }
 
+.banner img {
+  height: auto;
+  border-radius: 2em;
+}
+
 .text {
   width: 62vw;
   text-align: center;
