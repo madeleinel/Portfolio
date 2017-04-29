@@ -327,9 +327,12 @@ img {
 
 /* The footer */
 footer {
-  height: 1em;
+  /*height: 1em;*/
   width: 100vw;
-  padding: 1em;
+  padding-top: 0.5em;
+  padding-bottom: 0.2em;
+  font-family: 'Poiret One', sans-serif;
+  font-size: 1.2em;
   text-align: center;
   /*background-color: #B8CCC1;*/
 
