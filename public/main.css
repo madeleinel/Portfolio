@@ -222,6 +222,11 @@ img {
   margin: 1em;
 }
 
+.banner img {
+  height: auto;
+  border-radius: 2em;
+}
+
 .text {
   width: 62vw;
   text-align: center;
@@ -327,11 +332,21 @@ img {
 
 /* The footer */
 footer {
-  height: 1em;
+  /*height: 1em;*/
   width: 100vw;
-  padding: 1em;
+  padding-top: 0.5em;
+  padding-bottom: 0.2em;
+  font-family: 'Poiret One', sans-serif;
+  font-size: 1.2em;
   text-align: center;
-  background-color: #B8CCC1;
+  /*background-color: #B8CCC1;*/
+
+  color: #fff;
+  background-color: #b27686;
+  background-image: url('images/landingPage.jpg');
+  background-size: cover;
+  background-position: bottom;
+  background-blend-mode: difference;
 }
 
 footer p {
