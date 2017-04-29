@@ -47,6 +47,11 @@ a {
   color: #92626F;
 }
 
+.text a:hover {
+  color: #6E8F88;
+  transition: 0.2s;
+}
+
 /* Landing page */
 #landingPage {
   height: 100vh;
@@ -259,7 +264,7 @@ img {
 }
 
 .text a span:hover {
-  border-color: #B8CCC1;
+  border-color: #6E8F88;
   transition: 0.2s;
 }
 
@@ -293,6 +298,11 @@ img {
   margin: 0;
   background-size: cover;
   background-position: center;
+}
+
+#iconList a:hover {
+  background-color: #6E8F88;
+  transition: 0.2s;
 }
 
 #github {
