@@ -17,11 +17,11 @@ app.get('/', function (request, response) {
 });
 
 app.get('/testing', function (request, response) {
-  response.sendFile(__dirname + '/public/about_contact.html');
+  response.sendFile(__dirname + '/public/wrapper.html');
 });
 
 app.get('/about', function (request, response) {
-  response.sendFile(__dirname + '/public/about_contact.html');
+  response.sendFile(__dirname + '/public/about.html');
 });
 
 app.get('/portfolio', function (request, response) {

@@ -3,7 +3,7 @@ div {
 }
 
 body {
-  font-family: Raleway, sans-serif;
+  font-family: 'Raleway', sans-serif;
   overflow-x: hidden;
 }
 
@@ -25,7 +25,12 @@ h3 {
   /*font-family: 'Lobster', cursive;*/
   font-size: 2em;
   text-align: center;
-  padding: 1em 0;
+  padding-bottom: 1em;
+}
+
+h4 {
+  font-size: 1.5em;
+  padding: 1em;
 }
 
 p {
@@ -36,6 +41,10 @@ p {
 
 a {
   color: #fff;
+}
+
+.text a {
+  color: #92626F;
 }
 
 /* Landing page */
@@ -212,6 +221,30 @@ img {
   padding: 3em 1em;
 }
 
+.textColumn {
+  flex: 1;
+  margin-bottom: 1em;
+  /*border: 1px solid orange;*/
+}
+
+.rightAlign {
+  text-align: right;
+  padding-right: 2em;
+}
+
+.rightAlign h4 {
+  padding-right: 0;
+}
+
+.leftAlign {
+  text-align: left;
+  padding-left: 2em;
+}
+
+.leftAlign h4 {
+  padding-left: 0;
+}
+
 .text span {
   border: 0.2em solid #92626F;
   border-radius: 1em;
@@ -220,26 +253,46 @@ img {
   display: inline-block;
 }
 
-.text span a {
+.text a span {
   color: black;
+  margin: 0 -0.4em;
+}
+
+.text a span:hover {
+  border-color: #B8CCC1;
+  transition: 0.2s;
 }
 
 /* Contact content */
-#contactIcons {
+/*#contactIcons {
   justify-content: center;
   background-color: #92626F;
   width: 28vw;
   border-radius: 2em;
   padding: 0.5em;
   margin-bottom: 8em;
+}*/
+
+#iconList {
+  justify-content: center;
+  margin-top: -1em;
 }
 
-.icon {
-  height: 2em;
-  width: 2em;
+#iconList a {
+  width: 2.4em;
+  height: 2.4em;
+  padding: 0.8em;
+  background-color: #92626F;
+  border-radius: 4em;
+  margin: 1em 2em;
+}
+
+#iconList .icon {
+  width: inherit;
+  height: inherit;
+  margin: 0;
   background-size: cover;
   background-position: center;
-  margin: 0 2em;
 }
 
 #github {
