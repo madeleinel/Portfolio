@@ -26,6 +26,11 @@ h3 {
   font-size: 2em;
   text-align: center;
   padding-bottom: 1em;
+  width: 100%;
+}
+
+.rightAlign h3 {
+  text-align: right;
 }
 
 h4 {
@@ -37,6 +42,7 @@ p {
   font-size: 1.1em;
   line-height: 1.4em;
   margin-bottom: 1em;
+  width: 100%;
 }
 
 a {
@@ -45,6 +51,11 @@ a {
 
 .text a {
   color: #92626F;
+}
+
+.text a:hover {
+  color: #6E8F88;
+  transition: 0.2s;
 }
 
 /* Landing page */
@@ -206,13 +217,9 @@ main {
 
 /* Portfolio content */
 img {
-  height: 30vh;
+  height: 35vh;
   box-shadow: 0.2em 0.2em 1em #333;
   margin: 1em;
-}
-
-.topImg img {
-  height: 40vh;
 }
 
 .text {
@@ -259,8 +266,13 @@ img {
 }
 
 .text a span:hover {
-  border-color: #B8CCC1;
+  border-color: #6E8F88;
   transition: 0.2s;
+}
+
+.text em {
+  color: #92626F;
+  font-weight: bold;
 }
 
 /* Contact content */
@@ -275,7 +287,7 @@ img {
 
 #iconList {
   justify-content: center;
-  margin-top: -1em;
+  margin-top: 2em;
 }
 
 #iconList a {
@@ -284,7 +296,7 @@ img {
   padding: 0.8em;
   background-color: #92626F;
   border-radius: 4em;
-  margin: 1em 2em;
+  margin: 1em 6em 1em 2em;
 }
 
 #iconList .icon {
@@ -293,6 +305,11 @@ img {
   margin: 0;
   background-size: cover;
   background-position: center;
+}
+
+#iconList a:hover {
+  background-color: #6E8F88;
+  transition: 0.2s;
 }
 
 #github {
