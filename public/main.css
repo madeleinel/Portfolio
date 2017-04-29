@@ -211,13 +211,9 @@ main {
 
 /* Portfolio content */
 img {
-  height: 30vh;
+  height: 35vh;
   box-shadow: 0.2em 0.2em 1em #333;
   margin: 1em;
-}
-
-.topImg img {
-  height: 40vh;
 }
 
 .text {
