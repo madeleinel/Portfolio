@@ -1,34 +1,22 @@
-// Set up the portfolio slideshow
+// Toggle the navbar on smaller screens
+// Set up dropdown menu on smaller screens
 
-let slideIndex = 1;
-showDiv(slideIndex);
+const navbar = document.getElementById("topNav");
+const icon = document.getElementById("navIcon");
 
-function currentDiv(n) {
-  showDiv(slideIndex = n);
-}
+icon.addEventListener("click", (e) => {
 
-function showDiv(n) {
-  let i;
-  const slides = document.getElementsByClassName("slides");
-  const numOfSlides = slides.length;
-  const options = document.getElementsByClassName("chooseImage");
-  const numOfOptions = options.length;
+  console.log(navbar.className);
 
-  if (n > numOfSlides) {
-    slideIndex = 1;
-  } if (n < 1) {
-    slideIndex = numOfSlides;
+  if (navbar.id === "topNav") {
+    navbar.id += "_responsive";
+    // navbar.style.display = "block";
+
+    console.log(navbar.id);
+    console.log(navbar);
+  } else {
+    navbar.id = "topNav";
+
+    console.log(navbar.id);
   }
-
-  for (i = 0; i < numOfSlides; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < numOfOptions; i++) {
-    options[i].className = options[i].className.replace(" currentImage", "");
-  }
-
-  slides[slideIndex-1].style.display = "-webkit-flex";
-  slides[slideIndex-1].style.display = "-ms-flex";
-  slides[slideIndex-1].style.display = "flex";
-  options[slideIndex-1].className += " currentImage";
-}
+})
