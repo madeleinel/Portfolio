@@ -4,7 +4,7 @@
 const navbar = document.getElementById("topNav");
 const icon = document.getElementById("navIcon");
 
-icon.addEventListener("click", (e) => {
+icon.addEventListener("click touchstart", (e) => {
 
   console.log(navbar.className);
 
