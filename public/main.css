@@ -166,7 +166,7 @@ main {
 
   background-color: #b27686;
   background-image: url('images/landingPage.jpg');
-  background-size: 102vw cover;
+  background-size: cover;
   background-position: top;
   background-blend-mode: difference;
 
@@ -330,7 +330,7 @@ footer {
   color: #fff;
   background-color: #b27686;
   background-image: url('images/landingPage.jpg');
-  background-size: 102vw cover;
+  background-size: cover;
   background-position: bottom;
   background-blend-mode: difference;
 }

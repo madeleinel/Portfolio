@@ -24,6 +24,9 @@
     padding-left: 0;
     padding-right: 0;
   }
+  #topNav {
+    background-size: 162vw auto;
+  }
   #topNav a.navLink {
     display: none;
   }
@@ -73,7 +76,7 @@
 
     background-color: #b27686;
     background-image: url('images/landingPage.jpg');
-    background-size: 102vw cover;
+    background-size: 162vw auto;
     background-position: top;
     background-blend-mode: difference;
 
