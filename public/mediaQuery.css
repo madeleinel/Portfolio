@@ -1,3 +1,103 @@
-/* Create media query for dropdown topNav */
+@media screen and (max-width: 750px){
+  /* To make the site look good on smaller screens: */
+  main {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .row {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  h1 {
+    font-size: 4em;
+  }
+  .leftAlign, .rightAlign, .leftAlign h3, .rightAlign h3, .leftAlign h4, .rightAlign h4 {
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  #topNav a.navLink {
+    display: none;
+  }
+  #navIcon {
+    display: block;
+    width: 100vw;
+    font-size: 2em;
+    /*padding: 0.5em;*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
 
-/* Create media query for flexboxing: change order of structure columns and projects images & descriptions (so on top of each other instead of next to each other) */
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #navIcon a {
+    display: inline-block;
+    font-family: 'Poiret One', sans-serif;
+    padding: 0.5em 1em;
+  }
+  #navIcon a span {
+    border: 2px solid #fff;
+    padding: 0.1em;
+  }
+  #iconList {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+  #iconList a {
+    margin: 1em;
+  }
+
+  /* The dropdown menu: */
+  #topNav_responsive {
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    background-color: #b27686;
+    background-image: url('images/landingPage.jpg');
+    background-size: cover;
+    background-position: top;
+    background-blend-mode: difference;
+
+    box-shadow: 0.2em 0.2em 1em #333;
+
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+
+    padding-top: 4em;
+  }
+
+  #topNav_responsive li:nth-child(2) {
+    display: none;
+  }
+
+  #topNav_responsive a {
+    display: block;
+    width: 95vw;
+    font-family: 'Poiret One', sans-serif;
+    font-size: 1.8em;
+    text-align: right;
+    padding: 0.2em 1em 0.4em 0;
+  }
+
+  #topNav_responsive a:hover {
+    color: #B8CCC1;
+    transition: 0.2s;
+  }
+}

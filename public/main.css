@@ -21,8 +21,6 @@ h2 span {
 }
 
 h3 {
-  /*font-family: 'Poiret One', sans-serif;*/
-  /*font-family: 'Lobster', cursive;*/
   font-size: 2em;
   text-align: center;
   padding-bottom: 1em;
@@ -144,10 +142,6 @@ main {
   -ms-flex-direction: row;
   flex-direction: row;
   justify-content: center;
-
-  /*-webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;*/
 }
 
 .column {
@@ -192,13 +186,15 @@ main {
 #topNav li {
   min-width: 6rem;
   text-align: right;
-  /*border: 1px solid yellow;*/
+}
+
+#navIcon {
+  display: none;
 }
 
 #topNav a {
   font-family: 'Poiret One', sans-serif;
   font-size: 1.8em;
-  /*border: 1px solid white;*/
 }
 
 #topNav a:hover {
@@ -223,8 +219,10 @@ img {
 }
 
 .banner img {
-  height: auto;
-  border-radius: 2em;
+  height: 3em;
+  width: 3em;
+  border-radius: 3em;
+  margin: 0 2em;
 }
 
 .text {
@@ -236,7 +234,6 @@ img {
 .textColumn {
   flex: 1;
   margin-bottom: 1em;
-  /*border: 1px solid orange;*/
 }
 
 .rightAlign {
@@ -279,16 +276,6 @@ img {
   color: #92626F;
   font-weight: bold;
 }
-
-/* Contact content */
-/*#contactIcons {
-  justify-content: center;
-  background-color: #92626F;
-  width: 28vw;
-  border-radius: 2em;
-  padding: 0.5em;
-  margin-bottom: 8em;
-}*/
 
 #iconList {
   justify-content: center;
@@ -339,7 +326,6 @@ footer {
   font-family: 'Poiret One', sans-serif;
   font-size: 1.2em;
   text-align: center;
-  /*background-color: #B8CCC1;*/
 
   color: #fff;
   background-color: #b27686;
