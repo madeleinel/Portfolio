@@ -13,6 +13,11 @@
   h1 {
     font-size: 4em;
   }
+  img {
+    max-width: 96vw;
+    height: auto;
+    max-height: 35vh;
+  }
   .leftAlign, .rightAlign, .leftAlign h3, .rightAlign h3, .leftAlign h4, .rightAlign h4 {
     text-align: center;
     padding-left: 0;
