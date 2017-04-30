@@ -1,6 +1,6 @@
 // Set up dropdown menu for small screens
 
-const icon = document.getElementById("navIcon");
+const icon = document.getElementById("navToggleIcon");
 const navbar = document.getElementById("topNav");
 
 ["click", "touchstart"].forEach( input => {
