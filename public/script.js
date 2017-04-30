@@ -5,13 +5,13 @@ const navbar = document.getElementById("topNav");
 
 ["click", "touchstart"].forEach( input => {
   icon.addEventListener(input, (e) => {
-    e.preventDefault()
+    e.preventDefault()    // Prevent 'click' to be triggered as well when tapping on the icon using touch screens
     if (navbar.id === "topNav") {
-      navbar.id += "_responsive";
+      navbar.id += "_responsive";   // Change id of element to 'topNav_responsive'
     } else {
-      navbar.id = "topNav";
+      navbar.id = "topNav";   // If id name is already 'topNav_responsive', change it back to 'topNav'
     }
-  });
+  }, false);
 });
 
 // icon.addEventListener("click", (e) => {

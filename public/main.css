@@ -81,7 +81,7 @@ a {
 
 h1 {
   font-family: 'Poiret One', sans-serif;
-  font-size: 8em;
+  font-size: 6em;
   border: 0.4rem solid #fff;
   padding: 2rem;
   -webkit-filter: drop-shadow(0.2rem 0.2rem 0.2rem rgba(17, 17, 17, 1));
@@ -166,7 +166,7 @@ main {
 
   background-color: #b27686;
   background-image: url('images/landingPage.jpg');
-  background-size: cover;
+  background-size: 102vw cover;
   background-position: top;
   background-blend-mode: difference;
 
@@ -320,7 +320,7 @@ img {
 /* The footer */
 footer {
   /*height: 1em;*/
-  width: 100vw;
+  width: 102vw;
   padding-top: 0.5em;
   padding-bottom: 0.2em;
   font-family: 'Poiret One', sans-serif;
@@ -330,7 +330,7 @@ footer {
   color: #fff;
   background-color: #b27686;
   background-image: url('images/landingPage.jpg');
-  background-size: cover;
+  background-size: 102vw cover;
   background-position: bottom;
   background-blend-mode: difference;
 }
