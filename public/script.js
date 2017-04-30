@@ -11,7 +11,7 @@ const navbar = document.getElementById("topNav");
     } else {
       navbar.id = "topNav";   // If id name is already 'topNav_responsive', change it back to 'topNav'
     }
-  });
+  }, false);
 });
 
 // icon.addEventListener("click", (e) => {

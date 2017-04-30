@@ -29,7 +29,7 @@
   }
   #navIcon {
     display: block;
-    width: 100vw;
+    width: 102vw;
     font-size: 2em;
     /*padding: 0.5em;*/
     position: fixed;
@@ -73,7 +73,7 @@
 
     background-color: #b27686;
     background-image: url('images/landingPage.jpg');
-    background-size: cover;
+    background-size: 102vw cover;
     background-position: top;
     background-blend-mode: difference;
 
