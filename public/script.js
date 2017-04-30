@@ -3,8 +3,9 @@
 const icon = document.getElementById("navIcon");
 const navbar = document.getElementById("topNav");
 
-["click", "touch"].forEach( input => {
+["click", "touchstart"].forEach( input => {
   icon.addEventListener(input, (e) => {
+    e.preventDefault()
     if (navbar.id === "topNav") {
       navbar.id += "_responsive";
     } else {
