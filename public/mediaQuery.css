@@ -52,6 +52,13 @@
     color: #fff;
     font-size: inherit;
     padding: 0 1em;
+
+    /* To remove default button styling on phone devices: */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /*border: none;
+    background: none;*/
   }
   #navIcon a {
     display: inline-block;
