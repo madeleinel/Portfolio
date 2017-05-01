@@ -1,11 +1,11 @@
 // Set up dropdown menu for small screens
 
-window.addEventListener("load", (active) => {   // Enable the below functions on page load
+window.addEventListener("load", () => {   // Enable the below functions on page load
 
   const icon = document.getElementById("navToggleIcon");
   const navbar = document.getElementById("topNav");
 
-  ["touchstart"].forEach( input => {   // Could use touchstart only ; supposed to work on touch and click  >> to add at start of line: "click", 
+  ["click", "touchstart"].forEach( input => {   // Could use touchstart only ; supposed to work on touch and click >> tried and it didn't work
     icon.addEventListener(input, (e) => {
       e.preventDefault()    // Prevent 'click' to be triggered as well when tapping on the icon using touch screens
       if (navbar.id === "topNav") {
