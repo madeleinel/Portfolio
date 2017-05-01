@@ -57,8 +57,9 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    /*border: none;
-    background: none;*/
+    border: none;
+    outline: none;
+    background-color: inherit;
   }
   #navIcon a {
     display: inline-block;
