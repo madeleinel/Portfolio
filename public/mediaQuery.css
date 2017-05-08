@@ -1,3 +1,5 @@
+/* To make the site look good on smaller screens (<950px, <750px and <450px) */
+
 @media screen and (max-width: 950px){
   main {
     -webkit-flex-direction: column;
@@ -31,7 +33,6 @@
 }
 
 @media screen and (max-width: 750px){
-  /* To make the site look good on smaller screens: */
   h1 {
     font-size: 4em;
   }

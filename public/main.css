@@ -205,13 +205,6 @@ img {
   margin: 1em;
 }
 
-.banner img {
-  height: 3em;
-  width: 3em;
-  border-radius: 3em;
-  margin: 0 2em;
-}
-
 .text {
   width: 62vw;
   text-align: center;
