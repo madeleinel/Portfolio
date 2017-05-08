@@ -79,23 +79,8 @@ a {
   text-align: center;
 }
 
-h1 {
-  font-family: 'Poiret One', sans-serif;
-  font-size: 6em;
-  border: 0.4rem solid #fff;
-  padding: 2rem;
-  -webkit-filter: drop-shadow(0.2rem 0.2rem 0.2rem rgba(17, 17, 17, 1));
-}
-
-/*#landingPage a {        Old version of the landing page title
-  font-family: 'Lobster', cursive;
-  font-size: 8em;
-  color: #fff;
-  text-shadow: 0.2rem 0.2rem 0.4rem #111;
-}*/
-
-h1:hover {
-  -webkit-filter: drop-shadow(0 0 0.2rem rgba(255, 255, 255, 0.6));
+#landingPage svg:hover {
+  -webkit-filter: drop-shadow(0 0 0.4rem rgba(255, 255, 255, 0.6));
   transition: 0.2s;
 }
 
@@ -169,6 +154,8 @@ main {
   background-size: cover;
   background-position: top;
   background-blend-mode: difference;
+
+  /*background-color: #334a56;*/
 
   box-shadow: 0.2em 0.2em 1em #333;
 
@@ -300,7 +287,8 @@ img {
 }
 
 #iconList a:hover {
-  background-color: #6E8F88;
+  /*background-color: #6E8F88;*/
+  background-color: #333;
   transition: 0.2s;
 }
 
