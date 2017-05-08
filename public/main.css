@@ -140,6 +140,11 @@ main {
   align-items: center;
 }
 
+.text .column {
+  /*margin: 0;
+  padding: 0;*/
+}
+
 /* Site navbar */
 #topNav {
   height: 4em;
@@ -205,12 +210,12 @@ img {
   margin: 1em;
 }
 
-.banner img {
+/*.banner img {
   height: 3em;
   width: 3em;
   border-radius: 3em;
   margin: 0 2em;
-}
+}*/
 
 .text {
   width: 62vw;
