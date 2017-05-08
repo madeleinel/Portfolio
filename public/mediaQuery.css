@@ -10,6 +10,11 @@
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
+    -ms-align-items: center;
+    align-items: center;
+  }
+  .text {
+    width: 85%;
   }
   h1 {
     font-size: 4em;
@@ -128,5 +133,8 @@
   }
   #landingPage {
     overflow: hidden;
+  }
+  .text {
+    width: 90%;
   }
 }
