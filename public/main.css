@@ -79,29 +79,10 @@ a {
   text-align: center;
 }
 
-#landingPage svg {
-  border: 1px solid purple;
-}
-
-/*h1 {
-  font-family: 'Poiret One', sans-serif;
-  font-size: 6em;
-  border: 0.4rem solid #fff;
-  padding: 2rem;
-  -webkit-filter: drop-shadow(0.2rem 0.2rem 0.2rem rgba(17, 17, 17, 1));
-}*/
-
-/*#landingPage a {        Old version of the landing page title
-  font-family: 'Lobster', cursive;
-  font-size: 8em;
-  color: #fff;
-  text-shadow: 0.2rem 0.2rem 0.4rem #111;
-}*/
-
-/*h1:hover {
-  -webkit-filter: drop-shadow(0 0 0.2rem rgba(255, 255, 255, 0.6));
+#landingPage svg:hover {
+  -webkit-filter: drop-shadow(0 0 0.4rem rgba(255, 255, 255, 0.6));
   transition: 0.2s;
-}*/
+}
 
 /* Basic structure of the page */
 main {
