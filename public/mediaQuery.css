@@ -1,5 +1,4 @@
-@media screen and (max-width: 750px){
-  /* To make the site look good on smaller screens: */
+@media screen and (max-width: 950px){
   main {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -10,7 +9,29 @@
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
+    -ms-align-items: center;
+    align-items: center;
   }
+  .text {
+    width: 85%;
+  }
+  .leftAlign, .rightAlign, .leftAlign h3, .rightAlign h3, .leftAlign h4, .rightAlign h4 {
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  #iconList {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+  #iconList a {
+    margin: 1em;
+  }
+}
+
+@media screen and (max-width: 750px){
+  /* To make the site look good on smaller screens: */
   h1 {
     font-size: 4em;
   }
@@ -18,11 +39,6 @@
     max-width: 92vw;
     height: auto;
     max-height: 35vh;
-  }
-  .leftAlign, .rightAlign, .leftAlign h3, .rightAlign h3, .leftAlign h4, .rightAlign h4 {
-    text-align: center;
-    padding-left: 0;
-    padding-right: 0;
   }
   #topNav {
     background-size: 162vw auto;
@@ -69,14 +85,6 @@
   #navIcon a span {
     border: 2px solid #fff;
     padding: 0.1em;
-  }
-  #iconList {
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-  }
-  #iconList a {
-    margin: 1em;
   }
 
   /* The dropdown menu: */
@@ -128,5 +136,8 @@
   }
   #landingPage {
     overflow: hidden;
+  }
+  .text {
+    width: 90%;
   }
 }
