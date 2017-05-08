@@ -1,4 +1,10 @@
 @media screen and (max-width: 950px){
+  main {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    overflow-x: hidden;
+  }
   .row {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -26,12 +32,6 @@
 
 @media screen and (max-width: 750px){
   /* To make the site look good on smaller screens: */
-  main {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    overflow-x: hidden;
-  }
   h1 {
     font-size: 4em;
   }
