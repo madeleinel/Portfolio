@@ -170,6 +170,8 @@ main {
   background-position: top;
   background-blend-mode: difference;
 
+  /*background-color: #334a56;*/
+
   box-shadow: 0.2em 0.2em 1em #333;
 
   display: -webkit-flex;
@@ -300,7 +302,8 @@ img {
 }
 
 #iconList a:hover {
-  background-color: #6E8F88;
+  /*background-color: #6E8F88;*/
+  background-color: #333;
   transition: 0.2s;
 }
 
