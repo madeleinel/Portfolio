@@ -16,9 +16,9 @@ app.get('/', function (request, response) {
   // response.sendFile(__dirname + '/public/index.html'); // Redundant code
 });
 
-// app.get('/testing', function (request, response) {
-//   response.sendFile(__dirname + '/public/wrapper.html');
-// });
+app.get('/testing', function (request, response) {
+  response.sendFile(__dirname + '/public/wrapper.html');
+});
 
 app.get('/about', function (request, response) {
   response.sendFile(__dirname + '/public/about.html');
