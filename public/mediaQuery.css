@@ -96,11 +96,13 @@
     left: 0;
     z-index: 1;
 
-    background-color: #b27686;
-    background-image: url('images/landingPage.jpg');
+    background-image: url("images/chalkboard.jpg");
     background-size: 162vw auto;
     background-position: top;
+    /*background-color: #b27686;
+    background-image: url('images/landingPage.jpg');
     background-blend-mode: difference;
+    background-size: 162vw auto;*/
 
     box-shadow: 0.2em 0.2em 1em #333;
 
@@ -121,6 +123,7 @@
     width: 95vw;
     font-family: 'Poiret One', sans-serif;
     font-size: 1.8em;
+    font-weight: bold;
     text-align: right;
     padding: 0.2em 1em 0.4em 0;
   }
