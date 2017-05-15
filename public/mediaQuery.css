@@ -14,7 +14,7 @@
     -ms-align-items: center;
     align-items: center;
   }
-  .text {
+  .text, .text.about {
     width: 85%;
   }
   .leftAlign, .rightAlign, .leftAlign h3, .rightAlign h3, .leftAlign h4, .rightAlign h4 {
@@ -141,7 +141,7 @@
   #landingPage {
     overflow: hidden;
   }
-  .text {
+  .text, .text.about {
     width: 90%;
   }
 }
