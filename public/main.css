@@ -62,7 +62,8 @@ a {
   width: 100vw;
 
   background-color: #b27686;
-  background-image: url('images/landingPage.jpg');
+  /*background-image: url('images/landingPage.jpg');*/
+  background-image: url("images/chalkboard.jpg");
   background-size: cover;
   background-position: right;
   background-blend-mode: difference;
@@ -149,11 +150,14 @@ main {
   left: 0;
   z-index: 1;
 
-  background-color: #b27686;
+  background-image: url("images/chalkboard.jpg");
+  background-size: cover;
+  background-position: top;
+  /*background-color: #b27686;
   background-image: url('images/landingPage.jpg');
   background-size: cover;
   background-position: top;
-  background-blend-mode: difference;
+  background-blend-mode: difference;*/
 
   /*background-color: #334a56;*/
 
@@ -182,6 +186,7 @@ main {
 #topNav a {
   font-family: 'Poiret One', sans-serif;
   font-size: 1.8em;
+  font-weight: bold;
 }
 
 #topNav a:hover {
@@ -309,11 +314,13 @@ footer {
   text-align: center;
 
   color: #fff;
-  background-color: #b27686;
-  background-image: url('images/landingPage.jpg');
+  background-image: url("images/chalkboard.jpg");
   background-size: cover;
+  background-position: top;
+  /*background-color: #b27686;
+  background-image: url('images/landingPage.jpg');
   background-position: bottom;
-  background-blend-mode: difference;
+  background-blend-mode: difference;*/
 }
 
 footer p {
