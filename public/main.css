@@ -48,11 +48,13 @@ a {
 }
 
 .text a {
-  color: #92626F;
+  /*color: #92626F;*/
+  color: #6E8F88;
 }
 
 .text a:hover {
-  color: #6E8F88;
+  /*color: #6E8F88;*/
+  color: #92626F;
   transition: 0.2s;
 }
 
@@ -64,6 +66,7 @@ a {
   background-color: #b27686;
   /*background-image: url('images/landingPage.jpg');*/
   background-image: url("images/chalkboard.jpg");
+  /* Chalkboard image downloaded from Foolish Fire: https://www.foolishfire.com/2012/09/11/free-downloadable-chalkboard-backgrounds/ */
   background-size: cover;
   background-position: right;
   background-blend-mode: difference;
