@@ -214,9 +214,13 @@ img {
 }
 
 .text {
-  width: 62vw;
+  width: 75vw;
   text-align: center;
   padding: 3em 1em;
+}
+
+.text.about {
+  width: 62vw;
 }
 
 .textColumn {
