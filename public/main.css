@@ -94,9 +94,16 @@ main {
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  /*
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
-  flex-direction: row;
+  flex-direction: row;*/
 
   min-height: 87vh;
 }
@@ -115,12 +122,12 @@ main {
   order: 2;
   flex: 5;
 
-  display: -webkit-flex;
+  /*display: -webkit-flex;
   display: -ms-flex;
   display: flex;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
-  flex-direction: column;
+  flex-direction: column;*/
 }
 
 .row {
@@ -246,17 +253,33 @@ img {
   padding-left: 0;
 }
 
-.text span {
-  border: 0.2em solid #92626F;
-  border-radius: 1em;
+.text span, .column span, .textColumn span {
+  /*border: 0.2em solid #92626F;*/
+  border-radius: 0.5em;
+  line-height: 1.4em;
   padding: 0.5em;
   margin: 1em;
   display: inline-block;
+
+  background-color: #92626F;
+  background-image: url("images/chalkboard.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.textColumn span {
+  display: inline-block;
+  padding: 0.5em 1em;
+  margin: 1em 0;
 }
 
 .text a span {
   color: black;
   margin: 0 -0.4em;
+}
+
+.textColumn span a {
+  color: #fff;
 }
 
 .text a span:hover {
@@ -332,4 +355,24 @@ footer {
 
 footer p {
   margin-bottom: 0;
+}
+
+
+
+
+.popup {
+  display: none;
+}
+
+button {
+  border: none;
+   /*-webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;*/
+  font-size: inherit;
+  font-family: inherit;
+  color: #fff;
+  background: none;
+  outline: none;
+  padding: 0;
 }
