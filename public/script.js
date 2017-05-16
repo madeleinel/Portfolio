@@ -17,8 +17,6 @@ function enterSite() {
   window.location.pathname = "/about";
 }
 
-
-
 // To set up section toggling within the Portfolio page
 function displayPopup(buttonId) {
   // buttonId = Which button was clicked
