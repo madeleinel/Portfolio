@@ -27,7 +27,7 @@ function displayPopup(buttonId) {
   let currentPopup = document.getElementById(popupId);
   let sectionId = "section_" + id[1];
   // let currentSection = document.getElementById(sectionId);
-  let currentButton = document.querySelector("." + sectionId + " span:last-child");
+  let currentButton = document.querySelector("#" + sectionId + " span:last-child");
   console.log(id);
   console.log(popupId);
   console.log(currentPopup);

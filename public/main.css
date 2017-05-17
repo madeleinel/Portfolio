@@ -1,5 +1,5 @@
 div {
-  /*border: solid 1px purple;*/
+  /*border: 1px solid purple;*/
 }
 
 body {
@@ -8,53 +8,40 @@ body {
 }
 
 h2 {
-  font-family: 'Lobster', cursive;
-  font-size: 4em;
+  font-family: 'Oleo Script', cursive;
+  font-size: 3em;
   color: #b27686;
   text-align: center;
-  padding: 1em 0;
-}
-
-h2 span {
-  vertical-align: text-top;
-  margin: 0 0.5em;
+  padding: 0.5em 0;
 }
 
 h3 {
-  font-size: 2em;
-  text-align: center;
-  padding-bottom: 1em;
-  width: 100%;
-}
-
-.rightAlign h3 {
-  text-align: right;
-}
-
-h4 {
   font-size: 1.5em;
   padding: 1em;
 }
 
+.rightAlign h3 {
+  text-align: right;
+  padding-right: 0;
+}
+
+.leftAlign h3 {
+  text-align: left;
+  padding-left: 0;
+}
+
 p {
-  font-size: 1.1em;
   line-height: 1.4em;
   margin-bottom: 1em;
   width: 100%;
 }
 
 a {
-  color: #fff;
-}
-
-.text a {
-  /*color: #92626F;*/
-  color: #6E8F88;
-}
-
-.text a:hover {
-  /*color: #6E8F88;*/
   color: #92626F;
+}
+
+a:hover {
+  color: #111;
   transition: 0.2s;
 }
 
@@ -64,12 +51,10 @@ a {
   width: 100vw;
 
   background-color: #b27686;
-  /*background-image: url('images/landingPage.jpg');*/
-  background-image: url("images/chalkboard.jpg");
+  background-image: url("images/redChalkboard.png");
   /* Chalkboard image downloaded from Foolish Fire: https://www.foolishfire.com/2012/09/11/free-downloadable-chalkboard-backgrounds/ */
   background-size: cover;
   background-position: right;
-  background-blend-mode: difference;
 
   display: -webkit-flex;
   display: -ms-flex;
@@ -97,37 +82,8 @@ main {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  /*
-  display: -webkit-flex;
-  display: -ms-flex;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;*/
-
-  min-height: 87vh;
-}
-
-#leftSidebar {
-  order: 1;
-  flex: 1;
-}
-
-#rightSidebar {
-  order: 3;
-  flex: 1;
-}
-
-#mainColumn {
-  order: 2;
-  flex: 5;
-
-  /*display: -webkit-flex;
-  display: -ms-flex;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;*/
+  -ms-align-items: center;
+  align-items: center;
 }
 
 .row {
@@ -138,6 +94,7 @@ main {
   -ms-flex-direction: row;
   flex-direction: row;
   justify-content: center;
+  max-width: 80vw;
 }
 
 .column {
@@ -147,9 +104,29 @@ main {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -ms-align-items: center;
-  align-items: center;
+  /*-ms-align-items: center;
+  align-items: center;*/
 }
+
+.section {
+  padding: 6em 0 2em 0;
+}
+
+.popup {
+  padding: 0 0 2em 0;
+}
+
+/*.section, .popup {
+  box-shadow: 0.2em 0.2em 1em #333;
+}
+
+.section {
+  z-index: -99;
+}
+
+.popup {
+  z-index: 99;
+}*/
 
 /* Site navbar */
 #topNav {
@@ -163,14 +140,6 @@ main {
   background-image: url("images/chalkboard.jpg");
   background-size: cover;
   background-position: top;
-  /*background-color: #b27686;
-  background-image: url('images/landingPage.jpg');
-  background-size: cover;
-  background-position: top;
-  background-blend-mode: difference;*/
-
-  /*background-color: #334a56;*/
-
   box-shadow: 0.2em 0.2em 1em #333;
 
   display: -webkit-flex;
@@ -195,6 +164,7 @@ main {
 
 #topNav a {
   font-family: 'Poiret One', sans-serif;
+  color: #fff;
   font-size: 1.8em;
   font-weight: bold;
 }
@@ -208,11 +178,6 @@ main {
   font-size: 1.6em;
 }
 
-/* Main section content */
-.section {
-  padding: 3em 0;
-}
-
 /* Portfolio content */
 img {
   height: 35vh;
@@ -220,41 +185,25 @@ img {
   margin: 1em;
 }
 
-.text {
-  width: 75vw;
-  text-align: center;
-  padding: 3em 1em;
-}
-
-.text.about {
-  width: 62vw;
-}
-
-.textColumn {
-  flex: 1;
-  margin-bottom: 1em;
-}
-
 .rightAlign {
   text-align: right;
   padding-right: 2em;
-}
-
-.rightAlign h4 {
-  padding-right: 0;
+  flex: 1;
+  order: 1;
 }
 
 .leftAlign {
   text-align: left;
   padding-left: 2em;
+  flex: 1;
+  order: 2;
 }
 
-.leftAlign h4 {
-  padding-left: 0;
+.popup {
+  display: none;
 }
 
-.text span, .column span, .textColumn span {
-  /*border: 0.2em solid #92626F;*/
+.text span, .row span {
   border-radius: 0.5em;
   line-height: 1.4em;
   padding: 0.5em;
@@ -267,29 +216,28 @@ img {
   background-size: cover;
 }
 
-.textColumn span {
-  display: inline-block;
+.row span {
   padding: 0.5em 1em;
   margin: 1em 0;
 }
 
-.text a span {
-  color: black;
-  margin: 0 -0.4em;
-}
-
-.textColumn span a {
-  color: #fff;
-}
-
-.text a span:hover {
-  border-color: #6E8F88;
+.row span:hover {
+  background-image: url("images/redChalkboard.png");
   transition: 0.2s;
 }
 
-.text em {
-  color: #92626F;
-  font-weight: bold;
+.row span a, .row span a:hover {
+  color: #fff;
+}
+
+button {
+  border: none;
+  font-size: inherit;
+  font-family: inherit;
+  color: #fff;
+  background: none;
+  outline: none;
+  padding: 0;
 }
 
 #iconList {
@@ -323,9 +271,6 @@ img {
 #github {
   background-image: url('assets/github.png');
 }
-#twitter {
-  background-image: url('assets/twitter.png');
-}
 #linkedin {
   background-image: url('assets/linkedin.png');
 }
@@ -335,41 +280,18 @@ img {
 
 /* The footer */
 footer {
-  /*height: 1em;*/
   width: 102vw;
   padding-top: 0.5em;
   padding-bottom: 0.2em;
   font-family: 'Poiret One', sans-serif;
   font-size: 1.2em;
   text-align: center;
-
   color: #fff;
   background-image: url("images/chalkboard.jpg");
   background-size: cover;
   background-position: top;
-  /*background-color: #b27686;
-  background-image: url('images/landingPage.jpg');
-  background-position: bottom;
-  background-blend-mode: difference;*/
 }
 
 footer p {
   margin-bottom: 0;
-}
-
-.popup {
-  display: none;
-}
-
-button {
-  border: none;
-   /*-webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;*/
-  font-size: inherit;
-  font-family: inherit;
-  color: #fff;
-  background: none;
-  outline: none;
-  padding: 0;
 }
