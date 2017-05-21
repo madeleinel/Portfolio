@@ -11,8 +11,10 @@ h2 {
   font-family: 'Oleo Script', cursive;
   font-size: 3em;
   color: #b27686;
-  text-align: center;
-  padding: 0.5em 0;
+  text-align: left;
+  padding: 0.35em 0;
+
+  /*border: 1px solid purple;*/
 }
 
 h3 {
@@ -104,12 +106,21 @@ main {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  /*-ms-align-items: center;
-  align-items: center;*/
+  -ms-align-items: center;
+  align-items: center;
 }
 
 .section {
-  padding: 6em 0 2em 0;
+  width: 100vw;
+  padding: 2em 1em;
+  /*background-image: url("images/silhouettes_blue_narrow.jpeg");
+  background-size: stretch auto;
+  background-position: top;*/
+
+  /*margin: 2em 0;*/
+  /*box-shadow: 0em 0em 1em #333;*/
+  /*box-shadow: 0 0 1.5em #555;*/
+  /*background-color: #bbb;*/
 }
 
 .popup {
@@ -181,7 +192,8 @@ main {
 /* Portfolio content */
 img {
   height: 35vh;
-  box-shadow: 0.2em 0.2em 1em #333;
+  /*box-shadow: 0.2em 0.2em 1em #333;*/
+  box-shadow: 0 0 1.5em #555;
   margin: 1em;
 }
 
@@ -205,36 +217,40 @@ img {
 
 .text span, .row span {
   border-radius: 0.5em;
+  border: 2px solid #333;
+  background-color: #fff;
+  box-shadow: 0 0 0.2em #555;
   line-height: 1.4em;
   padding: 0.5em;
   margin: 1em;
   display: inline-block;
 
-  background-color: #92626F;
-  background-image: url("images/chalkboard.jpg");
+  /*background-color: #92626F;*/
+  /*background-image: url("images/chalkboard.jpg");*/
   background-position: center;
   background-size: cover;
 }
 
 .row span {
-  padding: 0.5em 1em;
+  padding: 0.3em 0.5em;
   margin: 1em 0;
 }
 
 .row span:hover {
-  background-image: url("images/redChalkboard.png");
+  /*background-image: url("images/redChalkboard.png");*/
+  border-color: #92626F;
   transition: 0.2s;
 }
 
 .row span a, .row span a:hover {
-  color: #fff;
+  color: #111;
 }
 
 button {
   border: none;
   font-size: inherit;
   font-family: inherit;
-  color: #fff;
+  color: #111;
   background: none;
   outline: none;
   padding: 0;
