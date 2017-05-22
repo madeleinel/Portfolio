@@ -1,8 +1,12 @@
-// Set up dropdown menu for small screens
+// Go to path "/about" when click on landing page svg
+// Have to set it up as a function, as adding a link within the svg did not function on touchscreen
+function enterSite() {
+  window.location.pathname = "/about";
+}
 
 const icon = document.getElementById("navToggleIcon");
 const navbar = document.getElementById("topNav");
-
+// Set up dropdown menu for small screens
 function toggleMenu() {
   if (navbar.id === "topNav") {
     navbar.id += "_responsive";   // Change id of element to 'topNav_responsive'
@@ -11,15 +15,9 @@ function toggleMenu() {
   }
 }
 
-// Go to path "/about" when click on landing page svg
-// Have to set it up as a function, as adding a link within the svg did not function on touchscreen
-function enterSite() {
-  window.location.pathname = "/about";
-}
-
-// To set up section toggling within the Portfolio page
+// Set up section toggling within the Portfolio page
 function togglePopup(buttonId) {
-  // buttonId = Which button was clicked
+  // buttonId = The class name of the button that was clicked
   // Set the popup ID to be "popup_" followed by the second half of the buttonId (ie the id number of the section)
   // This will be used to display the popup that's within the same section as the clicked button
   let id = buttonId.split("_");

@@ -1,5 +1,5 @@
 div, h1, h2, p {
-  border: 1px solid purple;
+  /*border: 1px solid purple;*/
 }
 
 span {
@@ -106,6 +106,7 @@ main {
 .section {
   width: 100vw;
   background-color: #fff;
+  padding: 4vh 0;
 }
 
 .section:first-of-type {
@@ -166,7 +167,7 @@ main {
 }
 
 .popup {
-  /*display: none;*/
+  display: none;
 }
 
 /* ///////// ///////// ///////// ///////// ///////// ///////// /////////
@@ -190,8 +191,9 @@ img {
   height: 2.4em;
   padding: 0.8em;
   background-color: #111;
-  border-radius: 4em;
-  /*margin: 1em 6em 1em 2em;*/
+  border-radius: 50%;
+
+  margin-bottom: 1em;  /* Ev change to 1em top and bottom when remove borders and add text */
 }
 
 #iconColumn a:hover {
@@ -228,7 +230,7 @@ img {
   padding: 0.3em 0.5em;
   border-radius: 0.4em;
 
-  margin: 1em;  /* See if necessary to update spacing when remove the working borders */
+  margin: 1em;  /* Ev update spacing when remove the working borders */
 }
 
 /* ////////    The Portfolio page work example preview section    //////// */
@@ -255,7 +257,7 @@ img {
   border-radius: 0.4em;
   line-height: 1.5em;  /* Specify line height to ensure that the link is vertically centered within the span borders */
 
-  margin: 1em;  /* See if necessary to update spacing when remove the working borders */
+  margin: 1em;  /* Ev update spacing when remove the working borders */
 }
 
 button {
