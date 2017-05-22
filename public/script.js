@@ -18,7 +18,7 @@ function enterSite() {
 }
 
 // To set up section toggling within the Portfolio page
-function displayPopup(buttonId) {
+function togglePopup(buttonId) {
   // buttonId = Which button was clicked
   // Set the popup ID to be "popup_" followed by the second half of the buttonId (ie the id number of the section)
   // This will be used to display the popup that's within the same section as the clicked button
