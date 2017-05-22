@@ -6,7 +6,7 @@ div, h1, h2, p {
 /////////        Style the basic properties of the page        /////////
 ///////// ///////// ///////// ///////// ///////// ///////// ///////// */
 
-body {
+body, background {
   font-family: 'Raleway', sans-serif;
   overflow-x: hidden;
 }
