@@ -17,7 +17,7 @@
 
   <body>
     <header>
-      <!-- Site navbar > will be visible at all times apart from the landing page (though minimised on smaller screens) -->
+      <!-- Site navbar > will be visible at all times apart from the landing page (minimised on smaller screens) -->
       <nav id="navIcon">
         <button id="navToggleIcon" onclick="toggleMenu()">&#9776;</button>
         <a href="/"><span>ML</span></a>
@@ -29,60 +29,74 @@
       </nav>
     </header>
 
-    <!-- The main content of the page > 2 side columns & 1 main column, set up using flexbox (turning into one column on smaller screens) -->
     <main>
+      <background></background>  <!-- Fixed background image which "peeks out" between the content sections -->
 
-      <div class="column section" id="section_paint">  <!-- Section containing the visible part of the work example -->
-        <div class="row">  <!-- Row containing the preview of the work example -->
-          <div class="rightAlign">
-            <img src="images/letsPaint.png" />  <!-- Screenshot of the work example / website landing page -->
-          </div>
-          <div class="leftAlign">  <!-- Textbox containing the preview text -->
-            <h2>Let's Paint</h2>
-            <p>A drawing application which enables the user to draw on a canvas and customise features such as the background colour, brush effects and the brush shape, as well as undoing and redoing drawing actions.</p>
-            <p>Tech Stack: HTML5 Canvas, HTML5, CSS3, ES6</p>
-            <div class="row">  <!-- Row containing the link buttons -->
-              <span><a href="https://madeleinel.github.io/Lets_Paint/" target="_blank">Website</a></span>
-              <span><a href="https://github.com/madeleinel/Lets_Paint" target="_blank">Source code</a></span>
-              <span><button id="btn_paint" onClick="displayPopup(this.id)">Find out more ⇓</button></span>
-            </div>
-          </div>
-        </div>
-        <div class="column popup" id="popup_paint">  <!-- Section containing the popup part of the work example -->
+      <div class="column section" id="section_paint">  <!-- Section containing the preview (always visible) and the popup (initially hidden; display/hide using the toggle button) parts of the work example -->
+        <div class="preview">  <!-- Section containing the preview part (always visible) of the work example -->
           <div class="row">
             <div class="rightAlign">
-              <h3>How it works:</h3>
-              <p>It was inspired by Wes Bos’s <a href="https://javascript30.com/" target="_blank">JavaScript30</a> HTML5 canvas tutorial. The canvas and the basic drawing feature was set up using this tutorial, and all additional features have been added using ES6.</p>
-              <p>More features are in the process of being added.</p>
+              <img src="images/letsPaint.png" alt="Image of the Let's Paint website, with the canvas containing a rough drawing of a plant" />  <!-- Screenshot of the website landing page -->
             </div>
             <div class="leftAlign">
-              <h3>Tech stack:</h3>
-              <p>¬ HTML5 Canvas to set up the canvas</p>
-              <p>¬ ES6 to enable the drawing features</p>
-              <p>¬ HTML5 and CSS3 to style the site</p>
+              <h2>TITLE</h2>
+              <p>Intro...</p>
+              <p>Tech Stack:...</p>
+              <!-- <div class="row" id="iconRow"> -->
+                <span><a href="/" target="_blank">Website</a></span>
+                <span><a href="/" target="_blank">Source code</a></span>
+                <span><button id="btn_paint" onClick="togglePopup(this.id)">See more ⇓</button></span>  <!-- Button to toggle the popup section -->
+              <!-- </div> -->
+            </div>
+          </div>
+        </div>  <!-- Closing .preview element -->
+        <div class="popup" id="popup_paint">  <!-- Section containing the popup part (initally hidden; display/hide using the toggle button) of the work example -->
+          <div class="row">
+            <div class="rightAlign">
+              <h3>Header</h3>
+              <p>Text...</p>
+              <p>Text...</p>
+            </div>
+            <div class="leftAlign">
+              <h3>Header</h3>
+              <p>¬ tech1...</p>
+              <p>¬ tech2...</p>
+              <p>¬ tech3...</p>
             </div>
           </div>
           <div class="row">
             <div class="rightAlign">
-              <h3>Challenge One:</h3>
-              <p>Enable the user to undo each drawing action:</p>
+              <h3>Header</h3>
+              <p>Text...</p>
+              <p>Text...</p>
             </div>
             <div class="leftAlign">
-              <h3>Solution:</h3>
-              <p>When start each new drawing action, the system saves the last version of the site to an array. When clicking the Undo button, the canvas is restored to the top item of the array, and that item is then removed from that array to enable the user to undo all drawing actions one by one.</p>
+              <h3>Header</h3>
+              <p>Text...</p>
+              <p>Text...</p>
             </div>
           </div>
-        </div>
+          <div class="row">
+            <div class="rightAlign">
+              <h3>Header</h3>
+              <p>Text...</p>
+              <p>Text...</p>
+            </div>
+            <div class="leftAlign">
+              <h3>Header</h3>
+              <p>Text...</p>
+              <p>Text...</p>
+            </div>
+          </div>
+        </div>  <!-- Closing .popup element -->
       </div>
 
     </main>
 
-    <!-- page footer -->
     <footer>
       <p>Created by Madeleine Linder (2017)</p>
     </footer>
 
-    <!-- link to the JavaScript file -->
     <script src="script.js"></script>
   </body>
 
