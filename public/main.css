@@ -163,8 +163,15 @@ main {
   text-align: center;
 }
 
-#roundImg, #iconColumn {
+#roundImg {
   max-width: 20vw;
+}
+
+#iconColumn {
+  max-width: 10vw;
+  -ms-align-items: center;
+  align-items: center;
+  /* Ev change this to flex-start (so align closer to the text) and max-width 15vw to keep the textbox from getting too wide > want it to match with the row below */
 }
 
 .popup {
@@ -227,6 +234,7 @@ img {
 }
 
 .centerAlign span {
+  display: inline-block;
   border: 2px solid #111;
   padding: 0.3em 0.5em;
   border-radius: 0.4em;
