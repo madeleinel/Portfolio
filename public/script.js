@@ -1,7 +1,7 @@
 // Go to path "/about" when click on landing page svg
 // Have to set it up as a function, as adding a link within the svg did not function on touchscreen
 function enterSite() {
-  window.location.pathname = "/about";
+  window.location.href = "/about";
 }
 
 // Set up dropdown menu for small screens
@@ -34,6 +34,7 @@ function togglePopup(buttonId) {
     // currentButton.style.backgroundImage = "url('images/chalkboard.jpg')";
     currentButton.style.borderColor = "#333";
     currentButtonText.textContent = "Find out more ⇓";
+    window.location.href = ("/portfolio\#" + sectionId);  // Makes the window jump back to the top of the section the user was just looking at > to avoid the screen seemingly jumping to a later section, and skipping work examples, when closing a popup section
   } else {
     currentPopup.style.display = "block";
     // currentButton.style.backgroundImage = "url('images/redChalkboard.png')";
