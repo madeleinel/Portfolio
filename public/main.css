@@ -1,9 +1,9 @@
-div {
+div, h1, h2, p {
   border: 1px solid purple;
 }
 
 span {
-  border: 1px solid orange;
+  /*border: 1px solid orange;*/
 }
 
 /* ///////// ///////// ///////// ///////// ///////// ///////// /////////
@@ -12,6 +12,21 @@ span {
 
 body {
   font-family: 'Raleway', sans-serif;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 1.8em;
+  padding-bottom: 0.5em;
+}
+
+h2 {
+  font-size: 1.2em;
+  padding-bottom: 0.5em;
+}
+
+p {
+  line-height: 1.2em;
 }
 
 /* ///////// ///////// ///////// ///////// ///////// ///////// /////////
@@ -93,8 +108,16 @@ main {
   background-color: #fff;
 }
 
+.section:first-of-type {
+  padding-top: 8vh;  /* Insert more padding between the top section and the navbar, to make the page feel less crowded */
+}
+
 .section:not(:last-child) {
-  margin-bottom: 20vh;
+  margin-bottom: 20vh;  /* Create a gap between each section (but not between the last section and the footer) wherein the fixed background image will be visible */
+}
+
+.section:last-child {
+  padding-bottom: 8vh;  /* Insert more padding between the last section and the footer, to make the page feel less crowded */
 }
 
 .row {
@@ -119,21 +142,27 @@ main {
   align-items: center;
 }
 
-.rightAlign, .leftAlign {
+.rightAlign, .leftAlign, .centerAlign {
   flex: 1;  /* Ensure .rightAlign and .leftAlign are of the same width */
   padding: 1em;
 }
 
 .rightAlign {
   text-align: right;
-  margin-right: 1em;
   /* order: 1;  /* When on smaller screens > .rightAlign sections should be on top of .leftAlign sections */
 }
 
 .leftAlign {
   text-align: left;
-  margin-left: 1em;
   /* order: 2;  /* When on smaller screens > .rightAlign sections should be on top of .leftAlign sections */
+}
+
+.centerAlign {
+  text-align: center;
+}
+
+#roundImg, #iconColumn {
+  max-width: 20vw;
 }
 
 .popup {
@@ -145,18 +174,16 @@ main {
 ///////// ///////// ///////// ///////// ///////// ///////// ///////// */
 
 img {
-  height: 30vh;
+  max-width: 100%;
+  max-height: 40vh;
   box-shadow: 0 0 1em #555;
 }
 
-span {
+#roundImg img {
+  border-radius: 50%;
 }
 
 /* //////// //////// The About page contact icons //////// //////// */
-
-#iconColumn {
-  /*justify-content: center;*/  /* ev necessary when add more text to the textbox next to it */
-}
 
 #iconColumn a {
   width: 2.4em;
@@ -164,7 +191,7 @@ span {
   padding: 0.8em;
   background-color: #111;
   border-radius: 4em;
-  margin: 1em 6em 1em 2em;
+  /*margin: 1em 6em 1em 2em;*/
 }
 
 #iconColumn a:hover {
@@ -200,18 +227,35 @@ span {
   border: 2px solid #111;
   padding: 0.3em 0.5em;
   border-radius: 0.4em;
+
+  margin: 1em;  /* See if necessary to update spacing when remove the working borders */
+}
+
+/* ////////    The Portfolio page work example preview section    //////// */
+
+.preview .leftAlign {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  justify-content: space-between;  /* Make the preview text take up the same height as the preview image, with the text content spread evenly vertically */
 }
 
 /* ////////        The Portfolio page work example links        //////// */
 
-#iconRow {
-
+.iconRow a {
+  color: #111;
 }
 
-#iconRow span {
+.iconRow span {
   border: 2px solid #111;
   padding: 0.3em 0.5em;
   border-radius: 0.4em;
+  line-height: 1.5em;  /* Specify line height to ensure that the link is vertically centered within the span borders */
+
+  margin: 1em;  /* See if necessary to update spacing when remove the working borders */
 }
 
 button {

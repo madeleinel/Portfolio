@@ -14,12 +14,11 @@
   </head>
 
   <body>
-    <!-- The landing page -->
-    <header id="landingPage">
+    <!-- When the user clicks anywhere on the page, it triggers the function enterSite(), which will take the user to path "/about"
+    Have to set it up as a function, as adding a link within the svg did not function on touchscreen -->
+    <header id="landingPage" onclick="enterSite()">
 
-      <!-- When click on svg, trigger function enterSite(), which will take the user to path "/about"
-      Have to set it up as a function, as adding a link within the svg did not function on touchscreen -->
-      <svg height="600" width="600" viewBox="0 0 600.000000 600.000000" onclick="enterSite()">
+      <svg height="600" width="600" viewBox="0 0 600.000000 600.000000">
         <!-- Use translate() to center the visible parts of the svg -->
         <g transform="translate(21.000000,584.000000) scale(0.100000,-0.100000)"
         fill="#fff" stroke="none">

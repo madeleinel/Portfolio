@@ -81,6 +81,7 @@
   #navIcon a {
     display: inline-block;
     font-family: 'Poiret One', sans-serif;
+    color: #fff;
     padding: 0.5em 1em;
   }
   #navIcon a span {
