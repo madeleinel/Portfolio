@@ -1,129 +1,129 @@
-div {
-  /*border: solid 1px purple;*/
+div, h1, h2, p {
+  /*border: 1px solid purple;*/
 }
+
+/* ///////// ///////// ///////// ///////// ///////// ///////// /////////
+/////////        Style the basic properties of the page        /////////
+///////// ///////// ///////// ///////// ///////// ///////// ///////// */
 
 body {
   font-family: 'Raleway', sans-serif;
   overflow-x: hidden;
 }
 
+h1 {
+  font-size: 1.8em;
+  padding-bottom: 0.5em;
+}
+
 h2 {
-  font-family: 'Lobster', cursive;
-  font-size: 4em;
-  color: #b27686;
-  text-align: center;
-  padding: 1em 0;
-}
-
-h2 span {
-  vertical-align: text-top;
-  margin: 0 0.5em;
-}
-
-h3 {
-  font-size: 2em;
-  text-align: center;
-  padding-bottom: 1em;
-  width: 100%;
-}
-
-.rightAlign h3 {
-  text-align: right;
-}
-
-h4 {
-  font-size: 1.5em;
-  padding: 1em;
+  font-size: 1.2em;
+  padding-bottom: 0.5em;
 }
 
 p {
-  font-size: 1.1em;
-  line-height: 1.4em;
-  margin-bottom: 1em;
-  width: 100%;
+  line-height: 1.2em;
 }
 
-a {
+/* ///////// ///////// ///////// ///////// ///////// ///////// /////////
+///////// /////////        Style the nav bar        ///////// /////////
+///////// ///////// ///////// ///////// ///////// ///////// ///////// */
+
+.navBar {
+  height: 4em;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: #111;
+  background-image: url("images/chalkboard.jpg");
+  background-size: cover;
+  background-position: top;
+  box-shadow: 0 0.2em 1em #333;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  justify-content: space-around;
+  -ms-align-items: center;
+  align-items: center;
+}
+
+.navBar a {
   color: #fff;
+  font-family: 'Poiret One', sans-serif;
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
-.text a {
-  /*color: #92626F;*/
-  color: #6E8F88;
-}
-
-.text a:hover {
-  /*color: #6E8F88;*/
-  color: #92626F;
+/*.navBar a:hover {
+  color: #B8CCC1;
   transition: 0.2s;
+}*/
+
+.navBar span {
+  font-size: 1.6em;
 }
 
-/* Landing page */
-#landingPage {
+#navIcon {  /* The dropdown menu toggle button and ML icon > to be hidden on large screens (when the navbar is displayed in full) */
+  display: none;
+}
+
+#navIcon span {
+  border-radius: 50%;
+}
+
+/* ///////// ///////// ///////// ///////// ///////// ///////// /////////
+///////// Style the structure of the main elements of the page /////////
+///////// ///////// ///////// ///////// ///////// ///////// ///////// */
+
+background {
   height: 100vh;
   width: 100vw;
-
-  background-color: #b27686;
-  /*background-image: url('images/landingPage.jpg');*/
-  background-image: url("images/chalkboard.jpg");
-  /* Chalkboard image downloaded from Foolish Fire: https://www.foolishfire.com/2012/09/11/free-downloadable-chalkboard-backgrounds/ */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -99;
+  background-color: #92626F;
+  background-image: url("images/redChalkboard.png");
   background-size: cover;
-  background-position: right;
-  background-blend-mode: difference;
-
-  display: -webkit-flex;
-  display: -ms-flex;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  justify-content: center;    /* center horizontally */
-  -ms-align-items: center;    /* center vertically */
-  align-items: center;
-  text-align: center;
 }
 
-#landingPage svg:hover {
-  -webkit-filter: drop-shadow(0 0 0.4rem rgba(255, 255, 255, 0.6));
-  transition: 0.2s;
-}
-
-/* Basic structure of the page */
 main {
-  margin-top: 4em;    /* To ensure it starts displaying under the navbar */
-  display: -webkit-flex;
-  display: -ms-flex;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-
-  min-height: 87vh;
-}
-
-#leftSidebar {
-  order: 1;
-  flex: 1;
-}
-
-#rightSidebar {
-  order: 3;
-  flex: 1;
-}
-
-#mainColumn {
-  order: 2;
-  flex: 5;
-
+  margin-top: 4em;    /* To ensure that the main section starts displaying under the navbar */
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  -ms-align-items: center;
+  align-items: center;
+}
+
+.section {
+  width: 100vw;
+  background-color: #fff;
+  padding: 4vh 0;
+}
+
+.section:first-of-type {
+  padding-top: 8vh;  /* Insert more padding between the top section and the navbar, to make the page feel less crowded */
+}
+
+.section:not(:last-child) {
+  margin-bottom: 20vh;  /* Create a gap between each section (but not between the last section and the footer) wherein the fixed background image will be visible */
+}
+
+.section:last-child {
+  padding-bottom: 8vh;  /* Insert more padding between the last section and the footer, to make the page feel less crowded */
 }
 
 .row {
+  width: 80vw;
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
@@ -144,146 +144,72 @@ main {
   align-items: center;
 }
 
-/* Site navbar */
-#topNav {
-  height: 4em;
-  width: 102vw;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
-
-  background-image: url("images/chalkboard.jpg");
-  background-size: cover;
-  background-position: top;
-  /*background-color: #b27686;
-  background-image: url('images/landingPage.jpg');
-  background-size: cover;
-  background-position: top;
-  background-blend-mode: difference;*/
-
-  /*background-color: #334a56;*/
-
-  box-shadow: 0.2em 0.2em 1em #333;
-
-  display: -webkit-flex;
-  display: -ms-flex;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  justify-content: space-around;
-  -ms-align-items: center;
-  align-items: center;
-}
-
-#topNav li {
-  min-width: 6rem;
-  text-align: right;
-}
-
-#navIcon {
-  display: none;
-}
-
-#topNav a {
-  font-family: 'Poiret One', sans-serif;
-  font-size: 1.8em;
-  font-weight: bold;
-}
-
-#topNav a:hover {
-  color: #B8CCC1;
-  transition: 0.2s;
-}
-
-#topNav span {
-  font-size: 1.6em;
-}
-
-/* Main section content */
-.section {
-  padding: 3em 0;
-}
-
-/* Portfolio content */
-img {
-  height: 35vh;
-  box-shadow: 0.2em 0.2em 1em #333;
-  margin: 1em;
-}
-
-.text {
-  width: 75vw;
-  text-align: center;
-  padding: 3em 1em;
-}
-
-.text.about {
-  width: 62vw;
-}
-
-.textColumn {
-  flex: 1;
-  margin-bottom: 1em;
+.rightAlign, .leftAlign, .centerAlign {
+  flex: 1;  /* Ensure .rightAlign and .leftAlign are of the same width */
+  padding: 1em;
 }
 
 .rightAlign {
   text-align: right;
-  padding-right: 2em;
-}
-
-.rightAlign h4 {
-  padding-right: 0;
+  /* order: 1;  /* When on smaller screens > .rightAlign sections should be on top of .leftAlign sections */
 }
 
 .leftAlign {
   text-align: left;
-  padding-left: 2em;
+  /* order: 2;  /* When on smaller screens > .rightAlign sections should be on top of .leftAlign sections */
 }
 
-.leftAlign h4 {
-  padding-left: 0;
+.centerAlign {
+  text-align: center;
 }
 
-.text span {
-  border: 0.2em solid #92626F;
-  border-radius: 1em;
-  padding: 0.5em;
-  margin: 1em;
-  display: inline-block;
+#roundImg {
+  max-width: 20vw;
 }
 
-.text a span {
-  color: black;
-  margin: 0 -0.4em;
+#iconColumn {
+  max-width: 10vw;
+  -ms-align-items: center;
+  align-items: center;
+  /* Ev change this to flex-start (so align closer to the text) and max-width 15vw to keep the textbox from getting too wide > want it to match with the row below */
 }
 
-.text a span:hover {
-  border-color: #6E8F88;
-  transition: 0.2s;
+.popup {
+  display: none;
 }
 
-.text em {
-  color: #92626F;
-  font-weight: bold;
+/* ///////// ///////// ///////// ///////// ///////// ///////// /////////
+/////////          Style the look of the page elements          /////////
+///////// ///////// ///////// ///////// ///////// ///////// ///////// */
+
+img {
+  max-width: 100%;
+  max-height: 40vh;
+  box-shadow: 0 0 1em #555;
 }
 
-#iconList {
-  justify-content: center;
-  margin-top: 2em;
+#roundImg img {
+  border-radius: 50%;
 }
 
-#iconList a {
+/* //////// //////// The About page contact icons //////// //////// */
+
+#iconColumn a {
   width: 2.4em;
   height: 2.4em;
   padding: 0.8em;
-  background-color: #92626F;
-  border-radius: 4em;
-  margin: 1em 6em 1em 2em;
+  background-color: #111;
+  border-radius: 50%;
+
+  margin-bottom: 1em;  /* Ev change to 1em top and bottom when remove borders and add text */
 }
 
-#iconList .icon {
+#iconColumn a:hover {
+  background-color: #6E8F88;
+  transition: 0.2s;
+}
+
+#iconColumn .icon {
   width: inherit;
   height: inherit;
   margin: 0;
@@ -291,17 +217,8 @@ img {
   background-position: center;
 }
 
-#iconList a:hover {
-  /*background-color: #6E8F88;*/
-  background-color: #333;
-  transition: 0.2s;
-}
-
 #github {
   background-image: url('assets/github.png');
-}
-#twitter {
-  background-image: url('assets/twitter.png');
 }
 #linkedin {
   background-image: url('assets/linkedin.png');
@@ -310,26 +227,66 @@ img {
   background-image: url('assets/email.png');
 }
 
-/* The footer */
-footer {
-  /*height: 1em;*/
-  width: 102vw;
-  padding-top: 0.5em;
-  padding-bottom: 0.2em;
-  font-family: 'Poiret One', sans-serif;
-  font-size: 1.2em;
-  text-align: center;
+/* //////// ////////  The About page skills buttons  //////// //////// */
 
+.centerAlign {
+
+}
+
+.centerAlign span {
+  display: inline-block;
+  border: 2px solid #111;
+  padding: 0.3em 0.5em;
+  border-radius: 0.4em;
+
+  margin: 1em;  /* Ev update spacing when remove the working borders */
+}
+
+/* ////////    The Portfolio page work example preview section    //////// */
+
+.preview .leftAlign {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  justify-content: space-between;  /* Make the preview text take up the same height as the preview image, with the text content spread evenly vertically */
+}
+
+/* ////////        The Portfolio page work example links        //////// */
+
+.iconRow a {
+  color: #111;
+}
+
+.iconRow span {
+  border: 2px solid #111;
+  padding: 0.3em 0.5em;
+  border-radius: 0.4em;
+  line-height: 1.5em;  /* Specify line height to ensure that the link is vertically centered within the span borders */
+
+  margin: 1em;  /* Ev update spacing when remove the working borders */
+}
+
+button {
+  border: none;
+  background: none;
+  outline: none;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+/* ///////// ///////// ///////// ///////// ///////// ///////// /////////
+///////// /////////      Style the page footer      ///////// /////////
+///////// ///////// ///////// ///////// ///////// ///////// ///////// */
+
+footer {
+  width: 100vw;
+  padding: 0.5em;
+  text-align: center;
   color: #fff;
   background-image: url("images/chalkboard.jpg");
   background-size: cover;
   background-position: top;
-  /*background-color: #b27686;
-  background-image: url('images/landingPage.jpg');
-  background-position: bottom;
-  background-blend-mode: difference;*/
-}
-
-footer p {
-  margin-bottom: 0;
 }

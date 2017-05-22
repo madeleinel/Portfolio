@@ -8,400 +8,341 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- Link to the stylesheet & custom font -->
+    <!-- Link to the relevant stylesheets & custom font -->
     <link rel="stylesheet" type="text/css" href="reset.css">
     <link rel="stylesheet" type="text/css" href="main.css">
     <link rel="stylesheet" type="text/css" href="mediaQuery.css">
-    <link href="https://fonts.googleapis.com/css?family=Poiret+One|Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One|Raleway|Oleo+Script" rel="stylesheet">
   </head>
 
   <body>
     <header>
-      <!-- Site navbar > will be visible at all times apart from the landing page (though minimised on smaller screens) -->
+      <!-- Site navbar > will be visible at all times apart from the landing page (minimised on smaller screens) -->
       <nav id="navIcon">
         <button id="navToggleIcon" onclick="toggleMenu()">&#9776;</button>
         <a href="/"><span>ML</span></a>
       </nav>
-      <nav id="topNav">
+      <nav class="navBar" id="topNav">
         <li><a class="navLink" href="/about">About</a></li>
         <li><a class="navLink" href="/"><span>Madeleine Linder</span></a></li>
         <li><a class="navLink" href="/portfolio">Portfolio</a></li>
       </nav>
     </header>
 
-    <!-- The main content of the page > 2 side columns & 1 main column, set up using flexbox (turning into one column on smaller screens) -->
     <main>
-      <!-- left sidebar > will be above main content on smaller screens -->
-      <div id="leftSidebar"></div>
+      <background></background>  <!-- Fixed background image which "peeks out" between the content sections -->
 
-      <!-- the main content column -->
-      <div id="mainColumn">
-
-        <!-- <h2><span>...</span>Portfolio<span>...</span></h2> -->
-
-        <div class="column section">
+      <div class="section column" id="section_paint">  <!-- Section containing the preview (always visible) and the popup (initially hidden; display/hide using the toggle button) parts of the work example -->
+        <div class="preview">  <!-- Section containing the preview part (always visible) of the work example -->
           <div class="row">
-            <img src="images/letsPaint.png" />
-          </div>
-          <div class="row">
-            <div class="text">
-              <h3>Let's Paint!</h3>
-              <!-- <p>The original canvas was created using a <a href="https://javascript30.com/" target="_blank">JavaScript30</a> tutorial created by Wes Bos, and the design and functionality has then been customised.</p> -->
-              <div class="row">
-                <div class="textColumn rightAlign">
-                  <h4>How it works:</h4>
-                  <p>A drawing application which enables the user to draw on a canvas and customise features such as the background colour, brush effects and the brush shape, as well as undoing and redoing drawing actions.</p>
-                  <p>It was inspired by Wes Bos’s <a href="https://javascript30.com/" target="_blank">JavaScript30</a> HTML5 canvas tutorial. The canvas and the basic drawing feature was set up using this tutorial, and all additional features have been added using ES6.</p>
-                  <p>More features are in the process of being added.</p>
-                  <!-- <p>Users can paint on the canvas, and customise features such as background colour, brush colour, size and shape, as well as add different effects.</p> -->
-                </div>
-                <div class="textColumn leftAlign">
-                  <h4>Tech stack:</h4>
-                  <p>¬ HTML5 Canvas to set up the canvas</p>
-                  <p>¬ ES6 to enable the drawing features</p>
-                  <p>¬ HTML5 and CSS3 to style the site</p>
-                  <!-- <p>¬ HTML5 Canvas for the painting canvas</p>
-                  <p>¬ HTML5 and CSS3 for front-end</p>
-                  <p>¬ JavaScript / ES6 for back-end</p> -->
-                </div>
-              </div>
-              <div class="row">
-                <div class="textColumn rightAlign">
-                  <p><a href="https://madeleinel.github.io/Lets_Paint/" target="_blank"><span>Website</span></a></p>
-                </div>
-                <div class="textColumn leftAlign">
-                  <p><a href="https://github.com/madeleinel/Lets_Paint" target="_blank"><span>Source code</span></a></p>
-                </div>
-              </div>
-              <h4>Challenges & Solutions</h4>
-              <div class="row">
-                <div class="textColumn rightAlign">
-                  <p><em>Enable the user to add brush effects:</em></p>
-                </div>
-                <div class="textColumn leftAlign">
-                  <p>Added event listeners to listen for changes within the effect list elements; when registering a change, it loops through the list to see which option element was chosen, and then sets the drawing effect to be the value of that option.</p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="textColumn rightAlign">
-                  <p><em>Make the control elements look nicer, while still displaying the current values (e.g. the current brush and background colours, the brush thickness, and the chosen brush effect):</em></p>
-                </div>
-                <div class="textColumn leftAlign">
-                  <p>The default styling of the HTML input elements was overwritten using span elements. To enable the span elements to display the current values, ES6 was used to update the look of these elements each time the value is changed within the JavaScript code.</p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="textColumn rightAlign">
-                  <p><em>Ability to change the background colour without overwriting the current drawing:</em></p>
-                </div>
-                <div class="textColumn leftAlign">
-                  <p>Added a secondary canvas below the primary one, and made the background of the primary canvas transparent.</p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="textColumn rightAlign">
-                  <p><em>Enable the user to undo each drawing action:</em></p>
-                </div>
-                <div class="textColumn leftAlign">
-                  <p>When start each new drawing action, the system saves the last version of the site to an array. When clicking the Undo button, the canvas is restored to the top item of the array, and that item is then removed from that array to enable the user to undo all drawing actions one by one.</p>
-                </div>
-              </div>
-              <!-- <div class="row">
-                <div class="textColumn rightAlign">
-                  <p><a href="https://madeleinel.github.io/Lets_Paint/" target="_blank"><span>Website</span></a></p>
-                </div>
-                <div class="textColumn leftAlign">
-                  <p><a href="https://github.com/madeleinel/Lets_Paint" target="_blank"><span>Source code</span></a></p>
-                </div>
-              </div> -->
+            <div class="rightAlign">
+              <img src="images/letsPaint.png" alt="Image of the Let's Paint website, with the canvas containing a rough drawing of a plant" />  <!-- Screenshot of the website landing page -->
+            </div>
+            <div class="leftAlign">
+              <h1>Title</h1>
+              <p>Sed elementum, est nec volutpat placerat, arcu purus condimentum mauris, nec auctor massa nisi in est. In mi tortor, malesuada eu lacinia quis, lacinia ac risus.</p>
+              <!-- <p>Sed elementum, est nec volutpat placerat, arcu purus condimentum mauris, nec auctor massa nisi in est. In mi tortor, malesuada eu lacinia quis, lacinia ac risus.</p> -->
+              <p>Tech Stack:...</p>
             </div>
           </div>
-        </div>
-
-        <div class="column section">
-          <div class="row">
-            <img src="images/wtt_homepage.png" />
+          <div class="row iconRow">
+            <span><a href="/" target="_blank">Website</a></span>
+            <span><a href="/" target="_blank">Source code</a></span>
+            <span><button id="btn_paint" onClick="togglePopup(this.id)">Find out more ⇓</button></span>  <!-- Button to toggle the popup section -->
           </div>
+        </div>  <!-- Closing .preview element -->
+        <div class="popup" id="popup_paint">  <!-- Section containing the popup part (initally hidden; display/hide using the toggle button) of the work example -->
           <div class="row">
-            <div class="text">
-              <h3>Women To Tech</h3>
-              <p><em>The platform is currently being updated; both the frontend of the site and the database are being reworked. More features, such as matching up mentors and mentees based on their preferred languages and what type of help they are looking for/can provide, are in the process of being added.</em></p>
-              <!-- <p>A platform that matches women in tech with mentors in the industry.</p> -->
-              <!-- <p>The website was created as part of the <a href="http://www.codefirstgirls.org.uk/" target="_blank">Code First: Girls</a> Advanced Python Web Development Course competition with <a href="https://github.com/eleanombre" target="_blank">E Keane</a>.</p> -->
-              <div class="row">
-                <div class="textColumn rightAlign">
-                  <h4>How it works:</h4>
-                  <p>This is a platform which matches self-identifying women who want to get started in the tech industry with mentors who are working within the industry.</p>
-                  <p>The website was created as part of the <a href="http://www.codefirstgirls.org.uk/" target="_blank">Code First: Girls</a> Advanced Python Web Development Course competition with <a href="https://github.com/eleanombre" target="_blank">E Keane</a>.</p>
-                  <p>Prospective mentors and mentees sign up to the platform by tweeting us, and when they sign up a profile is created for them on the website.</p>
-                  <!-- <p>Prospective mentors and mentees sign up to the platform by tweeting us using specific tags.</p> -->
-                  <!-- <p>When they sign up, a profile is created for them on the website, and they are sent their top three matches based on the information they have provided.</p> -->
-                </div>
-                <div class="textColumn leftAlign">
-                  <h4>Tech stack:</h4>
-                  <p>¬ HTML5 and CSS3 for frontend</p>
-                  <p>¬ Python 2 and Flask for backend</p>
-                  <p>¬ PostgreSQL for database handling</p>
-                  <p>¬ Twitter API for the Twitterbot</p>
-                  <p>¬ Heroku for app deployment</p>
-                  <!-- <p>¬ HTML5 and CSS3 for front-end</p>
-                  <p>¬ Python 2 for backend</p>
-                  <p>¬ PostgreSQL for database handling</p>
-                  <p>¬ Twitter API for Twitterbot</p> -->
-                </div>
-              </div>
-              <div class="row">
-                <div class="textColumn rightAlign">
-                  <p><a href="https://womentotech.herokuapp.com/" target="_blank"><span>Website</span></a></p>
-                </div>
-                <div class="textColumn leftAlign">
-                  <p><a href="https://github.com/madeleinel/WoMentor" target="_blank"><span>Source code</span></a></p>
-                </div>
-              </div>
-              <h4>Challenges & Solutions</h4>
-              <div class="row">
-                <div class="textColumn rightAlign">
-                  <p><em>Watch this space:</em></p>
-                </div>
-                <div class="textColumn leftAlign">
-                  <p>More information will be added soon.</p>
-                </div>
-              </div>
-              <!-- <div class="row">
-                <div class="textColumn rightAlign">
-                  <p><em></em></p>
-                </div>
-                <div class="textColumn leftAlign">
-                  <p></p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="textColumn rightAlign">
-                  <p><em></em></p>
-                </div>
-                <div class="textColumn leftAlign">
-                  <p></p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="textColumn rightAlign">
-                  <p><em></em></p>
-                </div>
-                <div class="textColumn leftAlign">
-                  <p></p>
-                </div>
-              </div> -->
+            <div class="rightAlign">
+              <h2>Header</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum metus et laoreet venenatis. Donec bibendum tincidunt finibus. Nulla auctor, dolor eget commodo ullamcorper, lorem dolor venenatis lectus, et sodales ante erat eu metus. Integer interdum sagittis nibh, sed facilisis neque sollicitudin et.</p>
+              <p>Sed elementum, est nec volutpat placerat, arcu purus condimentum mauris, nec auctor massa nisi in est. In mi tortor, malesuada eu lacinia quis, lacinia ac risus.</p>
+            </div>
+            <div class="leftAlign">
+              <h2>Header</h2>
+              <p>¬ tech1...</p>
+              <p>¬ tech2...</p>
+              <p>¬ tech3...</p>
             </div>
           </div>
-        </div>
-
-        <div class="column section">
           <div class="row">
-            <img src="images/os_homepage.png" />
-          </div>
-          <div class="row">
-            <div class="text">
-              <h3>Our Story</h3>
-              <div class="row">
-                <div class="textColumn rightAlign">
-                  <h4>How it works:</h4>
-                  <p>This website was created to provide a positive view of immigration in the UK.</p>
-                  <p>Within the "Myths" section, the user is presented with common perceptions about immigrants and asked to guess whether the statement is true or false. Upon making their choice, a pop-up window appears which informs the user whether they were correct or not, and provides more information about the topic.</p>
-                  <p>The website was created as part of the <a href="http://www.codefirstgirls.org.uk/" target="_blank">Code First: Girls</a> Beginners HTML/CSS Web Development Course competition with <a href="https://github.com/Anehi-j" target="_blank">Liz J</a>.</p>
-                </div>
-                <div class="textColumn leftAlign">
-                  <h4>Tech stack:</h4>
-                  <p>¬ HTML5 and CSS3 for front-end</p>
-                  <p>¬ Twitter API Bootstrap for styling</p>
-                  <p>¬ jQuery for interactive elements</p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="textColumn rightAlign">
-                  <p><a href="https://madeleinel.github.io/OurStory/" target="_blank"><span>Website</span></a></p>
-                </div>
-                <div class="textColumn leftAlign">
-                  <p><a href="https://github.com/madeleinel/OurStory" target="_blank"><span>Source code</span></a></p>
-                </div>
-              </div>
-              <!-- <h4>Challenges & Solutions</h4>
-              <div class="row">
-                <div class="textColumn rightAlign">
-                  <p><em>Watch this space:</em></p>
-                </div>
-                <div class="textColumn leftAlign">
-                  <p>More information will be added soon.</p>
-                </div>
-              </div> -->
-              <!-- <div class="row">
-                <div class="textColumn rightAlign">
-                  <p><em></em></p>
-                </div>
-                <div class="textColumn leftAlign">
-                  <p></p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="textColumn rightAlign">
-                  <p><em></em></p>
-                </div>
-                <div class="textColumn leftAlign">
-                  <p></p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="textColumn rightAlign">
-                  <p><em></em></p>
-                </div>
-                <div class="textColumn leftAlign">
-                  <p></p>
-                </div>
-              </div> -->
+            <div class="rightAlign">
+              <h2>Header</h2>
+              <p>Sed elementum, est nec volutpat placerat, arcu purus condimentum mauris, nec auctor massa nisi in est. In mi tortor, malesuada eu lacinia quis, lacinia ac risus.</p>
+            </div>
+            <div class="leftAlign">
+              <h2>Header</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum metus et laoreet venenatis. Donec bibendum tincidunt finibus. Nulla auctor, dolor eget commodo ullamcorper, lorem dolor venenatis lectus, et sodales ante erat eu metus. Integer interdum sagittis nibh, sed facilisis neque sollicitudin et.</p>
+              <p>Sed elementum, est nec volutpat placerat, arcu purus condimentum mauris, nec auctor massa nisi in est. In mi tortor, malesuada eu lacinia quis, lacinia ac risus.</p>
             </div>
           </div>
-        </div>
-
-        <div class="column section">
           <div class="row">
-            <img src="images/clock.png" />
-          </div>
-          <div class="row">
-            <div class="text">
-              <h3>Interactive Clock</h3>
-              <div class="row">
-                <div class="textColumn rightAlign">
-                  <h4>How it works:</h4>
-                  <p>The original clockface was created using a <a href="https://javascript30.com/" target="_blank">JavaScript30</a> tutorial created by Wes Bos, and the design and functionality has then been customised.</p>
-                  <p>Using the colour pickers on the right, the user can choose their preferred background and clockface colour.</p>
-                </div>
-                <div class="textColumn leftAlign">
-                  <h4>Tech stack:</h4>
-                  <p>¬ HTML5 and CSS3 for front-end</p>
-                  <p>¬ ES6 for back-end</p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="textColumn rightAlign">
-                  <p><a href="https://madeleinel.github.io/clock/" target="_blank"><span>Website</span></a></p>
-                </div>
-                <div class="textColumn leftAlign">
-                  <p><a href="https://github.com/madeleinel/clock" target="_blank"><span>Source code</span></a></p>
-                </div>
-              </div>
-              <!-- <h4>Challenges & Solutions</h4>
-              <div class="row">
-                <div class="textColumn rightAlign">
-                  <p><em>Watch this space:</em></p>
-                </div>
-                <div class="textColumn leftAlign">
-                  <p>More information will be added soon.</p>
-                </div>
-              </div> -->
-              <!-- <div class="row">
-                <div class="textColumn rightAlign">
-                  <p><em></em></p>
-                </div>
-                <div class="textColumn leftAlign">
-                  <p></p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="textColumn rightAlign">
-                  <p><em></em></p>
-                </div>
-                <div class="textColumn leftAlign">
-                  <p></p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="textColumn rightAlign">
-                  <p><em></em></p>
-                </div>
-                <div class="textColumn leftAlign">
-                  <p></p>
-                </div>
-              </div> -->
+            <div class="rightAlign">
+              <h2>Header</h2>
+              <p>Sed elementum, est nec volutpat placerat, arcu purus condimentum mauris, nec auctor massa nisi in est. In mi tortor, malesuada eu lacinia quis, lacinia ac risus.</p>
+            </div>
+            <div class="leftAlign">
+              <h2>Header</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum metus et laoreet venenatis. Donec bibendum tincidunt finibus. Nulla auctor, dolor eget commodo ullamcorper, lorem dolor venenatis lectus, et sodales ante erat eu metus. Integer interdum sagittis nibh, sed facilisis neque sollicitudin et.</p>
+              <p>Sed elementum, est nec volutpat placerat, arcu purus condimentum mauris, nec auctor massa nisi in est. In mi tortor, malesuada eu lacinia quis, lacinia ac risus.</p>
             </div>
           </div>
-        </div>
-
-        <div class="column section">
-          <div class="row">
-            <img src="images/slideshow.png" />
+          <div class="row iconRow">
+            <span><button id="btn_paint" onClick="togglePopup(this.id)">Close section</button></span>  <!-- Button to toggle the popup section -->
           </div>
+        </div>  <!-- Closing .popup element -->
+      </div>  <!-- Closing the .section element -->
+
+      <div class="section column" id="section_paint">  <!-- Section containing the preview (always visible) and the popup (initially hidden; display/hide using the toggle button) parts of the work example -->
+        <div class="preview">  <!-- Section containing the preview part (always visible) of the work example -->
           <div class="row">
-            <div class="text">
-              <h3>Slideshow</h3>
-              <p>Watch this space; more information about this project will be added soon.</p>
-              <!-- <p>An interactive photo slideshow.</p> -->
-              <!-- <div class="row">
-                <div class="textColumn rightAlign">
-                  <h4>How it works:</h4>
-                  <p>Users can choose which photo to view by clicking on the corresponding tab.</p>
-                </div>
-                <div class="textColumn leftAlign">
-                  <h4>Tech stack:</h4>
-                  <p>¬ HTML5 and CSS3 for front-end</p>
-                  <p>¬ JavaScript for back-end</p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="textColumn rightAlign">
-                  <p><a href="https://madeleinel.github.io/Slideshow/" target="_blank"><span>Website</span></a></p>
-                </div>
-                <div class="textColumn leftAlign">
-                  <p><a href="https://github.com/madeleinel/Slideshow" target="_blank"><span>Source code</span></a></p>
-                </div>
-              </div> -->
-              <!-- <h4>Challenges & Solutions</h4>
-              <div class="row">
-                <div class="textColumn rightAlign">
-                  <p><em>Watch this space:</em></p>
-                </div>
-                <div class="textColumn leftAlign">
-                  <p>More information will be added soon.</p>
-                </div>
-              </div> -->
-              <!-- <div class="row">
-                <div class="textColumn rightAlign">
-                  <p><em></em></p>
-                </div>
-                <div class="textColumn leftAlign">
-                  <p></p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="textColumn rightAlign">
-                  <p><em></em></p>
-                </div>
-                <div class="textColumn leftAlign">
-                  <p></p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="textColumn rightAlign">
-                  <p><em></em></p>
-                </div>
-                <div class="textColumn leftAlign">
-                  <p></p>
-                </div>
-              </div> -->
+            <div class="rightAlign">
+              <img src="images/letsPaint.png" alt="Image of the Let's Paint website, with the canvas containing a rough drawing of a plant" />  <!-- Screenshot of the website landing page -->
+            </div>
+            <div class="leftAlign">
+              <h1>Title</h1>
+              <p>Sed elementum, est nec volutpat placerat, arcu purus condimentum mauris, nec auctor massa nisi in est. In mi tortor, malesuada eu lacinia quis, lacinia ac risus.</p>
+              <p>Sed elementum, est nec volutpat placerat, arcu purus condimentum mauris, nec auctor massa nisi in est. In mi tortor, malesuada eu lacinia quis, lacinia ac risus.</p>
+              <p>Tech Stack:...</p>
             </div>
           </div>
-        </div>
+          <div class="row iconRow">
+            <span><a href="/" target="_blank">Website</a></span>
+            <span><a href="/" target="_blank">Source code</a></span>
+            <span><button id="btn_paint" onClick="togglePopup(this.id)">Find out more ⇓</button></span>  <!-- Button to toggle the popup section -->
+          </div>
+        </div>  <!-- Closing .preview element -->
+        <div class="popup" id="popup_paint">  <!-- Section containing the popup part (initally hidden; display/hide using the toggle button) of the work example -->
+          <div class="row">
+            <div class="rightAlign">
+              <h2>Header</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum metus et laoreet venenatis. Donec bibendum tincidunt finibus. Nulla auctor, dolor eget commodo ullamcorper, lorem dolor venenatis lectus, et sodales ante erat eu metus. Integer interdum sagittis nibh, sed facilisis neque sollicitudin et.</p>
+              <p>Sed elementum, est nec volutpat placerat, arcu purus condimentum mauris, nec auctor massa nisi in est. In mi tortor, malesuada eu lacinia quis, lacinia ac risus.</p>
+            </div>
+            <div class="leftAlign">
+              <h2>Header</h2>
+              <p>¬ tech1...</p>
+              <p>¬ tech2...</p>
+              <p>¬ tech3...</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="rightAlign">
+              <h2>Header</h2>
+              <p>Sed elementum, est nec volutpat placerat, arcu purus condimentum mauris, nec auctor massa nisi in est. In mi tortor, malesuada eu lacinia quis, lacinia ac risus.</p>
+            </div>
+            <div class="leftAlign">
+              <h2>Header</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum metus et laoreet venenatis. Donec bibendum tincidunt finibus. Nulla auctor, dolor eget commodo ullamcorper, lorem dolor venenatis lectus, et sodales ante erat eu metus. Integer interdum sagittis nibh, sed facilisis neque sollicitudin et.</p>
+              <p>Sed elementum, est nec volutpat placerat, arcu purus condimentum mauris, nec auctor massa nisi in est. In mi tortor, malesuada eu lacinia quis, lacinia ac risus.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="rightAlign">
+              <h2>Header</h2>
+              <p>Sed elementum, est nec volutpat placerat, arcu purus condimentum mauris, nec auctor massa nisi in est. In mi tortor, malesuada eu lacinia quis, lacinia ac risus.</p>
+            </div>
+            <div class="leftAlign">
+              <h2>Header</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum metus et laoreet venenatis. Donec bibendum tincidunt finibus. Nulla auctor, dolor eget commodo ullamcorper, lorem dolor venenatis lectus, et sodales ante erat eu metus. Integer interdum sagittis nibh, sed facilisis neque sollicitudin et.</p>
+              <p>Sed elementum, est nec volutpat placerat, arcu purus condimentum mauris, nec auctor massa nisi in est. In mi tortor, malesuada eu lacinia quis, lacinia ac risus.</p>
+            </div>
+          </div>
+          <div class="row iconRow">
+            <span><button id="btn_paint" onClick="togglePopup(this.id)">Close section</button></span>  <!-- Button to toggle the popup section -->
+          </div>
+        </div>  <!-- Closing .popup element -->
+      </div>  <!-- Closing the .section element -->
 
-      </div>    <!-- Closing #mainColumn -->
+      <div class="section column" id="section_paint">  <!-- Section containing the preview (always visible) and the popup (initially hidden; display/hide using the toggle button) parts of the work example -->
+        <div class="preview">  <!-- Section containing the preview part (always visible) of the work example -->
+          <div class="row">
+            <div class="rightAlign">
+              <img src="images/letsPaint.png" alt="Image of the Let's Paint website, with the canvas containing a rough drawing of a plant" />  <!-- Screenshot of the website landing page -->
+            </div>
+            <div class="leftAlign">
+              <h1>Title</h1>
+              <p>Sed elementum, est nec volutpat placerat, arcu purus condimentum mauris, nec auctor massa nisi in est. In mi tortor, malesuada eu lacinia quis, lacinia ac risus.</p>
+              <p>Sed elementum, est nec volutpat placerat, arcu purus condimentum mauris, nec auctor massa nisi in est. In mi tortor, malesuada eu lacinia quis, lacinia ac risus.</p>
+              <p>Tech Stack:...</p>
+            </div>
+          </div>
+          <div class="row iconRow">
+            <span><a href="/" target="_blank">Website</a></span>
+            <span><a href="/" target="_blank">Source code</a></span>
+            <span><button id="btn_paint" onClick="togglePopup(this.id)">Find out more ⇓</button></span>  <!-- Button to toggle the popup section -->
+          </div>
+        </div>  <!-- Closing .preview element -->
+        <div class="popup" id="popup_paint">  <!-- Section containing the popup part (initally hidden; display/hide using the toggle button) of the work example -->
+          <div class="row">
+            <div class="rightAlign">
+              <h2>Header</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum metus et laoreet venenatis. Donec bibendum tincidunt finibus. Nulla auctor, dolor eget commodo ullamcorper, lorem dolor venenatis lectus, et sodales ante erat eu metus. Integer interdum sagittis nibh, sed facilisis neque sollicitudin et.</p>
+              <p>Sed elementum, est nec volutpat placerat, arcu purus condimentum mauris, nec auctor massa nisi in est. In mi tortor, malesuada eu lacinia quis, lacinia ac risus.</p>
+            </div>
+            <div class="leftAlign">
+              <h2>Header</h2>
+              <p>¬ tech1...</p>
+              <p>¬ tech2...</p>
+              <p>¬ tech3...</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="rightAlign">
+              <h2>Header</h2>
+              <p>Sed elementum, est nec volutpat placerat, arcu purus condimentum mauris, nec auctor massa nisi in est. In mi tortor, malesuada eu lacinia quis, lacinia ac risus.</p>
+            </div>
+            <div class="leftAlign">
+              <h2>Header</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum metus et laoreet venenatis. Donec bibendum tincidunt finibus. Nulla auctor, dolor eget commodo ullamcorper, lorem dolor venenatis lectus, et sodales ante erat eu metus. Integer interdum sagittis nibh, sed facilisis neque sollicitudin et.</p>
+              <p>Sed elementum, est nec volutpat placerat, arcu purus condimentum mauris, nec auctor massa nisi in est. In mi tortor, malesuada eu lacinia quis, lacinia ac risus.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="rightAlign">
+              <h2>Header</h2>
+              <p>Sed elementum, est nec volutpat placerat, arcu purus condimentum mauris, nec auctor massa nisi in est. In mi tortor, malesuada eu lacinia quis, lacinia ac risus.</p>
+            </div>
+            <div class="leftAlign">
+              <h2>Header</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum metus et laoreet venenatis. Donec bibendum tincidunt finibus. Nulla auctor, dolor eget commodo ullamcorper, lorem dolor venenatis lectus, et sodales ante erat eu metus. Integer interdum sagittis nibh, sed facilisis neque sollicitudin et.</p>
+              <p>Sed elementum, est nec volutpat placerat, arcu purus condimentum mauris, nec auctor massa nisi in est. In mi tortor, malesuada eu lacinia quis, lacinia ac risus.</p>
+            </div>
+          </div>
+          <div class="row iconRow">
+            <span><button id="btn_paint" onClick="togglePopup(this.id)">Close section</button></span>  <!-- Button to toggle the popup section -->
+          </div>
+        </div>  <!-- Closing .popup element -->
+      </div>  <!-- Closing the .section element -->
 
-      <!-- right sidebar > will be below main content on smaller screens -->
-      <div id="rightSidebar"></div>
+      <div class="section column" id="section_paint">  <!-- Section containing the preview (always visible) and the popup (initially hidden; display/hide using the toggle button) parts of the work example -->
+        <div class="preview">  <!-- Section containing the preview part (always visible) of the work example -->
+          <div class="row">
+            <div class="rightAlign">
+              <img src="images/letsPaint.png" alt="Image of the Let's Paint website, with the canvas containing a rough drawing of a plant" />  <!-- Screenshot of the website landing page -->
+            </div>
+            <div class="leftAlign">
+              <h1>Title</h1>
+              <p>Sed elementum, est nec volutpat placerat, arcu purus condimentum mauris, nec auctor massa nisi in est. In mi tortor, malesuada eu lacinia quis, lacinia ac risus.</p>
+              <p>Sed elementum, est nec volutpat placerat, arcu purus condimentum mauris, nec auctor massa nisi in est. In mi tortor, malesuada eu lacinia quis, lacinia ac risus.</p>
+              <p>Tech Stack:...</p>
+            </div>
+          </div>
+          <div class="row iconRow">
+            <span><a href="/" target="_blank">Website</a></span>
+            <span><a href="/" target="_blank">Source code</a></span>
+            <span><button id="btn_paint" onClick="togglePopup(this.id)">Find out more ⇓</button></span>  <!-- Button to toggle the popup section -->
+          </div>
+        </div>  <!-- Closing .preview element -->
+        <div class="popup" id="popup_paint">  <!-- Section containing the popup part (initally hidden; display/hide using the toggle button) of the work example -->
+          <div class="row">
+            <div class="rightAlign">
+              <h2>Header</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum metus et laoreet venenatis. Donec bibendum tincidunt finibus. Nulla auctor, dolor eget commodo ullamcorper, lorem dolor venenatis lectus, et sodales ante erat eu metus. Integer interdum sagittis nibh, sed facilisis neque sollicitudin et.</p>
+              <p>Sed elementum, est nec volutpat placerat, arcu purus condimentum mauris, nec auctor massa nisi in est. In mi tortor, malesuada eu lacinia quis, lacinia ac risus.</p>
+            </div>
+            <div class="leftAlign">
+              <h2>Header</h2>
+              <p>¬ tech1...</p>
+              <p>¬ tech2...</p>
+              <p>¬ tech3...</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="rightAlign">
+              <h2>Header</h2>
+              <p>Sed elementum, est nec volutpat placerat, arcu purus condimentum mauris, nec auctor massa nisi in est. In mi tortor, malesuada eu lacinia quis, lacinia ac risus.</p>
+            </div>
+            <div class="leftAlign">
+              <h2>Header</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum metus et laoreet venenatis. Donec bibendum tincidunt finibus. Nulla auctor, dolor eget commodo ullamcorper, lorem dolor venenatis lectus, et sodales ante erat eu metus. Integer interdum sagittis nibh, sed facilisis neque sollicitudin et.</p>
+              <p>Sed elementum, est nec volutpat placerat, arcu purus condimentum mauris, nec auctor massa nisi in est. In mi tortor, malesuada eu lacinia quis, lacinia ac risus.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="rightAlign">
+              <h2>Header</h2>
+              <p>Sed elementum, est nec volutpat placerat, arcu purus condimentum mauris, nec auctor massa nisi in est. In mi tortor, malesuada eu lacinia quis, lacinia ac risus.</p>
+            </div>
+            <div class="leftAlign">
+              <h2>Header</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum metus et laoreet venenatis. Donec bibendum tincidunt finibus. Nulla auctor, dolor eget commodo ullamcorper, lorem dolor venenatis lectus, et sodales ante erat eu metus. Integer interdum sagittis nibh, sed facilisis neque sollicitudin et.</p>
+              <p>Sed elementum, est nec volutpat placerat, arcu purus condimentum mauris, nec auctor massa nisi in est. In mi tortor, malesuada eu lacinia quis, lacinia ac risus.</p>
+            </div>
+          </div>
+          <div class="row iconRow">
+            <span><button id="btn_paint" onClick="togglePopup(this.id)">Close section</button></span>  <!-- Button to toggle the popup section -->
+          </div>
+        </div>  <!-- Closing .popup element -->
+      </div>  <!-- Closing the .section element -->
+
+      <div class="section column" id="section_paint">  <!-- Section containing the preview (always visible) and the popup (initially hidden; display/hide using the toggle button) parts of the work example -->
+        <div class="preview">  <!-- Section containing the preview part (always visible) of the work example -->
+          <div class="row">
+            <div class="rightAlign">
+              <img src="images/letsPaint.png" alt="Image of the Let's Paint website, with the canvas containing a rough drawing of a plant" />  <!-- Screenshot of the website landing page -->
+            </div>
+            <div class="leftAlign">
+              <h1>Title</h1>
+              <p>Sed elementum, est nec volutpat placerat, arcu purus condimentum mauris, nec auctor massa nisi in est. In mi tortor, malesuada eu lacinia quis, lacinia ac risus.</p>
+              <p>Sed elementum, est nec volutpat placerat, arcu purus condimentum mauris, nec auctor massa nisi in est. In mi tortor, malesuada eu lacinia quis, lacinia ac risus.</p>
+              <p>Tech Stack:...</p>
+            </div>
+          </div>
+          <div class="row iconRow">
+            <span><a href="/" target="_blank">Website</a></span>
+            <span><a href="/" target="_blank">Source code</a></span>
+            <span><button id="btn_paint" onClick="togglePopup(this.id)">Find out more ⇓</button></span>  <!-- Button to toggle the popup section -->
+          </div>
+        </div>  <!-- Closing .preview element -->
+        <div class="popup" id="popup_paint">  <!-- Section containing the popup part (initally hidden; display/hide using the toggle button) of the work example -->
+          <div class="row">
+            <div class="rightAlign">
+              <h2>Header</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum metus et laoreet venenatis. Donec bibendum tincidunt finibus. Nulla auctor, dolor eget commodo ullamcorper, lorem dolor venenatis lectus, et sodales ante erat eu metus. Integer interdum sagittis nibh, sed facilisis neque sollicitudin et.</p>
+              <p>Sed elementum, est nec volutpat placerat, arcu purus condimentum mauris, nec auctor massa nisi in est. In mi tortor, malesuada eu lacinia quis, lacinia ac risus.</p>
+            </div>
+            <div class="leftAlign">
+              <h2>Header</h2>
+              <p>¬ tech1...</p>
+              <p>¬ tech2...</p>
+              <p>¬ tech3...</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="rightAlign">
+              <h2>Header</h2>
+              <p>Sed elementum, est nec volutpat placerat, arcu purus condimentum mauris, nec auctor massa nisi in est. In mi tortor, malesuada eu lacinia quis, lacinia ac risus.</p>
+            </div>
+            <div class="leftAlign">
+              <h2>Header</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum metus et laoreet venenatis. Donec bibendum tincidunt finibus. Nulla auctor, dolor eget commodo ullamcorper, lorem dolor venenatis lectus, et sodales ante erat eu metus. Integer interdum sagittis nibh, sed facilisis neque sollicitudin et.</p>
+              <p>Sed elementum, est nec volutpat placerat, arcu purus condimentum mauris, nec auctor massa nisi in est. In mi tortor, malesuada eu lacinia quis, lacinia ac risus.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="rightAlign">
+              <h2>Header</h2>
+              <p>Sed elementum, est nec volutpat placerat, arcu purus condimentum mauris, nec auctor massa nisi in est. In mi tortor, malesuada eu lacinia quis, lacinia ac risus.</p>
+            </div>
+            <div class="leftAlign">
+              <h2>Header</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum metus et laoreet venenatis. Donec bibendum tincidunt finibus. Nulla auctor, dolor eget commodo ullamcorper, lorem dolor venenatis lectus, et sodales ante erat eu metus. Integer interdum sagittis nibh, sed facilisis neque sollicitudin et.</p>
+              <p>Sed elementum, est nec volutpat placerat, arcu purus condimentum mauris, nec auctor massa nisi in est. In mi tortor, malesuada eu lacinia quis, lacinia ac risus.</p>
+            </div>
+          </div>
+          <div class="row iconRow">
+            <span><button id="btn_paint" onClick="togglePopup(this.id)">Close section</button></span>  <!-- Button to toggle the popup section -->
+          </div>
+        </div>  <!-- Closing .popup element -->
+      </div>  <!-- Closing the .section element -->
+
     </main>
 
-    <!-- page footer -->
     <footer>
       <p>Created by Madeleine Linder (2017)</p>
     </footer>
 
-    <!-- link to the JavaScript file -->
     <script src="script.js"></script>
   </body>
 

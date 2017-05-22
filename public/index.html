@@ -8,21 +8,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- Link to the stylesheet & custom font -->
+    <!-- Link to the relevant stylesheets -->
     <link rel="stylesheet" type="text/css" href="reset.css">
-    <link rel="stylesheet" type="text/css" href="main.css">
-    <link rel="stylesheet" type="text/css" href="mediaQuery.css">
-    <link href="https://fonts.googleapis.com/css?family=Poiret+One|Raleway" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="landingPage.css">
   </head>
 
   <body>
-    <!-- The landing page -->
-    <header id="landingPage">
-      <!-- <h1><a href="/about">Madeleine<br/>Linder</a></h1> -->
+    <!-- When the user clicks anywhere on the page, it triggers the function enterSite(), which will take the user to path "/about"
+    Have to set it up as a function, as adding a link within the svg did not function on touchscreen -->
+    <header id="landingPage" onclick="enterSite()">
 
-      <!-- When click on svg, trigger function enterSite(), which will take the user to path "/about"
-      Have to set it up as a function, as adding a link within the svg did not function on touchscreen -->
-      <svg height="600" width="600" viewBox="0 0 600.000000 600.000000" onclick="enterSite()">
+      <svg height="600" width="600" viewBox="0 0 600.000000 600.000000">
         <!-- Use translate() to center the visible parts of the svg -->
         <g transform="translate(21.000000,584.000000) scale(0.100000,-0.100000)"
         fill="#fff" stroke="none">
@@ -112,27 +108,9 @@
         32 -88 -65 -21 -91 -36 -190 -36 -237 0 -20 -3 -39 -7 -41 -5 -3 -46 -8 -92
         -12 l-84 -7 6 84 c4 46 15 118 26 159 34 134 36 167 12 199 -11 16 -21 38 -21
         49 0 22 35 29 150 27 63 -1 65 -2 68 -28z"/>
-        <!-- <path d="M2297 2868 c-27 -21 -67 -153 -67 -225 0 -79 12 -103 48 -103 43 1
-        57 20 70 95 6 39 18 105 25 148 8 43 11 79 8 81 -22 13 -69 15 -84 4z"/>
-        <path d="M1742 2863 c-37 -30 -62 -121 -62 -222 0 -53 4 -93 11 -96 6 -4 26
-        -4 45 -1 28 6 34 11 34 32 0 45 32 248 42 267 11 22 10 23 -23 32 -17 4 -32 0
-        -47 -12z"/>
-        <path d="M2846 2858 c-20 -27 -46 -118 -46 -160 0 -18 29 -6 67 30 46 42 63
-        96 44 138 -15 33 -35 30 -65 -8z"/>
-        <path d="M3612 2856 c-22 -32 -51 -150 -40 -161 11 -11 79 38 94 66 28 54 16
-        129 -20 129 -6 0 -21 -15 -34 -34z"/>
-        <path d="M4973 2857 c-21 -31 -51 -152 -40 -163 3 -3 23 6 45 20 52 33 81 100
-        62 146 -16 39 -40 38 -67 -3z"/>
-        <path d="M3544 1589 c-12 -4 -31 -30 -45 -61 -20 -45 -24 -69 -24 -157 0 -86
-        3 -105 17 -114 21 -14 67 9 78 38 10 26 42 210 44 254 1 29 -3 35 -24 41 -14
-        4 -35 4 -46 -1z"/>
-        <path d="M4088 1587 c-18 -14 -48 -112 -48 -155 0 -19 4 -22 23 -17 12 4 37
-        23 55 43 29 32 33 42 30 87 -2 41 -6 50 -23 52 -11 2 -28 -3 -37 -10z"/> -->
-        <!-- </a> -->
       </svg>
     </header>
 
-    <!-- link to the JavaScript file -->
     <script src="script.js"></script>
   </body>
 
