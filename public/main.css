@@ -2,10 +2,6 @@ div, h1, h2, p {
   /*border: 1px solid purple;*/
 }
 
-span {
-  /*border: 1px solid orange;*/
-}
-
 /* ///////// ///////// ///////// ///////// ///////// ///////// /////////
 /////////        Style the basic properties of the page        /////////
 ///////// ///////// ///////// ///////// ///////// ///////// ///////// */
@@ -33,7 +29,7 @@ p {
 ///////// /////////        Style the nav bar        ///////// /////////
 ///////// ///////// ///////// ///////// ///////// ///////// ///////// */
 
-#topNav {
+.navBar {
   height: 4em;
   width: 100vw;
   position: fixed;
@@ -56,14 +52,19 @@ p {
   align-items: center;
 }
 
-#topNav a {
+.navBar a {
   color: #fff;
   font-family: 'Poiret One', sans-serif;
   font-size: 1.5em;
   font-weight: bold;
 }
 
-#topNav span {
+/*.navBar a:hover {
+  color: #B8CCC1;
+  transition: 0.2s;
+}*/
+
+.navBar span {
   font-size: 1.6em;
 }
 

@@ -1,12 +1,16 @@
 /* To make the site look good on smaller screens (<950px, <750px and <450px) */
 
 @media screen and (max-width: 950px){
-  main {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    overflow-x: hidden;
+  img {
+    min-height: 25vh;  /* Ensures that when the screen is 750-950px wide > the work example screenshot will remain the same height, but be slightly squished width-wise > ev change this */
   }
+  #roundImg img {
+    min-height: 15vh;
+  }
+}
+
+@media screen and (max-width: 750px){
+  /* Update the page structure to fit smaller screens */
   .row {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -14,49 +18,43 @@
     -ms-align-items: center;
     align-items: center;
   }
-  .text, .text.about {
-    width: 85%;
-  }
-  .leftAlign, .rightAlign, .leftAlign h3, .rightAlign h3, .leftAlign h4, .rightAlign h4 {
+  .rightAlign, .leftAlign {
     text-align: center;
-    padding-left: 0;
-    padding-right: 0;
   }
-  #iconList {
+  img {
+    max-height: 25vh;
+  }
+  #iconColumn {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
+    justify-content: center;
   }
-  #iconList a {
-    margin: 1em;
+  #iconColumn a {
+    margin: 0 1em;
+  }
+  #roundImg {
+    max-width: 80vw;
   }
 }
 
-@media screen and (max-width: 750px){
-  h1 {
-    font-size: 4em;
-  }
-  img {
-    max-width: 92vw;
-    height: auto;
-    max-height: 35vh;
-  }
-  #topNav {
+@media screen and (max-width: 550px){
+  /* Switch to dropdown navbar */
+  .navBar {
     background-size: 162vw auto;
   }
-  #topNav a.navLink {
-    display: none;
+  .navBar a.navLink {
+    display: none;  /* Hide the link items from the full-size navbar */*/
   }
+  /* Display the minimised-navbar icons (for toggling menu and returning to landing page) */
   #navIcon {
-    display: block;
-    width: 102vw;
+    /*display: block;*/
+    width: 100vw;
     font-size: 2em;
-    /*padding: 0.5em;*/
     position: fixed;
     top: 0;
     left: 0;
     z-index: 99;
-
     display: -webkit-flex;
     display: -ms-flex;
     display: flex;
@@ -67,9 +65,8 @@
   }
   #navIcon button {
     color: #fff;
-    font-size: inherit;
+    /*font-size: inherit;*/
     padding: 0 1em;
-
     /* To remove default button styling on phone devices: */
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -80,8 +77,9 @@
   }
   #navIcon a {
     display: inline-block;
-    font-family: 'Poiret One', sans-serif;
     color: #fff;
+    font-family: 'Poiret One', sans-serif;
+    /*font-size: inherit;*/
     padding: 0.5em 1em;
   }
   #navIcon a span {
@@ -90,61 +88,35 @@
     padding: 0.2em;  /* Ideal padding (up to 0.3em) for round border */
     border-radius: 50%;
   }
-
-  /* The dropdown menu: */
-  #topNav_responsive {
-    width: 102vw;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1;
-
-    background-image: url("images/chalkboard.jpg");
+  /* Style the dropdown navbar > only visible when have clicked on the menu toogle icon to show the dropdown menubar */
+  .responsive {
+    padding-top: 6em;
     background-size: 162vw auto;
-    background-position: top;
-    /*background-color: #b27686;
-    background-image: url('images/landingPage.jpg');
-    background-blend-mode: difference;
-    background-size: 162vw auto;*/
-
-    box-shadow: 0.2em 0.2em 1em #333;
-
-    display: -webkit-flex;
-    display: -ms-flex;
-    display: flex;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-
-    padding-top: 4em;
+    justify-content: flex-end;
   }
-  #topNav_responsive li:nth-child(2) {
-    display: none;
+  .responsive li:nth-child(2) {
+    display: none;  /* Don't display the middle item of the full-size navbar ("Madeleine Linder") */
   }
-  #topNav_responsive a {
-    display: block;
-    width: 95vw;
-    font-family: 'Poiret One', sans-serif;
-    font-size: 1.8em;
-    font-weight: bold;
+  .responsive a.navLink {
+    display: block;  /* Display the navbar link items within the dropdown menu */
+    width: 100vw;
     text-align: right;
-    padding: 0.2em 1em 0.4em 0;
+    padding: 0.4em 3em 0.4em 0;
   }
-  #topNav_responsive a:hover {
+  /*.responsive a:hover {
     color: #B8CCC1;
     transition: 0.2s;
+  }*/
+  .row {
+    width: 90vw;
   }
 }
 
 @media screen and (max-width: 450px) {
-  h1 {
-    font-size: 3em;
-    padding: 1rem;
-  }
-  #landingPage {
-    overflow: hidden;
-  }
-  .text, .text.about {
-    width: 90%;
+  .row {
+    width: 95vw;
   }
 }
