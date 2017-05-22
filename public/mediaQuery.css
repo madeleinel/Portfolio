@@ -85,7 +85,9 @@
   }
   #navIcon a span {
     border: 2px solid #fff;
-    padding: 0.1em;
+    /*padding: 0.1em;*/  /* Ideal padding for square border */
+    padding: 0.2em;  /* Ideal padding (up to 0.3em) for round border */
+    border-radius: 50%;
   }
 
   /* The dropdown menu: */

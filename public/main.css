@@ -1,83 +1,83 @@
 div {
-  /*border: 1px solid purple;*/
+  border: 1px solid purple;
 }
+
+span {
+  border: 1px solid orange;
+}
+
+/* ///////// ///////// ///////// ///////// ///////// ///////// /////////
+/////////        Style the basic properties of the page        /////////
+///////// ///////// ///////// ///////// ///////// ///////// ///////// */
 
 body {
   font-family: 'Raleway', sans-serif;
-  overflow-x: hidden;
 }
 
-h2 {
-  font-family: 'Oleo Script', cursive;
-  font-size: 3em;
-  color: #b27686;
-  text-align: left;
-  padding: 0.35em 0;
+/* ///////// ///////// ///////// ///////// ///////// ///////// /////////
+///////// /////////        Style the nav bar        ///////// /////////
+///////// ///////// ///////// ///////// ///////// ///////// ///////// */
 
-  /*border: 1px solid purple;*/
-}
-
-h3 {
-  font-size: 1.5em;
-  padding: 1em;
-}
-
-.rightAlign h3 {
-  text-align: right;
-  padding-right: 0;
-}
-
-.leftAlign h3 {
-  text-align: left;
-  padding-left: 0;
-}
-
-p {
-  line-height: 1.4em;
-  margin-bottom: 1em;
-  width: 100%;
-}
-
-a {
-  color: #92626F;
-}
-
-a:hover {
-  color: #111;
-  transition: 0.2s;
-}
-
-/* Landing page */
-#landingPage {
-  height: 100vh;
+#topNav {
+  height: 4em;
   width: 100vw;
-
-  background-color: #b27686;
-  background-image: url("images/redChalkboard.png");
-  /* Chalkboard image downloaded from Foolish Fire: https://www.foolishfire.com/2012/09/11/free-downloadable-chalkboard-backgrounds/ */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: #111;
+  background-image: url("images/chalkboard.jpg");
   background-size: cover;
-  background-position: right;
-
+  background-position: top;
+  box-shadow: 0 0.2em 1em #333;
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  justify-content: center;    /* center horizontally */
-  -ms-align-items: center;    /* center vertically */
+  justify-content: space-around;
+  -ms-align-items: center;
   align-items: center;
-  text-align: center;
 }
 
-#landingPage svg:hover {
-  -webkit-filter: drop-shadow(0 0 0.4rem rgba(255, 255, 255, 0.6));
-  transition: 0.2s;
+#topNav a {
+  color: #fff;
+  font-family: 'Poiret One', sans-serif;
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
-/* Basic structure of the page */
+#topNav span {
+  font-size: 1.6em;
+}
+
+#navIcon {  /* The dropdown menu toggle button and ML icon > to be hidden on large screens (when the navbar is displayed in full) */
+  display: none;
+}
+
+#navIcon span {
+  border-radius: 50%;
+}
+
+/* ///////// ///////// ///////// ///////// ///////// ///////// /////////
+///////// Style the structure of the main elements of the page /////////
+///////// ///////// ///////// ///////// ///////// ///////// ///////// */
+
+background {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -99;
+  background-color: #92626F;
+  background-image: url("images/redChalkboard.png");
+  background-size: cover;
+}
+
 main {
-  margin-top: 4em;    /* To ensure it starts displaying under the navbar */
+  margin-top: 4em;    /* To ensure that the main section starts displaying under the navbar */
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
@@ -88,7 +88,17 @@ main {
   align-items: center;
 }
 
+.section {
+  width: 100vw;
+  background-color: #fff;
+}
+
+.section:not(:last-child) {
+  margin-bottom: 20vh;
+}
+
 .row {
+  width: 80vw;
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
@@ -96,7 +106,6 @@ main {
   -ms-flex-direction: row;
   flex-direction: row;
   justify-content: center;
-  max-width: 80vw;
 }
 
 .column {
@@ -110,178 +119,65 @@ main {
   align-items: center;
 }
 
-.section {
-  width: 100vw;
-  padding: 2em 1em;
-  /*background-image: url("images/silhouettes_blue_narrow.jpeg");
-  background-size: stretch auto;
-  background-position: top;*/
-
-  /*margin: 2em 0;*/
-  /*box-shadow: 0em 0em 1em #333;*/
-  /*box-shadow: 0 0 1.5em #555;*/
-  /*background-color: #bbb;*/
-}
-
-.popup {
-  padding: 0 0 2em 0;
-}
-
-/*.section, .popup {
-  box-shadow: 0.2em 0.2em 1em #333;
-}
-
-.section {
-  z-index: -99;
-}
-
-.popup {
-  z-index: 99;
-}*/
-
-/* Site navbar */
-#topNav {
-  height: 4em;
-  width: 102vw;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
-
-  background-image: url("images/chalkboard.jpg");
-  background-size: cover;
-  background-position: top;
-  box-shadow: 0.2em 0.2em 1em #333;
-
-  display: -webkit-flex;
-  display: -ms-flex;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  justify-content: space-around;
-  -ms-align-items: center;
-  align-items: center;
-}
-
-#topNav li {
-  min-width: 6rem;
-  text-align: right;
-}
-
-#navIcon {
-  display: none;
-}
-
-#topNav a {
-  font-family: 'Poiret One', sans-serif;
-  color: #fff;
-  font-size: 1.8em;
-  font-weight: bold;
-}
-
-#topNav a:hover {
-  color: #B8CCC1;
-  transition: 0.2s;
-}
-
-#topNav span {
-  font-size: 1.6em;
-}
-
-/* Portfolio content */
-img {
-  height: 35vh;
-  /*box-shadow: 0.2em 0.2em 1em #333;*/
-  box-shadow: 0 0 1.5em #555;
-  margin: 1em;
+.rightAlign, .leftAlign {
+  flex: 1;  /* Ensure .rightAlign and .leftAlign are of the same width */
+  padding: 1em;
 }
 
 .rightAlign {
   text-align: right;
-  padding-right: 2em;
-  flex: 1;
-  order: 1;
+  margin-right: 1em;
+  /* order: 1;  /* When on smaller screens > .rightAlign sections should be on top of .leftAlign sections */
 }
 
 .leftAlign {
   text-align: left;
-  padding-left: 2em;
-  flex: 1;
-  order: 2;
+  margin-left: 1em;
+  /* order: 2;  /* When on smaller screens > .rightAlign sections should be on top of .leftAlign sections */
 }
 
 .popup {
-  display: none;
+  /*display: none;*/
 }
 
-.text span, .row span {
-  border-radius: 0.5em;
-  border: 2px solid #333;
-  background-color: #fff;
-  box-shadow: 0 0 0.2em #555;
-  line-height: 1.4em;
-  padding: 0.5em;
-  margin: 1em;
-  display: inline-block;
+/* ///////// ///////// ///////// ///////// ///////// ///////// /////////
+/////////          Style the look of the page elements          /////////
+///////// ///////// ///////// ///////// ///////// ///////// ///////// */
 
-  /*background-color: #92626F;*/
-  /*background-image: url("images/chalkboard.jpg");*/
-  background-position: center;
-  background-size: cover;
+img {
+  height: 30vh;
+  box-shadow: 0 0 1em #555;
 }
 
-.row span {
-  padding: 0.3em 0.5em;
-  margin: 1em 0;
+span {
 }
 
-.row span:hover {
-  /*background-image: url("images/redChalkboard.png");*/
-  border-color: #92626F;
-  transition: 0.2s;
+/* //////// //////// The About page contact icons //////// //////// */
+
+#iconColumn {
+  /*justify-content: center;*/  /* ev necessary when add more text to the textbox next to it */
 }
 
-.row span a, .row span a:hover {
-  color: #111;
-}
-
-button {
-  border: none;
-  font-size: inherit;
-  font-family: inherit;
-  color: #111;
-  background: none;
-  outline: none;
-  padding: 0;
-}
-
-#iconList {
-  justify-content: center;
-  margin-top: 2em;
-}
-
-#iconList a {
+#iconColumn a {
   width: 2.4em;
   height: 2.4em;
   padding: 0.8em;
-  background-color: #92626F;
+  background-color: #111;
   border-radius: 4em;
   margin: 1em 6em 1em 2em;
 }
 
-#iconList .icon {
+#iconColumn a:hover {
+  background-color: #6E8F88;
+  transition: 0.2s;
+}
+
+#iconColumn .icon {
   width: inherit;
   height: inherit;
   margin: 0;
   background-size: cover;
   background-position: center;
-}
-
-#iconList a:hover {
-  /*background-color: #6E8F88;*/
-  background-color: #333;
-  transition: 0.2s;
 }
 
 #github {
@@ -294,20 +190,48 @@ button {
   background-image: url('assets/email.png');
 }
 
-/* The footer */
+/* //////// ////////  The About page skills buttons  //////// //////// */
+
+.centerAlign {
+
+}
+
+.centerAlign span {
+  border: 2px solid #111;
+  padding: 0.3em 0.5em;
+  border-radius: 0.4em;
+}
+
+/* ////////        The Portfolio page work example links        //////// */
+
+#iconRow {
+
+}
+
+#iconRow span {
+  border: 2px solid #111;
+  padding: 0.3em 0.5em;
+  border-radius: 0.4em;
+}
+
+button {
+  border: none;
+  background: none;
+  outline: none;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+/* ///////// ///////// ///////// ///////// ///////// ///////// /////////
+///////// /////////      Style the page footer      ///////// /////////
+///////// ///////// ///////// ///////// ///////// ///////// ///////// */
+
 footer {
-  width: 102vw;
-  padding-top: 0.5em;
-  padding-bottom: 0.2em;
-  font-family: 'Poiret One', sans-serif;
-  font-size: 1.2em;
+  width: 100vw;
+  padding: 0.5em;
   text-align: center;
   color: #fff;
   background-image: url("images/chalkboard.jpg");
   background-size: cover;
   background-position: top;
-}
-
-footer p {
-  margin-bottom: 0;
 }
