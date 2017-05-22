@@ -4,14 +4,14 @@ function enterSite() {
   window.location.pathname = "/about";
 }
 
+// Set up dropdown menu for small screens
 const icon = document.getElementById("navToggleIcon");
 const navbar = document.getElementById("topNav");
-// Set up dropdown menu for small screens
 function toggleMenu() {
-  if (navbar.id === "topNav") {
-    navbar.id += "_responsive";   // Change id of element to 'topNav_responsive'
+  if (navbar.className === "navBar") {
+    navbar.className += " responsive";   // Change the class of element to 'navBar responsive'
   } else {
-    navbar.id = "topNav";   // If id name is already 'topNav_responsive', change it back to 'topNav'
+    navbar.className = "navBar";   // If the class is already 'navBar responsive', change it back to 'navBar'
   }
 }
 
