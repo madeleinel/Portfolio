@@ -19,7 +19,7 @@
     <header>
       <!-- Site navbar > will be visible at all times apart from the landing page (minimised on smaller screens) -->
       <nav id="navIcon">
-        <button id="navToggleIcon" onclick="toggleMenu()">&#9776;</button>
+        <button id="navToggleIcon">&#9776;</button>  <!-- To display or hide the dropdown menu on smaller screens -->
         <a href="/"><span>ML</span></a>
       </nav>
       <nav class="navBar" id="topNav">
@@ -30,7 +30,7 @@
     </header>
 
     <main>
-      <background></background>  <!-- Fixed background image which "peeks out" between the content sections -->
+      <div id="background"></div>  <!-- Fixed background image which "peeks out" between the content sections -->
 
       <div class="section column">
         <div class="row">
@@ -39,7 +39,7 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum metus et laoreet venenatis. Donec bibendum tincidunt finibus. Nulla auctor, dolor eget commodo ullamcorper, lorem dolor venenatis lectus, et sodales ante erat eu metus. Integer interdum sagittis nibh, sed facilisis neque sollicitudin et.</p>
             <p>Sed elementum, est nec volutpat placerat, arcu purus condimentum mauris, nec auctor massa nisi in est. In mi tortor, malesuada eu lacinia quis, lacinia ac risus.</p>
           </div>
-          <div class="leftAlign column" id="iconColumn">
+          <div class="leftAlign" id="iconColumn">
             <a href="https://github.com/madeleinel" target="_blank"><div class="icon" id="github"></div></a>
             <a href="https://uk.linkedin.com/in/madeleinelinder" target="_blank"><div class="icon" id="linkedin"></div></a>
             <a href="mailto:madeleinelinder@hotmail.com"><div class="icon" id="email"></div></a>
