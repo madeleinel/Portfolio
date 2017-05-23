@@ -19,7 +19,7 @@
     <header>
       <!-- Site navbar > will be visible at all times apart from the landing page (minimised on smaller screens) -->
       <nav id="navIcon">
-        <button id="navToggleIcon" onclick="toggleMenu()">&#9776;</button>
+        <button id="navToggleIcon">&#9776;</button>  <!-- To display or hide the dropdown menu on smaller screens -->
         <a href="/"><span>ML</span></a>
       </nav>
       <nav class="navBar" id="topNav">
@@ -30,7 +30,7 @@
     </header>
 
     <main>
-      <background></background>  <!-- Fixed background image which "peeks out" between the content sections -->
+      <div id="background"></div>  <!-- Fixed background image which "peeks out" between the content sections -->
 
       <div class="section column" id="section_paint">  <!-- Section containing the preview (always visible) and the popup (initially hidden; display/hide using the toggle button) parts of the work example -->
         <div class="preview">  <!-- Section containing the preview part (always visible) of the work example -->

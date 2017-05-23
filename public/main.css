@@ -6,9 +6,10 @@ div, h1, h2, p {
 /////////        Style the basic properties of the page        /////////
 ///////// ///////// ///////// ///////// ///////// ///////// ///////// */
 
-body, background {
+body {
+  width: 100vw;
   font-family: 'Raleway', sans-serif;
-  overflow-x: hidden;
+  /*overflow-x: hidden;*/
 }
 
 h1 {
@@ -24,6 +25,12 @@ h2 {
 p {
   line-height: 1.2em;
 }
+
+a {
+  text-decoration: none;
+}
+
+/* The default stylings of links, buttons and list items have been removed within reset.css */
 
 /* ///////// ///////// ///////// ///////// ///////// ///////// /////////
 ///////// /////////        Style the nav bar        ///////// /////////
@@ -80,7 +87,7 @@ p {
 ///////// Style the structure of the main elements of the page /////////
 ///////// ///////// ///////// ///////// ///////// ///////// ///////// */
 
-background {
+#background {
   height: 100vh;
   width: 100vw;
   position: fixed;
@@ -169,6 +176,12 @@ main {
 
 #iconColumn {
   max-width: 10vw;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -ms-align-items: center;
   align-items: center;
   /* Ev change this to flex-start (so align closer to the text) and max-width 15vw to keep the textbox from getting too wide > want it to match with the row below */
@@ -230,7 +243,7 @@ img {
 /* //////// ////////  The About page skills buttons  //////// //////// */
 
 .centerAlign {
-
+  text-align: center;
 }
 
 .centerAlign span {
@@ -264,17 +277,9 @@ img {
   border: 2px solid #111;
   padding: 0.3em 0.5em;
   border-radius: 0.4em;
-  line-height: 1.5em;  /* Specify line height to ensure that the link is vertically centered within the span borders */
+  line-height: 1.2em;  /* Specify line height to ensure that the link is vertically centered within the span borders */
 
   margin: 1em;  /* Ev update spacing when remove the working borders */
-}
-
-button {
-  border: none;
-  background: none;
-  outline: none;
-  font-size: inherit;
-  font-family: inherit;
 }
 
 /* ///////// ///////// ///////// ///////// ///////// ///////// /////////
@@ -283,7 +288,7 @@ button {
 
 footer {
   width: 100vw;
-  padding: 0.5em;
+  padding: 0.5em 0;
   text-align: center;
   color: #fff;
   background-image: url("images/chalkboard.jpg");

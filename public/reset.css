@@ -37,6 +37,18 @@ ol, ul, li {
 a {
 	text-decoration: none;
 }
+button {
+	/*-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;*/
+	border: none;
+  background: none;
+	background-color: inherit;
+  outline: none;
+  font-size: inherit;
+  font-family: inherit;
+  padding: 0;
+}
 blockquote, q {
 	quotes: none;
 }

@@ -29,6 +29,9 @@
     -ms-flex-direction: row;
     flex-direction: row;
     justify-content: center;
+    width: 80vw;
+    /*min-width: 80vw;
+    max-width: 90vw;*/
   }
   #iconColumn a {
     margin: 0 1em;
@@ -65,22 +68,18 @@
   }
   #navIcon button {
     color: #fff;
-    /*font-size: inherit;*/
-    padding: 0 1em;
-    /* To remove default button styling on phone devices: */
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    border: none;
+    padding: 0 6vw;
+    /* To remove default button styling on phone devices:
+    >> already done in reset.css */
+    /*border: none;
     outline: none;
-    background-color: inherit;
+    background-color: inherit;*/
   }
   #navIcon a {
     display: inline-block;
     color: #fff;
     font-family: 'Poiret One', sans-serif;
-    /*font-size: inherit;*/
-    padding: 0.5em 1em;
+    padding: 0.5em 6vw;
   }
   #navIcon a span {
     border: 2px solid #fff;
@@ -90,7 +89,7 @@
   }
   /* Style the dropdown navbar > only visible when have clicked on the menu toogle icon to show the dropdown menubar */
   .responsive {
-    padding-top: 6em;
+    padding-top: 5em;
     background-size: 162vw auto;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -100,11 +99,14 @@
   .responsive li:nth-child(2) {
     display: none;  /* Don't display the middle item of the full-size navbar ("Madeleine Linder") */
   }
+  .responsive li {
+    width: 100vw;
+  }
   .responsive a.navLink {
     display: block;  /* Display the navbar link items within the dropdown menu */
-    width: 100vw;
-    text-align: right;
-    padding: 0.4em 3em 0.4em 0;
+    width: inherit;
+    text-align: center;
+    padding: 0 0 2vh 0;
   }
   /*.responsive a:hover {
     color: #B8CCC1;
@@ -113,10 +115,26 @@
   .row {
     width: 90vw;
   }
+  #iconColumn {
+    min-width: 90vw;
+  }
 }
 
 @media screen and (max-width: 450px) {
+  .responsive {
+    padding-top: 4em;
+  }
+  .iconRow a, .iconRow button {
+    font-size: 0.9em;
+  }
+  .iconRow span {
+    margin: 0.2em;
+  }
   .row {
     width: 95vw;
   }
+  #iconColumn a {
+    margin: 0 0.5em;
+  }
+  /* Make About contact icons round on smaller screens */
 }
