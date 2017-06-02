@@ -32,10 +32,11 @@ a {
   color: #4c58ed;
 }
 
-/*em {
-  font-weight: bold;
-  background-color: orange;
-}*/
+em {
+  background-color: #c7cbf9;
+  padding: 0.5em;
+  border-radius: 0.4em;
+}
 
 .red {
   color: #b4160f;
@@ -194,8 +195,8 @@ main {
   -ms-flex-direction: column;
   flex-direction: column;
   -ms-align-items: center;
-  align-items: center;
-  /* Ev change this to flex-start (so align closer to the text) and max-width 15vw to keep the textbox from getting too wide > want it to match with the row below */
+  align-items: center;    /* Ev change this to flex-start (so align closer to the text) and max-width 15vw to keep the textbox from getting too wide > want it to match with the row below */
+  justify-content: space-between;  /* Make the icons within the column spread out so that they take up the same space vertically as the About text next to it */
 }
 
 .popup {
@@ -302,7 +303,7 @@ img {
 
 footer {
   width: 100vw;
-  padding: 0.5em 0;
+  padding-top: 0.6em;
   text-align: center;
   color: #fff;
   background-image: url("images/chalkboard.jpg");
