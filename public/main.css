@@ -29,6 +29,7 @@ p {
 
 a {
   text-decoration: none;
+  color: #4c58ed;
 }
 
 /*em {
@@ -230,7 +231,8 @@ img {
 }
 
 #iconColumn a:hover {
-  background-color: #6E8F88;
+  background-color: #4c58ed;
+  /*background-color: #6E8F88;*/
   transition: 0.2s;
 }
 
