@@ -157,6 +157,113 @@
         </div>  <!-- Closing .popup element -->
       </div>  <!-- Closing the .section element -->
 
+      <div class="section column" id="section_clock">  <!-- Section containing the preview (always visible) and the popup (initially hidden; display/hide using the toggle button) parts of the work example -->
+        <div class="preview">  <!-- Section containing the preview part (always visible) of the work example -->
+          <div class="row">
+            <div class="rightAlign">
+              <img src="images/clock.png" alt="Image of the clock application, with a blue backgroud and white clockface." />  <!-- Screenshot of the website landing page -->
+            </div>
+            <div class="leftAlign">
+              <h1>Interactive Clock</h1>
+              <p>A website which displays the time of the user's timezone, and enables the user the customise the background and clockface colours.</p>
+              <p><em>Tech Stack:</em> ES6, and HTML5/CSS3.</p>
+            </div>
+          </div>
+          <div class="row iconRow">
+            <span><a href="https://madeleinel.github.io/clock/" target="_blank">Website</a></span>
+            <span><a href="https://github.com/madeleinel/clock" target="_blank">Source code</a></span>
+            <span><button id="btn_clock" onClick="togglePopup(this.id)">Find out more ⇓</button></span>  <!-- Button to toggle the popup section -->
+          </div>
+        </div>  <!-- Closing .preview element -->
+        <div class="popup" id="popup_clock">  <!-- Section containing the popup part (initally hidden; display/hide using the toggle button) of the work example -->
+          <div class="row">
+            <div class="rightAlign">
+              <h2>Background</h2>
+              <p>The original clockface was created using a <a href="https://javascript30.com/" target="_blank">JavaScript30</a> tutorial created by Wes Bos, and the design and functionality has then been customised.</p>
+            </div>
+            <div class="leftAlign">
+              <h2>Tech Stack</h2>
+              <p>¬ ES6 to set up the clock and the colour customisation features</p>
+              <p>¬ HTML5 and CSS3 to style the site</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="rightAlign">
+              <h2>Challenge</h2>
+              <p>Enable the user to customise the look of the application to their preference.</p>
+            </div>
+            <div class="leftAlign">
+              <h2>Solution</h2>
+              <p>Using the colour pickers on the right, the user can choose their preferred background and clockface colour.</p>
+            </div>
+          </div>
+          <div class="row iconRow">
+            <span><button id="btn_clock" onClick="togglePopup(this.id)">Close section</button></span>  <!-- Button to toggle the popup section -->
+          </div>
+        </div>  <!-- Closing .popup element -->
+      </div>  <!-- Closing the .section element -->
+
+      <div class="section column" id="section_wtt">  <!-- Section containing the preview (always visible) and the popup (initially hidden; display/hide using the toggle button) parts of the work example -->
+        <div class="preview">  <!-- Section containing the preview part (always visible) of the work example -->
+          <div class="row">
+            <div class="rightAlign">
+              <img src="images/wtt_homepage.png" alt="Image of the WomenToTech landing page, with two big sign-up buttons for prospective mentors and mentees." />  <!-- Screenshot of the website landing page -->
+            </div>
+            <div class="leftAlign">
+              <h1>WomenToTech</h1>
+              <p>A platform which matches self-identifying women who want to get started in the tech industry with mentors who are working within the industry.</p>
+              <p class="red">The platform database is currently being updated and more features are being added, so please be advised that the platform at times may not function properly.</p>
+              <p><em>Tech Stack:</em> Python 2, Flask, PostgreSQL, Twitter API, HTML5/CSS3, and Heroku.</p>
+            </div>
+          </div>
+          <div class="row iconRow">
+            <span><a href="https://womentotech.herokuapp.com/" target="_blank">Website</a></span>
+            <span><a href="https://github.com/madeleinel/WoMentor" target="_blank">Source code</a></span>
+            <span><button id="btn_wtt" onClick="togglePopup(this.id)">Find out more ⇓</button></span>  <!-- Button to toggle the popup section -->
+          </div>
+        </div>  <!-- Closing .preview element -->
+        <div class="popup" id="popup_wtt">  <!-- Section containing the popup part (initally hidden; display/hide using the toggle button) of the work example -->
+          <div class="row">
+            <div class="rightAlign">
+              <h2>Background</h2>
+              <p>The website was created as part of the <a href="http://www.codefirstgirls.org.uk/" target="_blank">Code First: Girls</a> Advanced Python Web Development Course competition with <a href="https://github.com/eleanombre" target="_blank">E Keane</a>.</p>
+              <p>The platform database is currently being updated and more features, such as matching up mentors and mentees based on their preferred languages and what type of help they are looking for or can provide, are being added.</p>
+            </div>
+            <div class="leftAlign">
+              <h2>Tech Stack</h2>
+              <p>¬ Python 2 and Flask for backend</p>
+              <p>¬ PostgreSQL for database handling</p>
+              <p>¬ Twitter API to set up the Twitterbot</p>
+              <p>¬ HTML5 and CSS3 to style the site</p>
+              <p>¬ Heroku for app deployment</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="rightAlign">
+              <h2>Challenge 1</h2>
+              <p>Enable prospective mentors and mentees to use the platform.</p>
+            </div>
+            <div class="leftAlign">
+              <h2>Solution</h2>
+              <p>Prospective mentors and mentees can sign up to the platform by tweeting us. When they sign up a profile is created for them on the website. They can then browse through the existing profiles on the website.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="rightAlign">
+              <h2>Challenge 2</h2>
+              <p>Create profiles on the website containing the information provided through the sign-up tweet.</p>
+            </div>
+            <div class="leftAlign">
+              <h2>Solution</h2>
+              <p>When the user tweets us, the information they have provided is saved into our database using the tags used within the tweet (eg "-langs" and "-skills"). The content of the database is then imported into the profile pages on the website. A for loop ensures that all new users are displayed as they sign up.</p>
+            </div>
+          </div>
+          <div class="row iconRow">
+            <span><button id="btn_wtt" onClick="togglePopup(this.id)">Close section</button></span>  <!-- Button to toggle the popup section -->
+          </div>
+        </div>  <!-- Closing .popup element -->
+      </div>  <!-- Closing the .section element -->
+
     </main>
 
     <footer>

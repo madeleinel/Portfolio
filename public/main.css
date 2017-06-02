@@ -36,6 +36,10 @@ a {
   background-color: orange;
 }*/
 
+.red {
+  color: #b4160f;
+}
+
 /* The default stylings of links, buttons and list items have been removed within reset.css */
 
 /* ///////// ///////// ///////// ///////// ///////// ///////// /////////
