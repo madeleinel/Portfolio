@@ -39,52 +39,69 @@
               <img src="images/letsPaint.png" alt="Image of the Let's Paint website, with the canvas containing a rough drawing of a plant" />  <!-- Screenshot of the website landing page -->
             </div>
             <div class="leftAlign">
-              <h1>Title</h1>
-              <p>Sed elementum, est nec volutpat placerat, arcu purus condimentum mauris, nec auctor massa nisi in est. In mi tortor, malesuada eu lacinia quis, lacinia ac risus.</p>
-              <!-- <p>Sed elementum, est nec volutpat placerat, arcu purus condimentum mauris, nec auctor massa nisi in est. In mi tortor, malesuada eu lacinia quis, lacinia ac risus.</p> -->
-              <p>Tech Stack:...</p>
+              <h1>Let's Paint</h1>
+              <p>A drawing application which allows the user to draw on a canvas and customise features such as brush stroke colour, size and effects, changing the background colour independently from the drawing itself, and undoing drawing actions.</p>
+              <p><em>Tech Stack:</em> ES6, HTML5 canvas and HTML5/CSS3.</p>
             </div>
           </div>
           <div class="row iconRow">
-            <span><a href="/" target="_blank">Website</a></span>
-            <span><a href="/" target="_blank">Source code</a></span>
+            <span><a href="https://madeleinel.github.io/Lets_Paint/" target="_blank">Website</a></span>
+            <span><a href="https://github.com/madeleinel/Lets_Paint" target="_blank">Source code</a></span>
             <span><button id="btn_paint" onClick="togglePopup(this.id)">Find out more ⇓</button></span>  <!-- Button to toggle the popup section -->
           </div>
         </div>  <!-- Closing .preview element -->
         <div class="popup" id="popup_paint">  <!-- Section containing the popup part (initally hidden; display/hide using the toggle button) of the work example -->
           <div class="row">
             <div class="rightAlign">
-              <h2>Header</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum metus et laoreet venenatis. Donec bibendum tincidunt finibus. Nulla auctor, dolor eget commodo ullamcorper, lorem dolor venenatis lectus, et sodales ante erat eu metus. Integer interdum sagittis nibh, sed facilisis neque sollicitudin et.</p>
-              <p>Sed elementum, est nec volutpat placerat, arcu purus condimentum mauris, nec auctor massa nisi in est. In mi tortor, malesuada eu lacinia quis, lacinia ac risus.</p>
+              <h2>Background</h2>
+              <p>The drawing application was inspired by Wes Bos’s <a href="https://javascript30.com/" target="_blank">JavaScript30</a> HTML5 canvas tutorial. The canvas and the basic drawing feature was set up using this tutorial, and all additional features have been added using ES6.</p>
+              <p>More features are in the process of being added.</p>
             </div>
             <div class="leftAlign">
-              <h2>Header</h2>
-              <p>¬ tech1...</p>
-              <p>¬ tech2...</p>
-              <p>¬ tech3...</p>
+              <h2>Tech Stack</h2>
+              <p>¬ HTML5 Canvas to set up the canvas</p>
+              <p>¬ ES6 to enable the drawing features</p>
+              <p>¬ HTML5 and CSS3 to style the site</p>
             </div>
           </div>
           <div class="row">
             <div class="rightAlign">
-              <h2>Header</h2>
-              <p>Sed elementum, est nec volutpat placerat, arcu purus condimentum mauris, nec auctor massa nisi in est. In mi tortor, malesuada eu lacinia quis, lacinia ac risus.</p>
+              <h2>Challenge 1</h2>
+              <p>Enable the user to add brush effects.</p>
             </div>
             <div class="leftAlign">
-              <h2>Header</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum metus et laoreet venenatis. Donec bibendum tincidunt finibus. Nulla auctor, dolor eget commodo ullamcorper, lorem dolor venenatis lectus, et sodales ante erat eu metus. Integer interdum sagittis nibh, sed facilisis neque sollicitudin et.</p>
-              <p>Sed elementum, est nec volutpat placerat, arcu purus condimentum mauris, nec auctor massa nisi in est. In mi tortor, malesuada eu lacinia quis, lacinia ac risus.</p>
+              <h2>Solution</h2>
+              <p>Added event listeners to listen for changes within the effect list elements; when registering a change, it loops through the list to see which option element was chosen, and then sets the drawing effect to be the value of that option.</p>
             </div>
           </div>
           <div class="row">
             <div class="rightAlign">
-              <h2>Header</h2>
-              <p>Sed elementum, est nec volutpat placerat, arcu purus condimentum mauris, nec auctor massa nisi in est. In mi tortor, malesuada eu lacinia quis, lacinia ac risus.</p>
+              <h2>Challenge 2</h2>
+              <p>Ability to change the background colour without overwriting the current drawing.</p>
             </div>
             <div class="leftAlign">
-              <h2>Header</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum metus et laoreet venenatis. Donec bibendum tincidunt finibus. Nulla auctor, dolor eget commodo ullamcorper, lorem dolor venenatis lectus, et sodales ante erat eu metus. Integer interdum sagittis nibh, sed facilisis neque sollicitudin et.</p>
-              <p>Sed elementum, est nec volutpat placerat, arcu purus condimentum mauris, nec auctor massa nisi in est. In mi tortor, malesuada eu lacinia quis, lacinia ac risus.</p>
+              <h2>Solution</h2>
+              <p>Added a secondary canvas below the primary one, and made the background of the primary canvas transparent.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="rightAlign">
+              <h2>Challenge 3</h2>
+              <p>Enable the user to undo each drawing action.</p>
+            </div>
+            <div class="leftAlign">
+              <h2>Solution</h2>
+              <p>When start each new drawing action, the system saves the last version of the site to an array. When clicking the Undo button, the canvas is restored to the top item of the array, and that item is then removed from that array to enable the user to undo all drawing actions one by one.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="rightAlign">
+              <h2>Challenge 4</h2>
+              <p>Make the controls (the input elements) look nicer, while still displaying the current values (e.g. the current brush and background colours, the brush thickness, and the chosen brush effect.)</p>
+            </div>
+            <div class="leftAlign">
+              <h2>Solution</h2>
+              <p>The default styling of the HTML input elements was overwritten using span elements. To enable the span elements to display the current values, ES6 was used to update the look of these elements each time the value is changed within the JavaScript code.</p>
             </div>
           </div>
           <div class="row iconRow">
@@ -93,7 +110,52 @@
         </div>  <!-- Closing .popup element -->
       </div>  <!-- Closing the .section element -->
 
-      
+      <div class="section column" id="section_ourstory">  <!-- Section containing the preview (always visible) and the popup (initially hidden; display/hide using the toggle button) parts of the work example -->
+        <div class="preview">  <!-- Section containing the preview part (always visible) of the work example -->
+          <div class="row">
+            <div class="rightAlign">
+              <img src="images/os_homepage.png" alt="Image of the Our Story landing page, with a quote by Maya Angelou: /"In diversity, there is beauty and there is strength/". "/>  <!-- Screenshot of the website landing page -->
+            </div>
+            <div class="leftAlign">
+              <h1>Our Story</h1>
+              <p>A website created to provide a positive view of immigration in the UK.</p>
+              <p>Winner of the Code First: Girls Introduction to Web Development course competition at The Guardian (2017).</p>
+              <p><em>Tech Stack:</em> HTML5/CSS3, the Twitter API Bootstrap and jQuery.</p>
+            </div>
+          </div>
+          <div class="row iconRow">
+            <span><a href="https://madeleinel.github.io/OurStory/" target="_blank">Website</a></span>
+            <span><a href="https://github.com/madeleinel/OurStory" target="_blank">Source code</a></span>
+            <span><button id="btn_ourstory" onClick="togglePopup(this.id)">Find out more ⇓</button></span>  <!-- Button to toggle the popup section -->
+          </div>
+        </div>  <!-- Closing .preview element -->
+        <div class="popup" id="popup_ourstory">  <!-- Section containing the popup part (initally hidden; display/hide using the toggle button) of the work example -->
+          <div class="row">
+            <div class="rightAlign">
+              <h2>Background</h2>
+              <p>The website was created as part of the <a href="http://www.codefirstgirls.org.uk/" target="_blank">Code First: Girls</a> Introduction to Web Development course competition with <a href="https://github.com/Anehi-j" target="_blank">E Jegede</a>.</p>
+            </div>
+            <div class="leftAlign">
+              <h2>Tech Stack</h2>
+              <p>¬ jQuery for the interactive features</p>
+              <p>¬ HTML5, CSS3 and the Twitter API Bootstrap to style the site</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="rightAlign">
+              <h2>Challenge</h2>
+              <p>Make the user interact with the material and challenge their perceptions of immigrants.</p>
+            </div>
+            <div class="leftAlign">
+              <h2>Solution</h2>
+              <p>Within the "Myths" section, the user is presented with common perceptions about immigrants and asked to guess whether the statement is true or false. Upon making their choice, a pop-up window appears which informs the user whether they were correct or not, and provides more information about the topic.</p>
+            </div>
+          </div>
+          <div class="row iconRow">
+            <span><button id="btn_ourstory" onClick="togglePopup(this.id)">Close section</button></span>  <!-- Button to toggle the popup section -->
+          </div>
+        </div>  <!-- Closing .popup element -->
+      </div>  <!-- Closing the .section element -->
 
     </main>
 

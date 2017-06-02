@@ -31,6 +31,11 @@ a {
   text-decoration: none;
 }
 
+/*em {
+  font-weight: bold;
+  background-color: orange;
+}*/
+
 /* The default stylings of links, buttons and list items have been removed within reset.css */
 
 /* ///////// ///////// ///////// ///////// ///////// ///////// /////////
@@ -190,6 +195,8 @@ main {
 
 .popup {
   display: none;
+  background-color: #dedede;
+  /*background-color: #cdcdcd;*/
 }
 
 /* ///////// ///////// ///////// ///////// ///////// ///////// /////////
