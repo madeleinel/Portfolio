@@ -1,6 +1,8 @@
 // Set up dropdown menu for small screens
 function toggleMenu(e) {
   e.preventDefault(); // Prevent the function from executing twice on touchscreens due to double calls to the eventListener function ("click" and "touch")
+  e.stopPropagation();    // Stop the event from propagating through the DOM
+
   const navbar = document.getElementById("topNav");
   if (navbar.className === "navBar") {
     navbar.className += " responsive";   // Change the class of element to 'navBar responsive'
@@ -8,7 +10,10 @@ function toggleMenu(e) {
     navbar.className = "navBar";   // If the class is already 'navBar responsive', change it back to 'navBar'
   }
 }
+// Set up event handler; when click on the dropdown menu icon > trigger the function which displays the dropdown manu
 document.getElementById("navToggleIcon").addEventListener("click", toggleMenu, false);
+
+
 
 // Set up section toggling within the Portfolio page
 function togglePopup(buttonId) {
@@ -31,15 +36,11 @@ function togglePopup(buttonId) {
     window.location.href = ("/portfolio\#" + sectionId);  // Makes the window jump back to the top of the section the user was just looking at > to avoid the screen seemingly jumping to a later section, and skipping work examples, when closing a popup section
   } else {
     currentPopup.style.display = "block";
-    currentButton.style.borderColor = "#92626F";
+    currentButton.style.borderColor = "#4c58ed";
+    // currentButton.style.borderColor = "#92626F";
     currentButtonText.textContent = "Find out more ⇑";
   }
-}
 
-// Replaced with a link over the landing page:
-// Go to path "/about" when click on landing page svg
-// Have to set it up as a function, as adding a link within the svg did not function on touchscreen
-// function enterSite() {
-//   window.location.href = "/about";
-// }
-// document.getElementById("landingPage").addEventListener("click", enterSite);
+  event.preventDefault();   // Prevent default action from being executed
+  event.stopPropagation();    // Stop the event from propagating through the DOM
+}
