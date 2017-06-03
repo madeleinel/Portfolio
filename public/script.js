@@ -39,6 +39,14 @@ function togglePopup(buttonId) {
     currentButton.style.borderColor = "#4c58ed";
     // currentButton.style.borderColor = "#92626F";
     currentButtonText.textContent = "Find out more ⇑";
+
+    // Send event info to Google Analytics when user clicks on a button to display more information about a work example
+    ga('send', {
+      hitType: 'event',
+      eventCategory: 'Portfolio examples: Show additional content',
+      eventAction: 'clicks',
+      eventLabel: 'Content for: ' + idTags[1]
+    });
   }
 
   event.preventDefault();   // Prevent default action from being executed
@@ -53,3 +61,14 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 
 ga('create', 'UA-100419989-1', 'auto');
 ga('send', 'pageview');
+
+// Track outbound link clicks
+// Send event info to Google Analytics when user clicks on a link which takes them to an external website
+function handleOutboundLinkClicks(event) {
+  ga('send', 'event', {
+    eventCategory: 'Outbound Link',
+    eventAction: 'click',
+    eventLabel: event.target.href,
+    transport: 'beacon'
+  });
+}
