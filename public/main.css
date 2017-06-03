@@ -107,8 +107,9 @@ em {
   left: 0;
   z-index: -99;
   background-color: #92626F;
-  background-image: url("images/redChalkboard.png");
+  background-image: url("images/fixed_background.png");
   background-size: cover;
+  background-position: center;
 }
 
 main {
