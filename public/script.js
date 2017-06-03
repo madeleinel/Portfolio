@@ -43,7 +43,7 @@ function togglePopup(buttonId) {
     // Send event info to Google Analytics when user clicks on a button to display more information about a work example
     ga('send', {
       hitType: 'event',
-      eventCategory: 'Portfolio examples: Show additional content',
+      eventCategory: 'Show additional content',
       eventAction: 'clicks',
       eventLabel: 'Content for: ' + idTags[1]
     });
