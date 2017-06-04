@@ -29,12 +29,12 @@ p {
 
 a {
   text-decoration: none;
-  color: #4c58ed;
+  color: #616BEF;
 }
 
 em {
   background-color: #c7cbf9;
-  padding: 0.5em;
+  padding: 0.4em;
   border-radius: 0.4em;
 }
 
@@ -202,8 +202,8 @@ main {
 
 .popup {
   display: none;
-  background-color: #dedede;
-  /*background-color: #cdcdcd;*/
+  background-color: #EFEFEF;
+  border-radius: 1em;
 }
 
 /* ///////// ///////// ///////// ///////// ///////// ///////// /////////
@@ -233,7 +233,7 @@ img {
 }
 
 #iconColumn a:hover {
-  background-color: #4c58ed;
+  background-color: #8A92F3;
   /*background-color: #6E8F88;*/
   transition: 0.2s;
 }
@@ -267,8 +267,7 @@ img {
   border: 2px solid #111;
   padding: 0.3em 0.5em;
   border-radius: 0.4em;
-
-  margin: 1em;  /* Ev update spacing when remove the working borders */
+  margin: 1em;
 }
 
 /* ////////    The Portfolio page work example preview section    //////// */
@@ -294,8 +293,7 @@ img {
   padding: 0.3em 0.5em;
   border-radius: 0.4em;
   line-height: 1.2em;  /* Specify line height to ensure that the link is vertically centered within the span borders */
-
-  margin: 1em;  /* Ev update spacing when remove the working borders */
+  margin: 1em;
 }
 
 /* ///////// ///////// ///////// ///////// ///////// ///////// /////////
