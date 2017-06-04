@@ -13,12 +13,10 @@ function toggleMenu(e) {
 // Set up event handler; when click on the dropdown menu icon > trigger the function which displays the dropdown manu
 document.getElementById("navToggleIcon").addEventListener("click", toggleMenu, false);
 
-
-
 // Set up section toggling within the Portfolio page
 function togglePopup(buttonId) {
   // buttonId = The class name of the button that was clicked
-  // Set the popup ID to be "popup_" followed by the second half of the buttonId (ie the id number of the section)
+  // Set the popup element ID to be "popup_" followed by the second half of the buttonId (ie the id number of the section)
   // This will be used to display the popup that's within the same section as the clicked button
   const idTags = buttonId.split("_");
   const popupId = "popup_" + idTags[1];
