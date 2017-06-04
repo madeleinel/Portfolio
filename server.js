@@ -1,4 +1,4 @@
-var fs = require('fs');
+// var fs = require('fs');    // Not currently using this
 
 var express = require('express');
 var app = express();
