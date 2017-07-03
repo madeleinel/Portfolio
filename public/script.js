@@ -34,7 +34,7 @@ function togglePopup(buttonId) {
     window.location.href = ("/portfolio\#" + sectionId);  // Makes the window jump back to the top of the section the user was just looking at > to avoid the screen seemingly jumping to a later section, and skipping work examples, when closing a popup section
   } else {
     currentPopup.style.display = "block";
-    currentButton.style.borderColor = "#616BEF";
+    currentButton.style.borderColor = "#7278C6";
     currentButtonText.textContent = "Find out more ⇑";
 
     // Send event info to Google Analytics when user clicks on a button to display more information about a work example

@@ -1,10 +1,9 @@
 #landingPage {
-  /*height: 100vh;
-  width: 100vw;*/
-  background-color: #111;
-  background-image: url("images/chalkboard.jpg");  /* Chalkboard image downloaded from Foolish Fire: https://www.foolishfire.com/2012/09/11/free-downloadable-chalkboard-backgrounds/ */
+  background-color: #b27686;
+  background-image: url('images/landingPage.jpg');
   background-size: cover;
-  background-position: right;
+  background-position: center;
+  background-blend-mode: difference;
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
@@ -15,6 +14,13 @@
   -ms-align-items: center;    /* center the svg vertically */
   align-items: center;
   text-align: center;
+
+  /*height: 100vh;
+  width: 100vw;*/
+  /*background-color: #111;
+  background-image: url("images/chalkboard.jpg");  /* Chalkboard image downloaded from Foolish Fire: https://www.foolishfire.com/2012/09/11/free-downloadable-chalkboard-backgrounds/ */*/
+  /*background-size: cover;
+  background-position: right;*/
 }
 
 a {

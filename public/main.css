@@ -23,6 +23,7 @@ h2 {
 }
 
 p {
+  font-size: 0.95em;
   line-height: 1.4em;
   padding-bottom: 0.7em;
 }
@@ -30,6 +31,10 @@ p {
 a {
   text-decoration: none;
   color: #616BEF;
+}
+
+span {
+  font-size: 0.95em;
 }
 
 em {
@@ -55,10 +60,7 @@ em {
   top: 0;
   left: 0;
   z-index: 1;
-  background-color: #111;
-  background-image: url("images/chalkboard.jpg");
-  background-size: cover;
-  background-position: top;
+  background-color: #222;
   box-shadow: 0 0.2em 1em #333;
   display: -webkit-flex;
   display: -ms-flex;
@@ -69,6 +71,11 @@ em {
   justify-content: space-around;
   -ms-align-items: center;
   align-items: center;
+
+  /*background-color: #111;
+  background-image: url("images/chalkboard.jpg");
+  background-size: cover;
+  background-position: top;*/
 }
 
 .navBar a {
@@ -228,13 +235,12 @@ img {
   padding: 0.8em;
   background-color: #111;
   border-radius: 50%;
-
-  margin-bottom: 1em;  /* Ev change to 1em top and bottom when remove borders and add text */
+  margin-bottom: 1em;
 }
 
 #iconColumn a:hover {
-  background-color: #8A92F3;
-  /*background-color: #6E8F88;*/
+  /*background-color: #8A92F3;*/
+  background-color: #7278C6;
   transition: 0.2s;
 }
 
@@ -256,7 +262,7 @@ img {
   background-image: url('assets/email.png');
 }
 
-/* //////// ////////  The About page skills buttons  //////// //////// */
+/* //////// ////////  The About page skills section background and buttons  //////// //////// */
 
 .centerAlign {
   text-align: center;
@@ -268,6 +274,12 @@ img {
   padding: 0.3em 0.5em;
   border-radius: 0.4em;
   margin: 1em;
+}
+
+.skills {
+  background-color: #EFEFEF;
+  border-radius: 1em;
+  margin-top: 2em;
 }
 
 /* ////////    The Portfolio page work example preview section    //////// */
@@ -305,7 +317,9 @@ footer {
   padding-top: 0.6em;
   text-align: center;
   color: #fff;
-  background-image: url("images/chalkboard.jpg");
+  background-color: #222;
+  
+  /*background-image: url("images/chalkboard.jpg");
   background-size: cover;
-  background-position: top;
+  background-position: top;*/
 }
