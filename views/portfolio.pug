@@ -1,0 +1,60 @@
+html
+  head
+    title= 'Madeleine Linder | Portfolio'
+    style
+      include ./../public/stylesheets/reset.css
+      include ./../public/stylesheets/style.css
+    link(href="https://fonts.googleapis.com/css?family=Poiret+One|Raleway" rel="stylesheet")
+  body
+    //- a(href='/')
+    //-   h1 Portfolio page here
+    nav#navBar
+      ul#navLinks
+        li
+          a(href='/#contact') Contact
+        li
+          a(href='/#about') About
+        li
+          a(href='/#skills') Skills
+        li
+          a(href='/portfolio') Portfolio
+    section#projects
+      h2 Main projects
+      div.leftAligned
+        img.screen(src='/assets/womentor.png', alt='Portfolio example image 1')
+        h3 WomenToTech
+        p Portfolio example 1 here
+        img.screen(src='/assets/womentor_list.png', alt='Portfolio example image 1')
+      div.rightAligned
+        img.screen(src='/assets/chalkboard.jpg', alt='Portfolio example image 2')
+        h3 Title
+        p Portfolio example 2 here
+      div.leftAligned
+        h3 Let's paint
+        p Portfolio example 3 here
+        img.screen(src='/assets/letsPaint.png', alt='Portfolio example image 3')
+    section#justForFun
+      h2 Just for fun
+      div.centerAligned
+        div.funExample
+          img.miniScreen(src='/assets/clock.png', alt='Portfolio example image 1')
+          p Clock with ability to customise the colour scheme
+        div.funExample
+          img.miniScreen(src='/assets/ourStory.png', alt='Portfolio example image 1')
+          p Our Story; a website created to promote a positive narrative of immigration in the UK
+        div.funExample
+          img.miniScreen(src='/assets/chalkboard.jpg', alt='Portfolio example image 1')
+          p Mini example 3 here
+      div.centerAligned
+        div.funExample
+          img.miniScreen(src='/assets/chalkboard.jpg', alt='Portfolio example image 1')
+          p Mini example 4 here
+        div.funExample
+          img.miniScreen(src='/assets/chalkboard.jpg', alt='Portfolio example image 1')
+          p Mini example 5 here
+        div.funExample
+          img.miniScreen(src='/assets/chalkboard.jpg', alt='Portfolio example image 1')
+          p Mini example 6 here
+    footer
+      p Created by ML (2017)
+    

@@ -1,0 +1,24 @@
+@media screen and (max-width: 750px) {
+  #icons {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    justify-content: center;
+    width: 80vw;
+  }
+  #icons a {
+    margin: 0 1em;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  #icons {
+    min-width: 90vw;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #icons a {
+    margin: 0 0.5em;
+  }
+}

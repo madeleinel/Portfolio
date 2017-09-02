@@ -1,23 +1,17 @@
-// var fs = require('fs');    // Not currently using this
+'use strict';
 
-var express = require('express');
-var app = express();
-app.use(express.static('public'));
+const express = require('express'),
+      app = express(),
+      port = process.env.PORT || 5500;
 
-var port = process.env.PORT || 5500;
+app.set('view engine', 'pug'); // Define the templating engine
+app.use(express.static(__dirname + '/public')); // Tell express where to find static files, such as images
+require(__dirname + '/routes.js')(app); // Import the routes and pass them the app
 
-app.get('/about', function (request, response) {
-  response.sendFile(__dirname + '/public/about.html');
-});
+if (!module.parent) { // Only start the server when this file is being run directly
+  app.listen(port, () => {
+    console.log('Server is ready on ' + port);
+  });
+}
 
-app.get('/portfolio', function (request, response) {
-  response.sendFile(__dirname + '/public/portfolio.html');
-});
-
-app.listen(port, function() {
-  console.log('Server is listening on port 5500. Ready to accept requests!')
-});
-
-// app.get('/testing', function (request, response) {
-//   response.sendFile(__dirname + '/public/wrapper.html');
-// });
+module.exports = app;

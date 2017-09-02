@@ -1,0 +1,50 @@
+html
+  head
+    title= 'Madeleine Linder | Home'
+    style
+      include ./../public/stylesheets/reset.css
+      include ./../public/stylesheets/style.css
+    link(href="https://fonts.googleapis.com/css?family=Poiret+One|Raleway" rel="stylesheet")
+  body
+    header
+      div#landingPage
+        include ./../public/ML.svg
+        //- img(src='/assets/chalkboard.jpg', alt='Homepage image')
+        img(src='/assets/silhouettes.jpeg', alt='Homepage image')
+      //- a(href='/')
+      //-   h1 Home page here
+      nav#navBar
+        ul#navLinks
+          li
+            a(href='/#contact') Contact
+          li
+            a(href='/#about') About
+          li
+            a(href='/#skills') Skills
+          li
+            a(href='/portfolio') Portfolio
+    section#contact
+      h2 Contact
+      div#icons
+        a(href='/')
+          div.icon#email
+        a(href='/')
+          div.icon#github
+        a(href='/')
+          div.icon#linkedin
+    section#about
+      h2 About
+      div.rightAligned
+        img.round(src='/assets/profile.jpg', alt='About image 1')
+        p About me as a person...
+      div.leftAligned
+        p About my experience...
+        img.round(src='/assets/chalkboard.jpg', alt='About image 2')
+    section#skills
+      h2 Skills
+      div.centerAligned
+        p Great skills here
+      div.centerAligned
+        p Basic skills here
+    footer
+      p Created by ML (2017)
