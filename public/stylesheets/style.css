@@ -1,10 +1,18 @@
 /* Define the colours to be used throughout the website */
 :root {
   --main_color: #0E0E0E;
+  --medi_accent: #f1d8e6;
   --light_accent: #E9E7FD;
-  --medium_accent: #FAF1F6; /* ice colour; currently on the navbar */
-  --dark_accent: #6d3939;
-  --image_frames: #F0ECFA;
+  --medium_accent: #FAF1F6; /* pinkish pastel - nice colour; currently on the navbar */
+  --dark_accent: #bb4385;
+  --another_accent: #C178A0;
+  --darkki_accent: #4a1a35;
+  --image_frames: #F0ECFA; /* blue pastel - fairly nice colour */
+  --light_accent: #E9E7FD;
+}
+
+div, section, p {
+  border: 1px solid purple;
 }
 
 body {
@@ -47,6 +55,8 @@ h2 {
   font-weight: bold;
   font-family: 'Poiret One', sans-serif;
   padding: 1em;
+
+  color: var(--dark_accent);
 }
 
 p {
@@ -75,7 +85,6 @@ p {
 .funExample {
   width: 33%;
   padding: 1em;
-  /*border: 1px solid purple;*/
 }
 
 #landingPage, #landingPage img {
@@ -90,7 +99,6 @@ svg {
   max-height: 45vh;
   position: absolute;
   padding-top: 12vh;
-  /*border: 2px solid yellow;*/
 
   /*max-width: 50vw;
   max-height: 50vh;
@@ -99,15 +107,15 @@ svg {
 }
 
 section {
-  /*border: 1px solid purple;*/
   margin-bottom: 4em;
 }
 
 /* Make the navbar stick to the top of the page when the user scrolls down */
-#navLinks {
+/*#navLinks {*/
+.navBar {
   width: 100vw;
   height: 10vh;
-  font-size: 1.2em;
+  font-size: 1.4em;
   background: var(--medium_accent);
   display: -webkit-flex;
   display: -ms-flex;
@@ -118,16 +126,29 @@ section {
   justify-content: space-around;
   -ms-align-items: center;
   align-items: center;
+
+  /*position: fixed;
+  top: 0;*/
 }
 
-#navLinks a {
+.navBar a {
+/*#navLinks a {*/
   color: #111;
+}
+
+.navBar a:hover {
+/*#navLinks a:hover {*/
+  color: var(--dark_accent);
+  transition: 0.2s;
+}
+
+#navIcon {
+  display: none;
 }
 
 .rightAligned, .leftAligned, .centerAligned {
   width: 80vw;
   min-height: 40vh;
-  /*border: 1px solid pink;*/
   flex: 1;  /* Ensure .rightAlign and .leftAlign are of the same width */
   /*padding: 1em;*/
   display: -webkit-flex;
@@ -136,7 +157,7 @@ section {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  justify-content: center;
+  /*justify-content: center;*/
 
   background: var(--image_frames);
   margin: 2rem 0;
@@ -156,6 +177,11 @@ section {
 
 .centerAligned {
   text-align: center;
+}
+
+#about p, #projects p, #justForFun p {
+  width: 100%;
+  /*margin: 2em 0;*/
 }
 
 #icons {
@@ -182,10 +208,11 @@ section {
   background-color: #111;
   border-radius: 50%;
   /*margin-bottom: 1em;*/
+  border: 1em solid var(--medium_accent);
 }
 
-#icons a:hover {
-  background-color: var(--medium_accent);
+#icons a:hover {;
+  border-color: var(--light_accent);
   transition: 0.2s;
 }
 
@@ -207,4 +234,10 @@ section {
 
 #linkedin {
   background-image: url('assets/linkedin.png');
+}
+
+footer {
+  background: var(--medium_accent);
+  width: 100vw;
+  text-align: center;
 }

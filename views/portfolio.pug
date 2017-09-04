@@ -8,29 +8,31 @@ html
   body
     //- a(href='/')
     //-   h1 Portfolio page here
-    nav#navBar
-      ul#navLinks
-        li
-          a(href='/#contact') Contact
-        li
-          a(href='/#about') About
-        li
-          a(href='/#skills') Skills
-        li
-          a(href='/portfolio') Portfolio
+    nav#navIcon
+      button#navToggleIcon &#9776;
+    nav.navBar#mainNav
+      //- ul#navLinks
+      li
+        a(href='/#about') About
+      li
+        a(href='/portfolio#projects') Main projects
+      li
+        a(href='/portfolio#justForFun') Just for fun
+      li
+        a(href='/#contact') Contact
     section#projects
       h2 Main projects
       div.leftAligned
         img.screen(src='/assets/womentor.png', alt='Portfolio example image 1')
-        h3 WomenToTech
+        //- h3 WomenToTech
         p Portfolio example 1 here
-        img.screen(src='/assets/womentor_list.png', alt='Portfolio example image 1')
+        //- img.screen(src='/assets/womentor_list.png', alt='Portfolio example image 1')
       div.rightAligned
         img.screen(src='/assets/chalkboard.jpg', alt='Portfolio example image 2')
-        h3 Title
+        //- h3 Title
         p Portfolio example 2 here
       div.leftAligned
-        h3 Let's paint
+        //- h3 Let's paint
         p Portfolio example 3 here
         img.screen(src='/assets/letsPaint.png', alt='Portfolio example image 3')
     section#justForFun
@@ -45,16 +47,16 @@ html
         div.funExample
           img.miniScreen(src='/assets/chalkboard.jpg', alt='Portfolio example image 1')
           p Mini example 3 here
-      div.centerAligned
-        div.funExample
-          img.miniScreen(src='/assets/chalkboard.jpg', alt='Portfolio example image 1')
-          p Mini example 4 here
-        div.funExample
-          img.miniScreen(src='/assets/chalkboard.jpg', alt='Portfolio example image 1')
-          p Mini example 5 here
-        div.funExample
-          img.miniScreen(src='/assets/chalkboard.jpg', alt='Portfolio example image 1')
-          p Mini example 6 here
+    //-   div.centerAligned
+    //-     div.funExample
+    //-       img.miniScreen(src='/assets/chalkboard.jpg', alt='Portfolio example image 1')
+    //-       p Mini example 4 here
+    //-     div.funExample
+    //-       img.miniScreen(src='/assets/chalkboard.jpg', alt='Portfolio example image 1')
+    //-       p Mini example 5 here
+    //-     div.funExample
+    //-       img.miniScreen(src='/assets/chalkboard.jpg', alt='Portfolio example image 1')
+    //-       p Mini example 6 here
     footer
       p Created by ML (2017)
     

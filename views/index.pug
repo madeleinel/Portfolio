@@ -1,28 +1,33 @@
 html
   head
-    title= 'Madeleine Linder | Home'
+    title Madeleine Linder | Home
     style
       include ./../public/stylesheets/reset.css
       include ./../public/stylesheets/style.css
+      include ./../public/stylesheets/mediaqueries.css
     link(href="https://fonts.googleapis.com/css?family=Poiret+One|Raleway" rel="stylesheet")
+    script(src="./script.js")
   body
     header
       div#landingPage
         include ./../public/ML.svg
-        //- img(src='/assets/chalkboard.jpg', alt='Homepage image')
-        img(src='/assets/silhouettes.jpeg', alt='Homepage image')
+        img(src='/assets/ved3.jpg', alt='Homepage image')
+        //- ev add the image as a background-image instead
+      //- Add a link to the homepage at the top of the screen?
       //- a(href='/')
       //-   h1 Home page here
-      nav#navBar
-        ul#navLinks
-          li
-            a(href='/#contact') Contact
-          li
-            a(href='/#about') About
-          li
-            a(href='/#skills') Skills
-          li
-            a(href='/portfolio') Portfolio
+      nav#navIcon
+        button#navToggleIcon &#9776;
+      nav.navBar#mainNav
+        //- ul#navLinks
+        li
+          a(href='/#about') About
+        li
+          a(href='/portfolio#projects') Main projects
+        li
+          a(href='/portfolio#justForFun') Just for fun
+        li
+          a(href='/#contact') Contact
     section#contact
       h2 Contact
       div#icons
@@ -35,16 +40,22 @@ html
     section#about
       h2 About
       div.rightAligned
-        img.round(src='/assets/profile.jpg', alt='About image 1')
+        img.round(src='/assets/profile.jpg', alt='A photo of Madeleine standing under a tree and smiling')
         p About me as a person...
       div.leftAligned
         p About my experience...
         img.round(src='/assets/chalkboard.jpg', alt='About image 2')
-    section#skills
-      h2 Skills
-      div.centerAligned
-        p Great skills here
-      div.centerAligned
-        p Basic skills here
+      div.rightAligned
+        img.round(src='/assets/chalkboard.jpg', alt='About image 2')
+        //- h3 I have experience working with...
+        p.
+          ES6, Node.js, Python, Postgres
+          Express, Sequelize, Passport.js
+    //- section#skills
+    //-   h2 Skills
+    //-   div.centerAligned
+    //-     p Great skills here
+    //-   div.centerAligned
+    //-     p Basic skills here
     footer
       p Created by ML (2017)

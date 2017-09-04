@@ -15,6 +15,37 @@
   #icons {
     min-width: 90vw;
   }
+
+  .navBar, .navBar li {
+    display: none;
+  }
+  #navIcon {
+    width: 100vw;
+    height: 10vh;
+    font-size: 1.4em;
+    background: var(--medium_accent);
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    justify-content: space-around;
+    -ms-align-items: center;
+    align-items: center;
+  }
+  .responsive {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .responsive li {
+    display: block;
+  }
 }
 
 @media screen and (max-width: 450px) {
