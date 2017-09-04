@@ -1,6 +1,6 @@
-div, p {
-  border: 1px solid blue;
-}
+/*section, .content {
+  border: 1px solid purple;
+}*/
 
 /* =============================================================================
 ========================== Basic elements of the site ==========================
@@ -40,8 +40,6 @@ body {
 }
 
 section {
-  border: 2px solid orange;
-
   width: 80vw;
   text-align: center;
   /*display: -webkit-flex;
@@ -54,8 +52,6 @@ section {
 }
 
 .content {
-  border: 2px solid purple;
-
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
@@ -68,8 +64,6 @@ section {
 }
 
 .miniExample {
-  border: 1px solid green;
-
   width: 33%;
   /*display: -webkit-flex;
   display: -ms-flex;
