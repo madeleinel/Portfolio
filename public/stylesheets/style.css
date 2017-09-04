@@ -1,22 +1,33 @@
-/* Define the colours to be used throughout the website */
+div, p {
+  border: 1px solid blue;
+}
+
+/* =============================================================================
+========================== Basic elements of the site ==========================
+============================================================================= */
 :root {
-  --main_color: #0E0E0E;
-  --medi_accent: #f1d8e6;
-  --light_accent: #E9E7FD;
-  --medium_accent: #FAF1F6; /* pinkish pastel - nice colour; currently on the navbar */
-  --dark_accent: #bb4385;
-  --another_accent: #C178A0;
-  --darkki_accent: #4a1a35;
-  --image_frames: #F0ECFA; /* blue pastel - fairly nice colour */
-  --light_accent: #E9E7FD;
+  --light_peach: #FAF1F6; /* pinkish pastel - nice colour; currently on the navbar */
+  --medium_peach: #F1D8E6;
+  --raspberry_pink: #BB4385;
 }
 
-div, section, p {
-  border: 1px solid purple;
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: 'Poiret One', sans-serif;
+  color: var(--raspberry_pink);
+  padding: 2rem;
 }
 
+p {
+  font-size: 1rem;
+  line-height: 1.4rem;
+}
+
+/* =============================================================================
+========================= Basic structure of the site ==========================
+============================================================================= */
 body {
-  /*color: purple;*/
   font-family: 'Raleway', sans-serif;
   display: -webkit-flex;
   display: -ms-flex;
@@ -29,94 +40,70 @@ body {
 }
 
 section {
+  border: 2px solid orange;
+
   width: 80vw;
-  min-height: 20vh;
-  display: -webkit-flex;
+  text-align: center;
+  /*display: -webkit-flex;
   display: -ms-flex;
   display: flex;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -ms-align-items: center;
-  align-items: center;
-  /*-webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   justify-content: center;*/
 }
 
-h1 {
-  font-size: 2em;
-  font-family: 'Poiret One', sans-serif;
+.content {
+  border: 2px solid purple;
+
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
-h2 {
-  font-size: 3em;
-  font-weight: bold;
-  font-family: 'Poiret One', sans-serif;
-  padding: 1em;
+.miniExample {
+  border: 1px solid green;
 
-  color: var(--dark_accent);
-}
-
-p {
-  padding: 1em;
-}
-
-.round {
-  max-width: 35vw;
-  max-height: 35vh;
-  border-radius: 50%;
-  padding: 1em;
-}
-
-.screen {
-  max-width: 30vw;*/
-  max-height: 30vh;
-  padding: 1em;
-}
-
-.miniScreen {
-  max-width: 20vw;
-  max-height: 20vh;
-  padding-bottom: 1em;
-}
-
-.funExample {
   width: 33%;
-  padding: 1em;
+  /*display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  justify-content: center;*/
 }
 
+/* =============================================================================
+================================= Landing page =================================
+============================================================================= */
 #landingPage, #landingPage img {
   width: 100vw;
   height: 90vh;
   background: #111;
 }
 
-/* Add animation to the svg? Eg, the letters being painted in when opening the page, like in Oli's Codepen example */
 svg {
   max-width: 45vw;
   max-height: 45vh;
   position: absolute;
   padding-top: 12vh;
-
-  /*max-width: 50vw;
-  max-height: 50vh;
-  padding-right: 40vw;
-  padding-top: 12vh;*/
 }
 
-section {
-  margin-bottom: 4em;
-}
-
-/* Make the navbar stick to the top of the page when the user scrolls down */
-/*#navLinks {*/
+/* =============================================================================
+============================= Main navigation bar ==============================
+============================================================================= */
 .navBar {
   width: 100vw;
   height: 10vh;
   font-size: 1.4em;
-  background: var(--medium_accent);
+  background: var(--light_peach);
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
@@ -126,19 +113,14 @@ section {
   justify-content: space-around;
   -ms-align-items: center;
   align-items: center;
-
-  /*position: fixed;
-  top: 0;*/
 }
 
 .navBar a {
-/*#navLinks a {*/
   color: #111;
 }
 
 .navBar a:hover {
-/*#navLinks a:hover {*/
-  color: var(--dark_accent);
+  color: var(--medium_peach);
   transition: 0.2s;
 }
 
@@ -146,44 +128,9 @@ section {
   display: none;
 }
 
-.rightAligned, .leftAligned, .centerAligned {
-  width: 80vw;
-  min-height: 40vh;
-  flex: 1;  /* Ensure .rightAlign and .leftAlign are of the same width */
-  /*padding: 1em;*/
-  display: -webkit-flex;
-  display: -ms-flex;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  /*justify-content: center;*/
-
-  background: var(--image_frames);
-  margin: 2rem 0;
-  padding: 1rem 0;
-  border-radius: 1rem;
-}
-
-.rightAligned {
-  text-align: right;
-  /* order: 1;  /* When on smaller screens > .rightAlign sections should be on top of .leftAlign sections */
-}
-
-.leftAligned {
-  text-align: left;
-  /* order: 2;  /* When on smaller screens > .rightAlign sections should be on top of .leftAlign sections */
-}
-
-.centerAligned {
-  text-align: center;
-}
-
-#about p, #projects p, #justForFun p {
-  width: 100%;
-  /*margin: 2em 0;*/
-}
-
+/* =============================================================================
+=============================== Contact icon bar ===============================
+============================================================================= */
 #icons {
   display: -webkit-flex;
   display: -ms-flex;
@@ -191,12 +138,10 @@ section {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  /*-webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;*/
-  -ms-align-items: center;
-  align-items: center;    /* Ev change this to flex-start (so align closer to the text) and max-width 15vw to keep the textbox from getting too wide > want it to match with the row below */
-  justify-content: space-around;  /* Make the icons within the column spread out so that they take up the same space vertically as the About text next to it */
+  justify-content: space-around;
+  /*justify-content: center;*/
+  /*-ms-align-items: center;
+  align-items: center;*/
 }
 
 #icons a {
@@ -204,15 +149,13 @@ section {
   height: 2.4em;
   padding: 0.8em;
   margin: 1em 1.5em;
-  /*background-color: var(--light_accent));*/
   background-color: #111;
   border-radius: 50%;
-  /*margin-bottom: 1em;*/
-  border: 1em solid var(--medium_accent);
+  border: 1em solid var(--light_peach);
 }
 
-#icons a:hover {;
-  border-color: var(--light_accent);
+#icons a:hover {
+  border-color: var(--medium_peach);
   transition: 0.2s;
 }
 
@@ -236,8 +179,50 @@ section {
   background-image: url('assets/linkedin.png');
 }
 
+/* =============================================================================
+=============================== Content sections ===============================
+============================================================================= */
+p {
+  margin: 1rem;
+}
+
+/* The text boxes on the About page */
+#about p {
+  background: orange;
+}
+
+#about img {
+
+}
+
+/* The text boxes on the Portfolio page */
+.content p {
+  width: 52vw;
+  background: yellow;
+}
+
+.content img {
+  max-height: 30vh;
+  max-width: 22vw;
+  margin: 1rem;
+}
+
+/* The text boxes within the Just For Fun section */
+.miniExample p {
+  max-width: 90%;
+
+  background: pink;
+}
+
+.miniExample img {
+  margin: 1rem;
+}
+
+/* =============================================================================
+================================== Site footer =================================
+============================================================================= */
 footer {
-  background: var(--medium_accent);
+  background: var(--light_peach);
   width: 100vw;
   text-align: center;
 }

@@ -6,12 +6,9 @@ html
       include ./../public/stylesheets/style.css
     link(href="https://fonts.googleapis.com/css?family=Poiret+One|Raleway" rel="stylesheet")
   body
-    //- a(href='/')
-    //-   h1 Portfolio page here
     nav#navIcon
       button#navToggleIcon &#9776;
     nav.navBar#mainNav
-      //- ul#navLinks
       li
         a(href='/#about') About
       li
@@ -21,42 +18,41 @@ html
       li
         a(href='/#contact') Contact
     section#projects
-      h2 Main projects
-      div.leftAligned
+      h1 Main projects
+      div.content
         img.screen(src='/assets/womentor.png', alt='Portfolio example image 1')
-        //- h3 WomenToTech
-        p Portfolio example 1 here
-        //- img.screen(src='/assets/womentor_list.png', alt='Portfolio example image 1')
-      div.rightAligned
-        img.screen(src='/assets/chalkboard.jpg', alt='Portfolio example image 2')
-        //- h3 Title
-        p Portfolio example 2 here
-      div.leftAligned
-        //- h3 Let's paint
-        p Portfolio example 3 here
+        //- h2 WomenToTech
+        p WoMentor info here...
+        img.screen(src='/assets/womentor_list.png', alt='Portfolio example image 1')
+        p More WoMentor info here...
+      div.content
+        //- h2 Let's paint
         img.screen(src='/assets/letsPaint.png', alt='Portfolio example image 3')
+        p Let's Paint info here...
+        img.screen(src='/assets/letsPaint.png', alt='Portfolio example image 3')
+        p More Let's Paint info here...
     section#justForFun
-      h2 Just for fun
-      div.centerAligned
-        div.funExample
+      h1 Just for fun
+      div.content
+        div.miniExample
           img.miniScreen(src='/assets/clock.png', alt='Portfolio example image 1')
           p Clock with ability to customise the colour scheme
-        div.funExample
+        div.miniExample
           img.miniScreen(src='/assets/ourStory.png', alt='Portfolio example image 1')
           p Our Story; a website created to promote a positive narrative of immigration in the UK
-        div.funExample
+        div.miniExample
           img.miniScreen(src='/assets/chalkboard.jpg', alt='Portfolio example image 1')
           p Mini example 3 here
-    //-   div.centerAligned
-    //-     div.funExample
-    //-       img.miniScreen(src='/assets/chalkboard.jpg', alt='Portfolio example image 1')
-    //-       p Mini example 4 here
-    //-     div.funExample
-    //-       img.miniScreen(src='/assets/chalkboard.jpg', alt='Portfolio example image 1')
-    //-       p Mini example 5 here
-    //-     div.funExample
-    //-       img.miniScreen(src='/assets/chalkboard.jpg', alt='Portfolio example image 1')
-    //-       p Mini example 6 here
+      div.content
+        div.miniExample
+          img.miniScreen(src='/assets/chalkboard.jpg', alt='Portfolio example image 1')
+          p Mini example 4 here
+        div.miniExample
+          img.miniScreen(src='/assets/chalkboard.jpg', alt='Portfolio example image 1')
+          p Mini example 5 here
+        div.miniExample
+          img.miniScreen(src='/assets/chalkboard.jpg', alt='Portfolio example image 1')
+          p Mini example 6 here
     footer
       p Created by ML (2017)
     
