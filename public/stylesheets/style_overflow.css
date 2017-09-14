@@ -1,0 +1,174 @@
+/* Define the colours to be used throughout the website */
+:root {
+  --main_color: #0E0E0E;
+  --light_accent: #E9E7FD;
+  --another_accent: #C178A0;
+  --darkki_accent: #4a1a35;
+  --image_frames: #F0ECFA; /* blue pastel - fairly nice colour */
+  --light_accent: #E9E7FD;
+}
+
+body {
+  /*color: purple;*/
+}
+
+section {
+  -ms-align-items: center;
+  align-items: center;
+  /*-webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;*/
+}
+
+.content {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 80vw;
+}
+
+h2 {
+  font-size: 3em;
+  padding: 1em;
+  font-family: 'Poiret One', sans-serif;
+  color: var(--dark_accent);
+}
+
+p {
+  padding: 1em;
+}
+
+.round {
+  max-width: 35vw;
+  max-height: 35vh;
+  border-radius: 50%;
+  padding: 1em;
+}
+
+.screen {
+  max-width: 30vw;*/
+  max-height: 30vh;
+  padding: 1em;
+}
+
+.miniScreen {
+  max-width: 20vw;
+  max-height: 20vh;
+  padding-bottom: 1em;
+}
+
+.funExample {
+  width: 33%;
+  padding: 1em;
+}
+
+#landingPage, #landingPage img {
+}
+
+/* Add animation to the svg? Eg, the letters being painted in when opening the page, like in Oli's Codepen example */
+svg {
+  /*max-width: 50vw;
+  max-height: 50vh;
+  padding-right: 40vw;
+  padding-top: 12vh;*/
+}
+
+section {
+  margin-bottom: 4em;
+}
+
+/* Make the navbar stick to the top of the page when the user scrolls down */
+/*#navLinks {*/
+.navBar {
+  /*position: fixed;
+  top: 0;*/
+}
+
+.navBar a {
+/*#navLinks a {*/
+}
+
+.navBar a:hover {
+/*#navLinks a:hover {*/
+}
+
+#navIcon {
+}
+
+.rightAligned, .leftAligned, .centerAligned {
+  width: 80vw;
+  min-height: 40vh;
+  flex: 1;  /* Ensure .rightAlign and .leftAlign are of the same width */
+  /*padding: 1em;*/
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  /*justify-content: center;*/
+
+  background: var(--image_frames);
+  margin: 2rem 0;
+  padding: 1rem 0;
+  border-radius: 1rem;
+}
+
+.rightAligned {
+  text-align: right;
+  /* order: 1;  /* When on smaller screens > .rightAlign sections should be on top of .leftAlign sections */
+}
+
+.leftAligned {
+  text-align: left;
+  /* order: 2;  /* When on smaller screens > .rightAlign sections should be on top of .leftAlign sections */
+}
+
+.centerAligned {
+  text-align: center;
+}
+
+#about p, #projects p, #justForFun p {
+  width: 100%;
+  /*margin: 2em 0;*/
+}
+
+#icons {
+  /*-webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;*/
+  -ms-align-items: center;
+  align-items: center;    /* Ev change this to flex-start (so align closer to the text) and max-width 15vw to keep the textbox from getting too wide > want it to match with the row below */
+  justify-content: space-around;  /* Make the icons within the column spread out so that they take up the same space vertically as the About text next to it */
+}
+
+#icons a {
+  /*background-color: var(--light_accent));*/
+  /*margin-bottom: 1em;*/
+}
+
+#icons a:hover {
+}
+
+#icons .icon {
+
+}
+
+#email {
+
+}
+
+#github {
+
+}
+
+#linkedin {
+
+}
+
+footer {
+
+}

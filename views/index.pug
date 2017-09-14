@@ -5,25 +5,33 @@ html
       include ./../public/stylesheets/reset.css
       include ./../public/stylesheets/style.css
       include ./../public/stylesheets/mediaqueries.css
-    link(href="https://fonts.googleapis.com/css?family=Poiret+One|Raleway" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css?family=Poiret+One|Raleway|Special+Elite" rel="stylesheet")
     script(src="./script.js")
   body
     header
-      div#landingPage
-        include ./../public/ML.svg
-        img(src='/assets/ved3.jpg', alt='Homepage image')
-      nav#navIcon
-        button#navToggleIcon &#9776;
-      nav.navBar#mainNav
-        //- ul#navLinks
-        li
+      section#landingPage
+        //- include ./../public/ML.svg
+        h1 Madeleine Linder
+        nav#labels
           a(href='/#about') About
-        li
-          a(href='/portfolio#projects') Main projects
-        li
-          a(href='/portfolio#justForFun') Just for fun
-        li
           a(href='/#contact') Contact
+          a(href='/portfolio#projects') Main projects
+          a(href='/portfolio#justForFun') Just for fun
+        img(src='/assets/ved3.jpg', alt='Homepage image')
+      //- //// Set up main nav bar to be fixed to the top of the page, //// ////
+      //- //// and only visible when not viewing the landing page //// //// ////
+      //- nav#navIcon
+      //-   button#navToggleIcon &#9776;
+      //- nav.navBar#mainNav
+      //-   //- ul#navLinks
+      //-   li
+      //-     a(href='/#about') About
+      //-   li
+      //-     a(href='/portfolio#projects') Main projects
+      //-   li
+      //-     a(href='/portfolio#justForFun') Just for fun
+      //-   li
+      //-     a(href='/#contact') Contact
     section#contact
       h1 Contact
       div#icons
@@ -35,7 +43,8 @@ html
           div.icon#linkedin
     section#about
       h1 About
-      p About me as a person...
+      p.
+        I am a full-stack developer with a BSc (Hons) degree in Psychology and an international background in administration and project management. I’m passionate about coding, thrive on new challenges and am always looking for ways to develop and improve my work.
       img.round(src='/assets/profile.jpg', alt='A photo of Madeleine standing under a tree and smiling')
       p About my experience...
       p.

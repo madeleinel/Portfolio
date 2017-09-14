@@ -1,3 +1,5 @@
+/* Define layout on smaller screens */
+
 @media screen and (max-width: 750px) {
   #icons {
     -webkit-flex-direction: row;

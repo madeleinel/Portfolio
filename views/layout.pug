@@ -1,0 +1,24 @@
+html
+  head
+    title Madeleine Linder | Home
+    style
+      include ./../public/stylesheets/reset.css
+      include ./../public/stylesheets/style.css
+      include ./../public/stylesheets/mediaqueries.css
+    link(href="https://fonts.googleapis.com/css?family=Poiret+One|Raleway|Special+Elite" rel="stylesheet")
+    script(src="./script.js")
+  body
+    include landingPage.pug
+    include contact.pug
+    section.blank
+    include about.pug
+    section.blank
+    include skills.pug
+    section.blank
+    include fun.pug
+
+    //- h1 Portfolio site
+    //- h2 Madeleine Linder
+    section.blank
+
+    include footer.pug

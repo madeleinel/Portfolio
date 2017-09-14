@@ -11,4 +11,8 @@ module.exports = (app) => {
   app.get('/portfolio', (req, res) => {
     res.render('portfolio.pug');
   });
+
+  app.get('/templating', (req, res) => {
+    res.render('layout.pug');
+  });
 }

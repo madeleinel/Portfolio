@@ -16,7 +16,7 @@ h1 {
   font-weight: bold;
   font-family: 'Poiret One', sans-serif;
   color: var(--raspberry_pink);
-  padding: 2rem;
+  padding: 4rem 0;
 }
 
 p {
@@ -40,7 +40,7 @@ body {
 }
 
 section {
-  width: 80vw;
+  width: 70vw;
   text-align: center;
   /*display: -webkit-flex;
   display: -ms-flex;
@@ -61,26 +61,30 @@ section {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-}
 
-.miniExample {
-  width: 33%;
-  /*display: -webkit-flex;
-  display: -ms-flex;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  justify-content: center;*/
+  margin-bottom: 4rem;
 }
 
 /* =============================================================================
 ================================= Landing page =================================
 ============================================================================= */
+header {
+  /*display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;*/
+}
+
 #landingPage, #landingPage img {
   width: 100vw;
-  height: 90vh;
+  /*height: 90vh;*/
+  height: 100vh;
   background: #111;
+
+  /*height: 100vh;
+  width: 90vw;*/
 }
 
 svg {
@@ -88,6 +92,42 @@ svg {
   max-height: 45vh;
   position: absolute;
   padding-top: 12vh;
+}
+
+#landingPage h1 {
+  position: absolute;
+  background: #fff;
+  padding: 2rem;
+  margin: 14rem 10rem;
+  font-size: 3rem;
+  border: 8px solid var(--medium_peach);
+  border-radius: 20px;
+  box-shadow: 4px 4px 8px #555;
+}
+
+#labels {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+  height: 80vh;
+  margin: 10vh 0;
+  position: absolute;
+  right: 0;
+}
+
+#labels a {
+  font-family: 'Special Elite', sans-serif;
+  color: #000;
+  background: #fff;
+  font-size: 1.8rem;
+  font-weight: bold;
+  padding: 0.6rem 0.8rem;
+  margin-right: 14vw;
 }
 
 /* =============================================================================
@@ -107,6 +147,21 @@ svg {
   justify-content: space-around;
   -ms-align-items: center;
   align-items: center;
+
+  /*height: 100vh;
+  width: 10vw;
+  font-size: 1.4em;
+  background: var(--light_peach);
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  justify-content: space-around;*/
+  /*position: fixed;
+  top: 0;
+  right: 0;*/
 }
 
 .navBar a {
@@ -174,43 +229,178 @@ svg {
 }
 
 /* =============================================================================
+================================= About section ================================
+============================================================================= */
+#checklists {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  justify-content: space-between;
+  -ms-align-items: flex-start;
+  align-items: flex-start;
+
+  font-family: 'Special Elite', sans-serif;
+  font-weight: bold;
+}
+
+.checklist {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-align-items: flex-start;
+  align-items: flex-start;
+}
+
+.checklist h2 {
+  font-size: 1.4rem;
+  /*padding: 0 0 0.4rem 0.4rem;*/
+  /*margin: 1rem;*/
+  /*border: 1px outset #c3c6d4;*/
+
+  color: #fff;
+  background: #111;
+  padding: 0.6rem 1rem 0.6rem 0.4rem;
+  margin-bottom: 0.4rem;
+
+  box-shadow: 0.05rem 0.05rem 0.2rem #7e85a2;
+}
+
+.checklist h4 {
+  font-size: 1.2rem;
+  color: #000;
+  padding: 0.6rem 0.8rem;
+  margin: 1rem;
+  box-shadow: 0.05rem 0.05rem 0.2rem #7e85a2;
+  /*border: 1px outset #c3c6d4;*/
+}
+
+/*.checklist h4:before {*/
+  /* content: "✓"; /* thin checkmark */
+  /* content: "✔"; /* thick checkmark */
+  /* content: "✗"; /* thin check-x */
+  /* content: "✘"; /* thick check-x */
+  /*margin-right: 0.6rem;
+  font-size: 1.4rem;
+}*/
+
+/*.checklist h4:before {
+  content: "";
+  background: url('./../assets/checkbox.svg');
+  background-size: cover;
+  background-position: center;
+
+  filter: blur(0.4px);
+  -webkit-filter: blur(0.4px);
+  -moz-filter: blur(0.4px);
+  -o-filter: blur(0.4px);
+  -ms-filter: blur(0.4px);
+
+  height: 1.5rem;
+  width: 1.5rem;
+  display: inline-block;
+  margin: 0 0.6rem -0.1rem 0;
+}*/
+
+/*svg {
+  height: 20px;
+  width: 20px;
+  border: 1px solid green;
+  display: inline-block;
+}*/
+
+/* =============================================================================
+============================ Just For Fun sections =============================
+============================================================================= */
+
+.funExample {
+  width: 23vw;
+  /*border: 1px solid purple;*/
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-align-items: center;
+  align-items: center;
+}
+
+.miniScreen {
+  width: 20vw;
+  /*margin-bottom: 1rem;*/
+}
+
+.funExample h4 {
+  font-family: 'Special Elite', sans-serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+  background: #111;
+  color: #fff;
+  padding: 0.8rem 1rem 0.6rem 0.6rem;
+  margin: 1rem;
+  box-shadow: 0.05rem 0.05rem 0.2rem #7e85a2;
+}
+
+.funExample p {
+  margin: 1rem;
+}
+
+/* =============================================================================
 =============================== Content sections ===============================
 ============================================================================= */
 p {
-  margin: 1rem;
+  /*margin: 1rem;
+  border-radius: 2rem;*/
+  /*border-radius: 4rem 1rem;*/
 }
 
 /* The text boxes on the About page */
 #about p {
-  background: orange;
+  /*width: 34vw;*/
+  background: var(--light_peach);
+  padding: 4rem;
 }
 
 #about img {
+  max-height: 30vh;
+  max-width: 22vw;
+  margin: 1rem;
+}
 
+.round {
+  border-radius: 50%;
 }
 
 /* The text boxes on the Portfolio page */
-.content p {
-  width: 52vw;
-  background: yellow;
+/*.content p {
+  width: 34vw;
+  background: var(--light_peach);
+  padding: 4rem;
 }
 
 .content img {
   max-height: 30vh;
   max-width: 22vw;
   margin: 1rem;
-}
+}*/
 
 /* The text boxes within the Just For Fun section */
-.miniExample p {
-  max-width: 90%;
+/*.miniExample p {
+  width: 17.5vw;
+  padding: 2rem;
 
-  background: pink;
+  background: var(--light_peach);
 }
 
 .miniExample img {
   margin: 1rem;
-}
+}*/
 
 /* =============================================================================
 ================================== Site footer =================================
@@ -219,4 +409,84 @@ footer {
   background: var(--light_peach);
   width: 100vw;
   text-align: center;
+}
+
+
+
+
+
+
+
+
+/* ////// for navbar experimentation: ////// */
+/*
+header {
+  position: relative;
+  background-image: linear-gradient(-225deg, rgba(250,250,250, 0.6), 0%, rgba(0,0,0, 0.4) 50%), url(../assets/header.png);
+  background-size: 100%;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  z-index: 4;
+}
+
+#Navigation {
+    font-size: 1.5rem;
+    position: fixed;
+    top: 80vh;
+    z-index: 1;
+    text-align: right;
+    height: 4.4rem;
+    padding-top: 1.6rem;
+    margin: 0;
+    width: 97%;
+    padding-right: 3%;
+    transition: 0.5s background-color ease;
+}
+
+#Navigation.navigation--onscroll {
+  background-color: #fafafa;
+  z-index: 5;
+  top: 0;
+}
+
+.navigation__link {
+  text-decoration: none;
+  color: #fafafa;
+  padding: 2%;
+}
+
+.navigation__link--white {
+  color: black;
+  margin-top: 1.6rem;
+}
+.navigation__link:hover, .navigation__link:focus {
+  color: #ff6f56;
+  border-bottom: 2px solid #fafafa;
+}
+
+.navigation__link--white:hover, .navigation__link--white:focus {
+  color: #07689f;
+  border-bottom: 2px solid #ff6f56;
+}
+
+.navigation__box {
+    width: 100%;
+    background-color: black;
+    height: 6rem;
+    z-index: 3;
+    position: fixed;
+    top: 0;
+}
+
+*/
+
+.blank {
+  height: 20vh;
+}
+
+.divider {
+  height: 1vh;
+  background: var(--medium_peach);
 }
