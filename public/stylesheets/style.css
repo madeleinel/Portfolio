@@ -4,11 +4,20 @@
 :root {
   --light_peach: #FAF1F6; /* pinkish pastel - nice colour; currently on the navbar */
   --medium_peach: #F1D8E6;
+  --light_raspberry_pink: #F1D9E7;
+  --medium_raspberry_pink: #E4B4CE;
   --raspberry_pink: #BB4385;
+  --light_grey: #F8F8F8;
+  --light_bluish_grey: #f1f4f9;
+  --bluish_grey: #b7c5dd;
 }
 
+/** {
+  box-sizing: border-box;
+}*/
+
 h1 {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: bold;
   font-family: 'Poiret One', sans-serif;
   color: var(--raspberry_pink);
@@ -67,6 +76,7 @@ section {
   width: 100vw;
   height: 100vh;
   background: #111;
+  box-shadow: 0 0.05rem 0.2rem #333;
 }
 
 svg {
@@ -120,6 +130,16 @@ svg {
   font-weight: bold;
   padding: 0.6rem 0.8rem;
   margin-right: 14vw;
+
+  -webkit-transition: background-color 0.5s linear;
+  -ms-transition: background-color 0.5s linear;
+  -moz-transition: background-color 0.5s linear;
+  -o-transition: background-color 0.5s linear;
+  transition: background-color 0.5s linear;
+}
+
+#labels a:hover {
+  /*background-color: var(--medium_raspberry_pink);*/
 }
 
 /* =============================================================================
@@ -234,6 +254,9 @@ svg {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   justify-content: space-between;
   -ms-align-items: flex-start;
   align-items: flex-start;
@@ -258,7 +281,7 @@ svg {
   color: #fff;
   background: #111;
   padding: 0.6rem 1rem 0.6rem 0.4rem;
-  margin-bottom: 0.4rem;
+  margin: 3rem 0 0.4rem 0;
   box-shadow: 0.05rem 0.05rem 0.2rem #7e85a2;
 }
 
@@ -368,7 +391,7 @@ svg {
   text-align: left;
 }
 
-.mainExample .label {
+.label {
   font-family: 'Special Elite', sans-serif;
   font-weight: bold;
   font-size: 1rem;
@@ -398,6 +421,11 @@ svg {
 
 #skillsLists {
   background: var(--light_peach);
+  padding: 4rem 15vw;
+}
+
+#experienceLists {
+  /*background: var(--medium_peach);*/
   padding: 4rem 15vw;
 }
 
@@ -565,6 +593,32 @@ header {
 
 .blank {
   height: 20vh;
+}
+
+.grey {
+  background: var(--light_grey);
+  /*background: var(--light_peach);*/
+}
+
+.diagonalUp, .diagonalDown {
+  width: 70vw;
+  height: 10vh;
+  background: var(--light_grey);
+  /*background: var(--light_peach);*/
+}
+
+.diagonalUp {
+  -webkit-clip-path: polygon(0 0, 0% 100%, 100% 0);
+  clip-path: polygon(0 0, 0% 100%, 100% 0);
+}
+
+.diagonalDown {
+  /*-webkit-clip-path: polygon(0 0, 100% 100%, 100% 0);
+  clip-path: polygon(0 0, 100% 100%, 100% 0);*/
+  /*-webkit-clip-path: polygon(0 100%, 100% 100%, 100% 0);
+  clip-path: polygon(0 100%, 100% 100%, 100% 0);*/
+  -webkit-clip-path: polygon(0 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 100%, 0 100%);
 }
 
 .divider {

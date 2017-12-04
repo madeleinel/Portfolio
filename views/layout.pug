@@ -5,20 +5,25 @@ html
       include ./../public/stylesheets/reset.css
       include ./../public/stylesheets/style.css
       include ./../public/stylesheets/mediaqueries.css
-    link(href="https://fonts.googleapis.com/css?family=Poiret+One|Raleway|Special+Elite" rel="stylesheet")
-    script(src="./script.js")
+    link(href='https://fonts.googleapis.com/css?family=Poiret+One|Raleway|Special+Elite' rel='stylesheet')
+    script(src='./script.js')
   body
     include landingPage.pug
     
-    include contact.pug
-    section.blank
+    //- section.blank
     include about.pug
-    section.blank
-    include skills.pug
-    section.blank
-    include fun.pug
-    section.blank
+    //- section.blank
+    include contact.pug
+    //- section.blank
     include projects.pug
+    //- section.blank
+    section.diagonalDown
+    include fun.pug
+    section.diagonalUp
+    section.blank
+    include experience.pug
+    //- section.blank
+    include skills.pug
     section.blank
 
     include footer.pug

@@ -1,6 +1,6 @@
 html
   body
-    section#mainProjects
+    section.mainProjects
       h1 Main projects
       div.content
         div.mainExample#light
@@ -9,18 +9,22 @@ html
             h2= 'Women To Tech'
             p.paragraph.
               A platform which matches self-identifying women who want to get started in the tech industry with mentors who are working within the industry. </br> </br>
-              The website was created as part of the <a href="http://www.codefirstgirls.org.uk/" target="_blank">Code First: Girls</a> 
-              Advanced Python Web Development Course competition with <a href="https://github.com/eleanombre" target="_blank">E Keane</a>. </br> </br>
+              The website was created as part of the <a href='http://www.codefirstgirls.org.uk/' target='_blank'>Code First: Girls</a> 
+              Advanced Python Web Development Course competition with <a href='https://github.com/eleanombre' target='_blank'>E Keane</a>. </br> </br>
               The platform database is currently being updated and more features, such as matching up mentors and mentees based on their preferred 
-              languages and what type of help they are looking for or can provide, are being added.
+              languages and what type of help they are looking for or can provide, are being added. </br> </br>
+              <span class='label'><a href='https://womentotech.herokuapp.com/' target='_blank'>Check it out</a></span> <span class='label'><a href='https://github.com/madeleinel/WoMentor' target='_blank'>View source code</a></span>
           div.text
             h4= 'Tech stack'
-            p.label Python 2 and Flask for backend
-            p.label PostgreSQL for database handling
-            p.label Twitter API to set up the Twitterbot
-            p.label HTML5 and CSS3 to style the site
+            p.label Python 2 and Flask
+            p.label PostgreSQL
+            p.label Twitter API
+            p.label HTML5 and CSS3
+            //- p.label Python 2 and Flask for backend
+            //- p.label PostgreSQL for database handling
+            //- p.label Twitter API to set up the Twitterbot
+            //- p.label HTML5 and CSS3 to style the site
           img.mainScreen(src='/assets/womentor_list.png', alt='Portfolio example image 1')
-
         div.mainExample#dark
           img.mainScreen(src='/assets/letsPaint.png', alt='Portfolio example image 1')
           div.text
@@ -28,10 +32,14 @@ html
             p.paragraph.
               A drawing application which allows the user to draw on a canvas and customise features such as brush stroke colour, size and effects, 
               changing the background colour independently from the drawing itself, and undoing drawing actions. </br> </br>
-              More features are in the process of being added.
+              More features are in the process of being added. </br> </br>
+              <span class='label'><a href='https://madeleinel.github.io/Lets_Paint/' target='_blank'>Try it out</a></span> <span class='label'><a href='https://github.com/madeleinel/Lets_Paint' target='_blank'>View source code</a></span>
           div.text
             h4= 'Tech stack'
-            p.label HTML5 Canvas to set up the canvas
-            p.label ES6 to enable the drawing features
-            p.label HTML5 and CSS3 to style the site
+            p.label ES6
+            p.label HTML5 Canvas
+            p.label HTML5 and CSS3
+            //- p.label HTML5 Canvas to set up the canvas
+            //- p.label ES6 to enable the drawing features
+            //- p.label HTML5 and CSS3 to style the site
           img.mainScreen(src='/assets/letsPaint.png', alt='Portfolio example image 1')
