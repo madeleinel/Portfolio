@@ -1,0 +1,56 @@
+html
+  head
+    title= 'Madeleine Linder | Portfolio'
+    style
+      include ./../public/stylesheets/reset.css
+      include ./../public/stylesheets/style.css
+    link(href='https://fonts.googleapis.com/css?family=Poiret+One|Raleway' rel='stylesheet')
+  body
+    nav#navIcon
+      button#navToggleIcon &#9776;
+    nav.navBar#mainNav
+      li
+        a(href='/#about') About
+      li
+        a(href='/portfolio#projects') Main projects
+      li
+        a(href='/portfolio#justForFun') Just for fun
+      li
+        a(href='/#contact') Contact
+    section#projects
+      h1 Main projects
+      div.content
+        img.screen(src='/assets/womentor.png', alt='Portfolio example image 1')
+        p WomenToTech
+        p WoMentor info here...
+        img.screen(src='/assets/womentor_list.png', alt='Portfolio example image 1')
+      div.content
+        img.screen(src='/assets/letsPaint.png', alt='Portfolio example image 3')
+        p Let's Paint info here...
+        p Let's paint
+        img.screen(src='/assets/letsPaint.png', alt='Portfolio example image 3')
+    section#justForFun
+      h1 Just for fun
+      div.content
+        div.miniExample
+          img.miniScreen(src='/assets/clock.png', alt='Portfolio example image 1')
+          p Clock with ability to customise the colour scheme
+        div.miniExample
+          img.miniScreen(src='/assets/ourStory.png', alt='Portfolio example image 1')
+          p Our Story; a website created to promote a positive narrative of immigration in the UK
+        div.miniExample
+          img.miniScreen(src='/assets/womentor.png', alt='Portfolio example image 1')
+          p Mini example 3 here
+      div.content
+        div.miniExample
+          img.miniScreen(src='/assets/clock.png', alt='Portfolio example image 1')
+          p Clock with ability to customise the colour scheme
+        div.miniExample
+          img.miniScreen(src='/assets/ourStory.png', alt='Portfolio example image 1')
+          p Our Story; a website created to promote a positive narrative of immigration in the UK
+        div.miniExample
+          img.miniScreen(src='/assets/womentor.png', alt='Portfolio example image 1')
+          p Mini example 3 here
+    footer
+      p Created by Madeleine Linder (2017)
+    

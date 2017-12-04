@@ -1,71 +1,91 @@
-// Set up dropdown menu for small screens
-function toggleMenu(e) {
-  e.preventDefault(); // Prevent the function from executing twice on touchscreens due to double calls to the eventListener function ("click" and "touch")
-  e.stopPropagation();    // Stop the event from propagating through the DOM
+'use strict';
 
-  const navbar = document.getElementById("topNav");
-  if (navbar.className === "navBar") {
-    navbar.className += " responsive";   // Change the class of element to 'navBar responsive'
-  } else {
-    navbar.className = "navBar";   // If the class is already 'navBar responsive', change it back to 'navBar'
-  }
-}
-// Set up event handler; when click on the dropdown menu icon > trigger the function which displays the dropdown manu
-document.getElementById("navToggleIcon").addEventListener("click", toggleMenu, false);
+window.onload = () => {
 
-// Set up section toggling within the Portfolio page
-function togglePopup(buttonId) {
-  // buttonId = The class name of the button that was clicked
-  // Set the popup element ID to be "popup_" followed by the second half of the buttonId (ie the id number of the section)
-  // This will be used to display the popup that's within the same section as the clicked button
-  const idTags = buttonId.split("_");
-  const popupId = "popup_" + idTags[1];
-  const currentPopup = document.getElementById(popupId);
-  const sectionId = "section_" + idTags[1];
-  const currentButton = document.querySelector("#" + sectionId + " span:last-child");
-  const currentButtonText = document.querySelector("#" + sectionId + " span:last-child button");
+  const toggleMenu = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
 
-  // To toggle the popup: Hide if it's visible, and make visible if it's hidden
-  // Also update the background colour of the clicked button when the popup is visible, to indicate that it is currently "active"
-  if (currentPopup.style.display == "block") {
-    currentPopup.style.display = "none";
-    currentButton.style.borderColor = "#333";
-    currentButtonText.textContent = "Find out more ⇓";
-    window.location.href = ("/portfolio\#" + sectionId);  // Makes the window jump back to the top of the section the user was just looking at > to avoid the screen seemingly jumping to a later section, and skipping work examples, when closing a popup section
-  } else {
-    currentPopup.style.display = "block";
-    currentButton.style.borderColor = "#7278C6";
-    currentButtonText.textContent = "Find out more ⇑";
+    const mainNav = document.getElementById('mainNav');
 
-    // Send event info to Google Analytics when user clicks on a button to display more information about a work example
-    ga('send', {
-      hitType: 'event',
-      eventCategory: 'Show additional content',
-      eventAction: 'clicks',
-      eventLabel: 'Content for: ' + idTags[1]
-    });
+    if (mainNav.className === 'navBar') {
+      console.log('dropdown active');
+      mainNav.className += ' responsive';
+      console.log(mainNav.className);
+    } else {
+      console.log('dropdown inactive');
+      mainNav.className = "navBar";
+      console.log(mainNav.className);
+    }
   }
 
-  event.preventDefault();   // Prevent default action from being executed
-  event.stopPropagation();    // Stop the event from propagating through the DOM
+  // document.getElementById('navIcon').addEventListener('click', toggleMenu, false);
+
+  // Add Google Analytics script
+
+
+  const fixMenuToTop = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+
+    const mainNav = document.getElementById('mainNav');
+
+    // when the nav bar hits the top of the page; fix it to the top
+    // when scroll back up again; remove the fixed positioning
+  }
+
+
+
+  // /////// From FAC10 PAMF week1 //////
+  //   // add fade in to nav bar on scroll
+  // (function () {
+  //   var nav = document.getElementById('Navigation');
+  //   var navLinks = document.getElementsByClassName('navigation__link');
+  //   navLinks = Array.from(navLinks);
+  //   document.getElementById('navbox').style.display = 'none';
+  //   var windowSize = window.innerHeight - nav.clientHeight;
+  //
+  //   window.addEventListener("scroll", function (e) {
+  //     var scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+  //     if (scroll > windowSize) {
+  //       nav.className = 'navigation--onscroll';
+  //       navLinks.forEach(function (e) {
+  //         e.className = 'navigation__link navigation__link--white';
+  //       });
+  //       return;
+  //     }
+  //     nav.className = '';
+  //     navLinks.forEach(function (e) {
+  //       e.className = 'navigation__link';
+  //     });
+  //   });
+  // })();
+  // ///////////
+
 }
 
-// Set up Google Analytics
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-100419989-1', 'auto');
-ga('send', 'pageview');
-
-// Track outbound link clicks
-// Send event info to Google Analytics when user clicks on a link which takes them to an external website
-function handleOutboundLinkClicks(event) {
-  ga('send', 'event', {
-    eventCategory: 'Outbound Link',
-    eventAction: 'click',
-    eventLabel: event.target.href,
-    transport: 'beacon'
-  });
-}
+// /////// From FAC10 PAMF week1 //////
+//   // add fade in to nav bar on scroll
+// (function () {
+//   var nav = document.getElementById('Navigation');
+//   var navLinks = document.getElementsByClassName('navigation__link');
+//   navLinks = Array.from(navLinks);
+//   document.getElementById('navbox').style.display = 'none';
+//   var windowSize = window.innerHeight - nav.clientHeight;
+//
+//   window.addEventListener("scroll", function (e) {
+//     var scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+//     if (scroll > windowSize) {
+//       nav.className = 'navigation--onscroll';
+//       navLinks.forEach(function (e) {
+//         e.className = 'navigation__link navigation__link--white';
+//       });
+//       return;
+//     }
+//     nav.className = '';
+//     navLinks.forEach(function (e) {
+//       e.className = 'navigation__link';
+//     });
+//   });
+// })();
+// ///////////
