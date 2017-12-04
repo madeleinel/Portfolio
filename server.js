@@ -1,4 +1,4 @@
-// var fs = require('fs');    // Not currently using this
+// Portfolio site - Version 1
 
 var express = require('express');
 var app = express();
